@@ -162,13 +162,14 @@ class LiveWell:
             self.begin_cycle()
             if self.shut_in:
                 alerts.append(dict(date=date_str, well=self.id, fleet=self.fleet, level="warn",
-                                   msg="cannot inject: reservoir pressure above allowed injection pressure"))
+                                   msg="Cannot steam: reservoir pressure is above the allowed injection pressure."))
                 return None
             c = _controls_dict(self.controls)
             alerts.append(dict(date=date_str, well=self.id, fleet=self.fleet, level="info",
-                               msg=(f"cycle {self.st.cycle_no} steam {c['steam_t']:.0f} t @ {c['inj_pressure_MPa']:.1f} MPa, "
-                                    f"soak {c['soak_days']} d, cut-off {c['cutoff_m3d']:.2f} m3/d"
-                                    + (" (twin-optimised, physics-verified)" if self.css_plan else ""))))
+                               msg=(f"Started steaming for cycle {self.st.cycle_no}: {c['steam_t']:.0f} t at "
+                                    f"{c['inj_pressure_MPa']:.1f} MPa, then a {c['soak_days']}-day soak"
+                                    + (". Settings chosen by the optimiser and checked in the physics twin."
+                                       if self.css_plan else "."))))
         if self.queue:
             rec = self.queue.popleft()
         else:
@@ -177,7 +178,8 @@ class LiveWell:
             except StopIteration:
                 s = self._finish_cycle()
                 alerts.append(dict(date=date_str, well=self.id, fleet=self.fleet, level="info",
-                                   msg=f"cycle {s['cycle_no']} ended at max days: oil {s['oil_m3']:.0f} m3, SOR {s['sor']:.1f}"))
+                                   msg=f"Cycle {s['cycle_no']} ended at its maximum length: {s['oil_m3']:.0f} m³ oil, "
+                                       f"{s['sor']:.1f} t steam per m³."))
                 return self.step(alerts, date_str)
         self.ticks += 1
         if rec["phase"] == "production":
@@ -193,16 +195,19 @@ class LiveWell:
             t["impact_strokes"] += rec["impact_strokes"]
             if rec["floating"]:
                 alerts.append(dict(date=date_str, well=self.id, fleet=self.fleet, level="alarm",
-                                   msg=f"rod floating at {rec['spm']:.2f} SPM (min load {rec['prl_min_kN']:.1f} kN); "
-                                       f"twin: {spm_r:.2f} SPM, down/up {ratio_r:.2f}" + ("" if ok else " (no safe point)")))
+                                   msg=(f"Rods floating at {rec['spm']:.2f} strokes/min. "
+                                        + (f"The twin suggests {spm_r:.2f} strokes/min with a {ratio_r:.2f}x slower downstroke."
+                                           if ok else "No safe pump speed exists; the cycle should end and the well be re-steamed."))))
             elif rec["goodman"] > 1.0:
                 alerts.append(dict(date=date_str, well=self.id, fleet=self.fleet, level="alarm",
-                                   msg=f"rod overload: Goodman {rec['goodman'] * 100:.0f}%"))
+                                   msg=f"Rod stress at {rec['goodman'] * 100:.0f}% of the safe limit."))
             if rec.get("stop_reason"):
                 s = self._finish_cycle()
-                why = "lift-limited cut-off (no safe SPM)" if rec["stop_reason"] == "lift_cutoff" else "rate cut-off"
+                why = ("pumping became unsafe for the rods" if rec["stop_reason"] == "lift_cutoff"
+                       else "the oil rate fell below the cut-off")
                 alerts.append(dict(date=date_str, well=self.id, fleet=self.fleet, level="info",
-                                   msg=f"cycle {s['cycle_no']} ended by {why}: oil {s['oil_m3']:.0f} m3, SOR {s['sor']:.1f}"))
+                                   msg=f"Cycle {s['cycle_no']} ended because {why}: {s['oil_m3']:.0f} m³ oil, "
+                                       f"{s['sor']:.1f} t steam per m³."))
         rec = dict(rec, date=date_str)
         self.last = rec
         self.series.append(rec)
@@ -280,6 +285,21 @@ class LiveField:
         self.tick_ms = 0.0
         self._card_cache = {}
         self.card_tally = dict(n=0, agree=0, agree_grouped=0)  # live CNN-vs-physics check, this session
+        self.kpi_history = deque(maxlen=int(self.lcfg["history_days_kept"]))
+        self.positions = self._layout(n, seed)
+
+    def _layout(self, n, seed):
+        """SCHEMATIC map positions (real well coordinates are not public): staggered grid with
+        a small deterministic jitter; units = grid spacing."""
+        m = self.lcfg["map"]
+        cols = int(np.ceil(np.sqrt(n * float(m["aspect"]))))
+        rng = np.random.default_rng([seed, 31])
+        pos = []
+        for i in range(n):
+            r, c = divmod(i, cols)
+            jx, jy = rng.uniform(-1, 1, 2) * float(m["jitter"])
+            pos.append((round(c + 0.5 * (r % 2) + jx, 3), round(r * 0.866 + jy, 3)))
+        return pos
 
     # ------------------------------------------------------------- ticking
     def tick(self):
@@ -291,6 +311,8 @@ class LiveField:
             for w in self.fleets[f]:
                 w.step(new_alerts, ds)
         snap = self._build_snapshot(new_alerts)
+        self.kpi_history.append(dict(date=snap["date"], **{f: snap["kpis"][f] for f in FLEETS}))
+        snap["kpi_history"] = list(self.kpi_history)
         self.tick_ms = (time.time() - t0) * 1e3
         snap["tick_ms"] = round(self.tick_ms, 1)
         with self.new_snapshot:
@@ -314,9 +336,15 @@ class LiveField:
             else:
                 time.sleep(0.1)
 
+    def step_once(self):
+        """Advance exactly one day (used by the 'next day' button while paused)."""
+        if not self.running:
+            self.tick()
+
     def refresh(self):
         """Rebuild the snapshot without advancing time (after a selection/fault change)."""
         snap = self._build_snapshot([])
+        snap["kpi_history"] = list(self.kpi_history)
         with self.new_snapshot:
             snap["alerts"] = list(self.alerts)[::-1][: int(self.lcfg["alerts_sent"])]
             snap["tick_ms"] = round(self.tick_ms, 1)
@@ -351,12 +379,57 @@ class LiveField:
         return (tot["oil"] / BBL * e["oil_price"] - tot["fuel_GJ"] * e["fuel_cost_per_GJ"]
                 - tot["energy"] * e["power_cost"])
 
-    @staticmethod
-    def _row(w):
+    def status(self, w):
+        """Plain-language status, severity and recommended action for a well (both fleets).
+        Thresholds come from config (low-fillage threshold, controller grid step)."""
         r = w.last
         if r is None:
-            return dict(phase="shut-in" if w.shut_in else "-")
-        out = dict(phase=r["phase"], cycle=r["cycle_no"], t_bottom=round(float(r.get("t_bottom", r["t_bottom_true"])), 1))
+            if w.shut_in:
+                return ("shut_in", "Shut in", "warn",
+                        "Reservoir pressure is above the allowed injection pressure, so the well cannot be steamed.")
+            return ("starting", "Starting", "info", "")
+        if r["phase"] == "injection":
+            return ("steaming", "Steaming", "info", f"Steam is being injected for cycle {r['cycle_no']}.")
+        if r["phase"] == "soak":
+            return ("soaking", "Soaking", "info", "The well is shut in so the steam heat soaks into the oil.")
+        twin = w.fleet == "twin"
+        spm, rs, rr = r["spm"], r["rec_spm"], r["rec_ratio"]
+        tol = float(self.pl["simulation"]["spm_grid_step"]) + 1e-6
+        if not r["rec_feasible"]:
+            return ("no_safe_speed", "No safe pump speed", "alarm",
+                    "The oil in the tubing is too thick to pump without the rods floating or overloading at any "
+                    "allowed speed. End this cycle and re-steam."
+                    + (" The twin does this automatically after a few days." if twin else ""))
+        if r["floating"]:
+            return ("floating", "Rods floating", "alarm",
+                    f"Slow the pump to {rs:.2f} strokes/min with a {rr:.2f}x slower downstroke to stop the rods floating.")
+        if r["goodman"] > 1.0:
+            return ("overload", "Rods overloaded", "alarm",
+                    f"Rod stress is above the safe limit. Change to {rs:.2f} strokes/min, downstroke {rr:.2f}x slower.")
+        if r["fillage"] < self.cfg.value("srp.low_fillage_threshold"):
+            if spm <= self.cfg.value("srp.spm_min") + 1e-6:
+                return ("low_inflow", "Low inflow", "ok",
+                        f"The pump fills {r['fillage'] * 100:.0f}% per stroke at its slowest speed. Inflow is low, "
+                        "which is normal late in a cycle; no action needed.")
+            return ("pumped_off", "Pump running dry", "warn",
+                    f"The pump fills only {r['fillage'] * 100:.0f}% per stroke. "
+                    f"Slow it to {rs:.2f} strokes/min to match what the well delivers.")
+        if abs(spm - rs) > tol or abs(r["speed_ratio"] - rr) > tol:
+            return ("off_target", "Speed off target", "warn",
+                    f"The twin suggests {rs:.2f} strokes/min (downstroke {rr:.2f}x the upstroke) instead of {spm:.2f}.")
+        return ("ok", "Producing normally", "ok", "No action needed.")
+
+    def _row(self, w):
+        r = w.last
+        code, label, level, action = self.status(w)
+        pos = self.positions[w.idx]
+        out = dict(status=code, status_label=label, level=level, action=action, x=pos[0], y=pos[1],
+                   r_heated=round(w.st.r_h, 2), r_e=round(w.sim.w.r_e, 1))
+        if r is None:
+            out.update(phase="shut-in" if w.shut_in else "-")
+            return out
+        out.update(phase=r["phase"], cycle=r["cycle_no"], t_bottom=round(float(r.get("t_bottom", r["t_bottom_true"])), 1),
+                   t_zone=round(float(w.sim.heated_temperature(w.st)), 1))
         if r["phase"] == "production":
             out.update(prod_day=r["prod_day"], oil=round(r["oil_m3d"], 2), water=round(r["water_m3d"], 2),
                        spm=r["spm"], ratio=r["speed_ratio"], fill=round(r["fillage"], 2),
@@ -447,4 +520,5 @@ class LiveField:
                     feed="SIMULATED FIELD FEED (physics twin) - replace with SCADA/historian for field use",
                     kpis={f: self._kpis(f) for f in FLEETS}, wells=wells, selected=self.selected,
                     detail=self._detail(), classes=CLASSES, card_tally=dict(self.card_tally),
-                    fault_presets=["none"] + list(self.lcfg["fault_presets"]))
+                    fault_presets=["none"] + list(self.lcfg["fault_presets"]),
+                    sor_chart_start_day=int(self.lcfg["sor_chart_start_day"]))

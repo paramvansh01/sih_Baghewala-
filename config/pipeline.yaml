@@ -90,6 +90,10 @@ live:                         # real-time dashboard (python -m twin.cli live)
   css_top_k: 3                # of which re-simulated in the physics twin before applying
   alerts_kept: 500
   alerts_sent: 60
+  sor_chart_start_day: 30     # SOR is meaningless before oil flows; the compare chart starts here
+  map:                        # SCHEMATIC layout - actual well coordinates are not public
+    aspect: 1.4
+    jitter: 0.18
   fault_presets:              # injected into the dynamometer-card simulation ONLY (diagnosis demo)
     tv_leak: {tv_leak: 0.4}
     sv_leak: {sv_leak: 0.4}

@@ -126,9 +126,16 @@ def make_handler(field: LiveField):
                 if data.get("well") not in ids or data.get("fleet") not in FLEETS:
                     return self._json(dict(error="unknown well or fleet"), 400)
                 field.selected = dict(well=data["well"], fleet=data["fleet"])
+            elif route == "/api/ask":
+                from .assistant import answer
+                return self._json(answer(field, str(data.get("question", ""))[:500],
+                                         data.get("fleet", field.selected["fleet"])))
             elif route == "/api/control":
                 if "running" in data:
                     field.running = bool(data["running"])
+                if data.get("step"):
+                    field.step_once()
+                    return self._json(dict(ok=True))
                 if "seconds_per_day" in data:
                     lo, hi = field.lcfg["seconds_per_day_range"]
                     field.seconds_per_day = float(min(max(float(data["seconds_per_day"]), lo), hi))

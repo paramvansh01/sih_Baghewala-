@@ -31,7 +31,15 @@ verified in the physics twin before being applied). For the selected well it sho
 ML-forecast rate and temperature for the current cycle, applied vs recommended SPM/speed ratio,
 the rod-load envelope and Goodman loading, and a dynamometer card simulated at today's operating
 point with the CNN diagnosis next to the label the physics implies. Pump faults can be injected
-into the card simulation to exercise the diagnosis. Live CNN-vs-physics agreement is measured by
+into the card simulation to exercise the diagnosis.
+
+Views: **Today** (daily briefing: oil, wells pumping/steaming, what needs attention and what to
+do, today's events), **Field map** (schematic layout - real well coordinates are not public;
+dot colour = status, dot size = oil rate, glow = heated zone), **Wells** (search and filter),
+**Well** pages (production vs forecast, pump & rods with the live card, steam-cycle settings and
+how they were chosen), **Compare** (twin control vs current practice over time). The **field
+assistant** ("Ask the twin") answers questions from the live data and the physics only - there is
+no language model behind it, so it cannot invent facts. `?ask=<question>` opens it with a question. Live CNN-vs-physics agreement is measured by
 `python -m twin.cli livecheck` and reported in the batch report.
 
 ## What maps to the problem statement
