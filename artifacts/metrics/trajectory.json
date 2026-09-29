@@ -1,0 +1,84 @@
+{
+  "info": {
+    "n_train_rows": 16299,
+    "n_test_rows": 4221,
+    "test_wells": [
+      "BGW-S01",
+      "BGW-S03",
+      "BGW-S07",
+      "BGW-S17",
+      "BGW-S24",
+      "BGW-S25",
+      "BGW-S28"
+    ],
+    "features": [
+      "k_mD",
+      "h",
+      "phi",
+      "s_oi",
+      "r_e",
+      "p_i_MPa",
+      "t_r",
+      "api",
+      "mu_ref_cP",
+      "walther_b",
+      "stroke",
+      "pump_depth",
+      "cycle_no",
+      "cum_oil",
+      "cum_water",
+      "cum_steam_t",
+      "prev_oil_m3",
+      "prev_sor",
+      "prev_prod_days",
+      "prev_t_bottom_end",
+      "prev_peak_oil_m3d",
+      "prev_floating_days",
+      "cold_oil_m3d",
+      "steam_t",
+      "inj_pressure_MPa",
+      "quality_surface",
+      "soak_days",
+      "cutoff_m3d",
+      "min_prod_days",
+      "spm_init",
+      "prod_day"
+    ],
+    "hyperparameters": {
+      "max_iter": 500,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0
+    },
+    "seed": 20260929
+  },
+  "results": {
+    "oil_m3d": {
+      "gbm": {
+        "r2": 0.9255629128928574,
+        "mae": 0.21882252811913827,
+        "mape": 0.2525785982672741
+      },
+      "mean_profile": {
+        "r2": 0.7077276965968532,
+        "mae": 0.48882649787425275,
+        "mape": 0.8140602442790147
+      },
+      "n_iter": 311
+    },
+    "t_bottom": {
+      "gbm": {
+        "r2": 0.9908463009368973,
+        "mae": 2.4569746883327843,
+        "mape": 0.011228072311991907
+      },
+      "mean_profile": {
+        "r2": 0.7990252368355231,
+        "mae": 11.725085221617402,
+        "mape": 0.05397126219602546
+      },
+      "n_iter": 500
+    }
+  }
+}

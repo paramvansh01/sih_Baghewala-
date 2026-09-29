@@ -1,0 +1,97 @@
+# Numerical / ML settings (not field data). Change freely; results are logged with them.
+seed: 20260929
+
+simulation:
+  tubing_nodes: 40            # discretisation of tubing for drag integral
+  spm_grid_step: 0.25         # twin controller search resolution
+  ratio_grid_step: 0.25
+  min_days_before_cutoff: 14  # cut-off test only after this many production days
+  cutoff_window_days: 7       # moving average window for cut-off test
+  no_response_days: 30        # end cycle if oil never exceeded cut-off by this day
+  pre_css_cold_days: 60       # cold-production period simulated before first steam
+
+history:
+  n_wells: null               # null -> use field.n_producing_wells from field.yaml
+
+cards:
+  n_per_class: 900
+  points_per_card: 128
+  strokes_to_simulate: 4      # last stroke is recorded (periodic steady state)
+  rod_elements: 40
+  cfl: 0.8
+  n_jobs: -1
+  max_attempts: 40            # resampling attempts to satisfy a class's physics check
+  non_floating_margin: 0.02   # non-floating classes need min load > margin * buoyant rod weight
+  scenario:                   # scenario sampling ranges (synthetic-data design, not field data)
+    depth_offset_m: [-100, 100]
+    spm: [1.0, 8.0]
+    speed_ratio: [1.0, 3.0]
+    rho_fluid: [900, 1000]
+    wellhead_MPa: [0.5, 1.5]
+    p_intake_MPa: [0.3, 3.0]
+    # tubing viscosity comes from a sampled TEMPERATURE profile through the field's own oil
+    # (ASTM D341, published anchor) or water viscosity law - never from free viscosity numbers
+    t_pump_C: [46.0, 300.0]           # fluid temperature at the pump
+    oil_continuous_fraction: 0.5      # share of non-floating cards with oil-continuous tubing flow
+    floating_t_pump_C: [46.0, 160.0]  # floating class: oil-continuous, cooler fluid
+    floating_spm: [1.5, 8.0]
+    floating_speed_ratio: [1.0, 1.5]
+    pound_fill: [0.02, 0.9]         # upper bound also = live "fluid pound" threshold
+    floating_fill: [0.05, 1.0]      # floating often coincides with pump-off in the live field
+    pound_p_intake_MPa: [0.2, 0.6]
+    gas_gvf: [0.3, 0.7]
+    gas_p_intake_MPa: [1.0, 3.0]
+    leak_frac: [0.2, 0.6]
+
+css_surrogate:
+  test_fraction_wells: 0.2
+  cv_folds: 5
+  targets: [oil_m3, water_m3, prod_days, energy_kwh]
+  hgb_grid:                   # searched with grouped CV on TRAINING wells only
+    max_iter: [300]
+    learning_rate: [0.03, 0.1]
+    max_leaf_nodes: [7, 15]
+    min_samples_leaf: [10, 30]
+    l2_regularization: [1.0]
+  ridge_alphas: [0.001, 0.01, 0.1, 1, 10, 100, 1000]
+
+trajectory_model:
+  day_sample_every: 3
+  hgb:
+    max_iter: 500
+    learning_rate: 0.05
+    max_leaf_nodes: 31
+    min_samples_leaf: 20
+    l2_regularization: 1.0
+
+card_cnn:
+  test_fraction: 0.2
+  val_fraction: 0.15
+  epochs: 40
+  batch_size: 64
+  learning_rate: 0.002
+  weight_decay: 0.0001
+  patience: 8
+  robustness:                 # independent evaluation set: different seed, amplified sensor noise
+    seed_offset: 1000
+    noise_multiplier: 3.0
+    n_per_class: 300
+
+optimizer:
+  n_candidates: 4000          # random candidates scored by surrogate
+  top_k_verify: 5             # best candidates re-simulated with physics twin
+
+live:                         # real-time dashboard (python -m twin.cli live)
+  seconds_per_day: 1.0        # wall-clock seconds per simulated day (adjustable in the UI)
+  seconds_per_day_range: [0.1, 10.0]
+  history_days_kept: 240      # per-well daily history kept in memory / charted
+  prediction_horizon_days: 240
+  css_candidates: 800         # surrogate candidates per new cycle (twin fleet)
+  css_top_k: 3                # of which re-simulated in the physics twin before applying
+  alerts_kept: 500
+  alerts_sent: 60
+  fault_presets:              # injected into the dynamometer-card simulation ONLY (diagnosis demo)
+    tv_leak: {tv_leak: 0.4}
+    sv_leak: {sv_leak: 0.4}
+    gas_interference: {gvf: 0.5, p_intake_MPa: 2.0}
+    pump_unseated: {unseated: true}

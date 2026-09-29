@@ -1,0 +1,5782 @@
+[
+  {
+    "well_id": "BGW-S01",
+    "practice": {
+      "steam_t": 1286.2363465577462,
+      "inj_pressure_MPa": 11.73911852262901,
+      "quality_surface": 0.7184709755565729,
+      "soak_days": 5,
+      "cutoff_m3d": 0.4266305356892419,
+      "min_prod_days": 87,
+      "spm_init": 2.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -14643.96356929392,
+      "value_per_day": -144.9897383098408,
+      "oil_m3": 66.6140666403301,
+      "sor": 19.308779833282557,
+      "days": 101,
+      "energy_kwh": 17699.205985721204,
+      "floating_days": 10,
+      "overload_days": 10
+    },
+    "practice_pred_value_per_day": -101.30048925775486,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 832.6224132564457,
+          "inj_pressure_MPa": 11.85011268844496,
+          "quality_surface": 0.7877592916755821,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.954558283552215,
+          "min_prod_days": 65.0,
+          "spm_init": 2.1040346030085373
+        },
+        "pred_value_per_day": -21.76451929767465,
+        "pred_oil_m3": 66.09327446159269,
+        "sim": {
+          "feasible": true,
+          "value": -5765.589497198012,
+          "value_per_day": -77.91337158375693,
+          "oil_m3": 60.74628884397439,
+          "sor": 13.706556056371104,
+          "days": 74,
+          "energy_kwh": 32495.337688979413,
+          "floating_days": 25,
+          "overload_days": 25
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 836.3525167611741,
+          "inj_pressure_MPa": 11.819706691043116,
+          "quality_surface": 0.7405099942253531,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.3908112081056048,
+          "min_prod_days": 91.0,
+          "spm_init": 2.3990040448464924
+        },
+        "pred_value_per_day": -26.65242074069687,
+        "pred_oil_m3": 73.45405598852786,
+        "sim": {
+          "feasible": true,
+          "value": -7260.07524133972,
+          "value_per_day": -71.88193308257149,
+          "oil_m3": 65.03890708838914,
+          "sor": 12.859264618708227,
+          "days": 101,
+          "energy_kwh": 29487.881491094522,
+          "floating_days": 27,
+          "overload_days": 27
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 813.4517600499913,
+          "inj_pressure_MPa": 11.958338862198813,
+          "quality_surface": 0.7251978951309674,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.9986224127942867,
+          "min_prod_days": 78.0,
+          "spm_init": 2.595392860497542
+        },
+        "pred_value_per_day": -31.764468665321342,
+        "pred_oil_m3": 65.90403331291927,
+        "sim": {
+          "feasible": true,
+          "value": -6499.252935881454,
+          "value_per_day": -73.02531388630847,
+          "oil_m3": 62.415030697851314,
+          "sor": 13.032946566795408,
+          "days": 89,
+          "energy_kwh": 34670.24735313898,
+          "floating_days": 28,
+          "overload_days": 28
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 843.8312967045895,
+          "inj_pressure_MPa": 11.516957701311242,
+          "quality_surface": 0.7413368923776714,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8093554363888238,
+          "min_prod_days": 66.0,
+          "spm_init": 2.16002394842233
+        },
+        "pred_value_per_day": -32.48856729083197,
+        "pred_oil_m3": 64.46969618511747,
+        "sim": {
+          "feasible": true,
+          "value": -6110.742330894456,
+          "value_per_day": -80.40450435387443,
+          "oil_m3": 58.100876162475906,
+          "sor": 14.523555451123691,
+          "days": 76,
+          "energy_kwh": 23132.41546389473,
+          "floating_days": 24,
+          "overload_days": 24
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 854.2765395942233,
+          "inj_pressure_MPa": 11.842179901017232,
+          "quality_surface": 0.7127393447259279,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.783412459768968,
+          "min_prod_days": 110.0,
+          "spm_init": 2.2570013809341662
+        },
+        "pred_value_per_day": -37.114044039191995,
+        "pred_oil_m3": 75.0099034749961,
+        "sim": {
+          "feasible": true,
+          "value": -8538.394464270848,
+          "value_per_day": -71.15328720225708,
+          "oil_m3": 67.73010995732737,
+          "sor": 12.612950726529915,
+          "days": 120,
+          "energy_kwh": 24505.664444951908,
+          "floating_days": 25,
+          "overload_days": 25
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 854.2765395942233,
+        "inj_pressure_MPa": 11.842179901017232,
+        "quality_surface": 0.7127393447259279,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.783412459768968,
+        "min_prod_days": 110.0,
+        "spm_init": 2.2570013809341662
+      },
+      "pred_value_per_day": -37.114044039191995,
+      "pred_oil_m3": 75.0099034749961,
+      "sim": {
+        "feasible": true,
+        "value": -8538.394464270848,
+        "value_per_day": -71.15328720225708,
+        "oil_m3": 67.73010995732737,
+        "sor": 12.612950726529915,
+        "days": 120,
+        "energy_kwh": 24505.664444951908,
+        "floating_days": 25,
+        "overload_days": 25
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S02",
+    "practice": {
+      "steam_t": 1367.0374996379742,
+      "inj_pressure_MPa": 9.513580617458867,
+      "quality_surface": 0.7337875191058941,
+      "soak_days": 7,
+      "cutoff_m3d": 0.637024079747126,
+      "min_prod_days": 105,
+      "spm_init": 5.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -51991.44618192616,
+      "value_per_day": -426.15939493382103,
+      "oil_m3": 67.30452538838031,
+      "sor": 20.311227094307455,
+      "days": 122,
+      "energy_kwh": 342238.1582903964,
+      "floating_days": 70,
+      "overload_days": 70
+    },
+    "practice_pred_value_per_day": -420.5117400941705,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 848.0513605263378,
+          "inj_pressure_MPa": 11.975378744427692,
+          "quality_surface": 0.7775188264394988,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.8481964461218342,
+          "min_prod_days": 117.0,
+          "spm_init": 2.382561131714175
+        },
+        "pred_value_per_day": -86.25724991826392,
+        "pred_oil_m3": 73.7709599445734,
+        "sim": {
+          "feasible": true,
+          "value": -9311.196395926148,
+          "value_per_day": -72.74372184317303,
+          "oil_m3": 82.54869503463657,
+          "sor": 10.273346661270713,
+          "days": 128,
+          "energy_kwh": 80649.24598365035,
+          "floating_days": 88,
+          "overload_days": 89
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 807.9730852248417,
+          "inj_pressure_MPa": 11.607607837281503,
+          "quality_surface": 0.7734667762780812,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.5471111688810358,
+          "min_prod_days": 93.0,
+          "spm_init": 2.0072152472050067
+        },
+        "pred_value_per_day": -91.77362057601181,
+        "pred_oil_m3": 67.96477840932252,
+        "sim": {
+          "feasible": true,
+          "value": -7522.85985066431,
+          "value_per_day": -71.64628429204105,
+          "oil_m3": 72.59170181531923,
+          "sor": 11.130378060021359,
+          "days": 105,
+          "energy_kwh": 62257.43397236636,
+          "floating_days": 81,
+          "overload_days": 81
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 805.6446881203505,
+          "inj_pressure_MPa": 11.717789482648003,
+          "quality_surface": 0.721449686024785,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.5029831375736674,
+          "min_prod_days": 81.0,
+          "spm_init": 2.2338060140355154
+        },
+        "pred_value_per_day": -94.49553146160841,
+        "pred_oil_m3": 66.52895420385329,
+        "sim": {
+          "feasible": true,
+          "value": -5171.358030258776,
+          "value_per_day": -56.210413372378,
+          "oil_m3": 72.95409154727899,
+          "sor": 11.04317346749826,
+          "days": 92,
+          "energy_kwh": 65188.73668631395,
+          "floating_days": 69,
+          "overload_days": 70
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 869.0832553179009,
+          "inj_pressure_MPa": 11.554919593128961,
+          "quality_surface": 0.7808706011626737,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.76021880355869,
+          "min_prod_days": 89.0,
+          "spm_init": 2.6284247472095363
+        },
+        "pred_value_per_day": -96.93844512186497,
+        "pred_oil_m3": 69.39084776239382,
+        "sim": {
+          "feasible": true,
+          "value": -8721.091000266337,
+          "value_per_day": -88.09182828551856,
+          "oil_m3": 76.83310493895327,
+          "sor": 11.3113124350294,
+          "days": 99,
+          "energy_kwh": 87898.09073728845,
+          "floating_days": 78,
+          "overload_days": 78
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 909.7230171361504,
+          "inj_pressure_MPa": 11.474707129062116,
+          "quality_surface": 0.7808531363481537,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.563187244334591,
+          "min_prod_days": 110.0,
+          "spm_init": 2.4145592309657213
+        },
+        "pred_value_per_day": -103.23451869457341,
+        "pred_oil_m3": 73.85938744099155,
+        "sim": {
+          "feasible": true,
+          "value": -11372.050572023887,
+          "value_per_day": -93.21352927888432,
+          "oil_m3": 78.38007562520556,
+          "sor": 11.606559573713916,
+          "days": 122,
+          "energy_kwh": 77821.76099666378,
+          "floating_days": 85,
+          "overload_days": 85
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 805.6446881203505,
+        "inj_pressure_MPa": 11.717789482648003,
+        "quality_surface": 0.721449686024785,
+        "soak_days": 5.0,
+        "cutoff_m3d": 0.5029831375736674,
+        "min_prod_days": 81.0,
+        "spm_init": 2.2338060140355154
+      },
+      "pred_value_per_day": -94.49553146160841,
+      "pred_oil_m3": 66.52895420385329,
+      "sim": {
+        "feasible": true,
+        "value": -5171.358030258776,
+        "value_per_day": -56.210413372378,
+        "oil_m3": 72.95409154727899,
+        "sor": 11.04317346749826,
+        "days": 92,
+        "energy_kwh": 65188.73668631395,
+        "floating_days": 69,
+        "overload_days": 70
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S03",
+    "practice": {
+      "steam_t": 1378.8656648289889,
+      "inj_pressure_MPa": 11.949681676688243,
+      "quality_surface": 0.7630591809821617,
+      "soak_days": 7,
+      "cutoff_m3d": 0.9004856840470402,
+      "min_prod_days": 85,
+      "spm_init": 5.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -21133.056296953884,
+      "value_per_day": -207.18682644072436,
+      "oil_m3": 54.72664985301624,
+      "sor": 25.1955065499591,
+      "days": 102,
+      "energy_kwh": 2473.163177948776,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -202.61044147150787,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 807.0475069285025,
+          "inj_pressure_MPa": 11.738663413354903,
+          "quality_surface": 0.7065182363672172,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.4457188256309667,
+          "min_prod_days": 103.0,
+          "spm_init": 5.8587725007520834
+        },
+        "pred_value_per_day": -89.34354730840398,
+        "pred_oil_m3": 57.139606152989984,
+        "sim": {
+          "feasible": true,
+          "value": -11987.91984814189,
+          "value_per_day": -106.08778626674238,
+          "oil_m3": 50.10676388221491,
+          "sor": 16.10655816499375,
+          "days": 113,
+          "energy_kwh": 2345.647975903919,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 875.5216959163315,
+          "inj_pressure_MPa": 11.897938312052284,
+          "quality_surface": 0.7121476490022269,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.581832100739458,
+          "min_prod_days": 118.0,
+          "spm_init": 3.236957266546389
+        },
+        "pred_value_per_day": -98.85911714204926,
+        "pred_oil_m3": 57.06109930126738,
+        "sim": {
+          "feasible": true,
+          "value": -16002.879097322479,
+          "value_per_day": -125.02249294783186,
+          "oil_m3": 49.41954692441215,
+          "sor": 17.716101227221962,
+          "days": 128,
+          "energy_kwh": 2157.2929552063374,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 849.8021564667941,
+          "inj_pressure_MPa": 11.52313388008823,
+          "quality_surface": 0.7012337678515577,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8914819191183233,
+          "min_prod_days": 105.0,
+          "spm_init": 5.028365251337728
+        },
+        "pred_value_per_day": -101.28322181225181,
+        "pred_oil_m3": 54.96395750993734,
+        "sim": {
+          "feasible": true,
+          "value": -13453.778063016118,
+          "value_per_day": -116.98937446100972,
+          "oil_m3": 49.35820005131896,
+          "sor": 17.217041050590044,
+          "days": 115,
+          "energy_kwh": 2226.0812590010814,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 843.4918603055024,
+          "inj_pressure_MPa": 11.424736987591121,
+          "quality_surface": 0.7021885113013948,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.7001326305112677,
+          "min_prod_days": 69.0,
+          "spm_init": 5.431329002614509
+        },
+        "pred_value_per_day": -102.44559814803024,
+        "pred_oil_m3": 50.774830449268244,
+        "sim": {
+          "feasible": true,
+          "value": -9068.404164606756,
+          "value_per_day": -114.78992613426274,
+          "oil_m3": 46.74910373866243,
+          "sor": 18.042952545588978,
+          "days": 79,
+          "energy_kwh": 2081.86306268608,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 814.1573065234991,
+          "inj_pressure_MPa": 11.669674267594193,
+          "quality_surface": 0.7861542198310542,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.9761113563206201,
+          "min_prod_days": 89.0,
+          "spm_init": 5.518680861133043
+        },
+        "pred_value_per_day": -102.84114985871945,
+        "pred_oil_m3": 52.53062105887748,
+        "sim": {
+          "feasible": true,
+          "value": -11362.745351215264,
+          "value_per_day": -114.77520556783095,
+          "oil_m3": 48.75130419307611,
+          "sor": 16.700215922410738,
+          "days": 99,
+          "energy_kwh": 2206.883242481155,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 807.0475069285025,
+        "inj_pressure_MPa": 11.738663413354903,
+        "quality_surface": 0.7065182363672172,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.4457188256309667,
+        "min_prod_days": 103.0,
+        "spm_init": 5.8587725007520834
+      },
+      "pred_value_per_day": -89.34354730840398,
+      "pred_oil_m3": 57.139606152989984,
+      "sim": {
+        "feasible": true,
+        "value": -11987.91984814189,
+        "value_per_day": -106.08778626674238,
+        "oil_m3": 50.10676388221491,
+        "sor": 16.10655816499375,
+        "days": 113,
+        "energy_kwh": 2345.647975903919,
+        "floating_days": 0,
+        "overload_days": 0
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S04",
+    "practice": {
+      "steam_t": 1809.7165460640492,
+      "inj_pressure_MPa": 8.166521305640691,
+      "quality_surface": 0.7207247941151247,
+      "soak_days": 8,
+      "cutoff_m3d": 0.5753286802896838,
+      "min_prod_days": 108,
+      "spm_init": 4.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -43948.63160260657,
+      "value_per_day": -340.68706668687264,
+      "oil_m3": 31.445805711476524,
+      "sor": 57.550331598072916,
+      "days": 129,
+      "energy_kwh": 2213.9051374480155,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -321.0858160663027,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 805.079566179471,
+          "inj_pressure_MPa": 11.12938279301715,
+          "quality_surface": 0.7038428171514717,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.36143245430109167,
+          "min_prod_days": 120.0,
+          "spm_init": 2.35502965194226
+        },
+        "pred_value_per_day": -125.68716060793021,
+        "pred_oil_m3": 47.15154776728028,
+        "sim": {
+          "feasible": true,
+          "value": -21482.581711094164,
+          "value_per_day": -165.25062854687818,
+          "oil_m3": 34.10334818470104,
+          "sor": 23.607053530909155,
+          "days": 130,
+          "energy_kwh": 1835.4747966550976,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 809.3736121203264,
+          "inj_pressure_MPa": 11.466659898657033,
+          "quality_surface": 0.7136722118222774,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.6690052196326074,
+          "min_prod_days": 104.0,
+          "spm_init": 5.582976360108296
+        },
+        "pred_value_per_day": -131.49557743020682,
+        "pred_oil_m3": 47.03209050748717,
+        "sim": {
+          "feasible": true,
+          "value": -18670.485600215645,
+          "value_per_day": -160.95246207082454,
+          "oil_m3": 36.178265934839175,
+          "sor": 22.37181885881685,
+          "days": 116,
+          "energy_kwh": 2113.5673294256676,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 822.9467435043662,
+          "inj_pressure_MPa": 11.410825925667194,
+          "quality_surface": 0.7299938136158538,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.6801635108437423,
+          "min_prod_days": 96.0,
+          "spm_init": 5.513023292187478
+        },
+        "pred_value_per_day": -132.5260813662668,
+        "pred_oil_m3": 47.73963480996263,
+        "sim": {
+          "feasible": true,
+          "value": -16381.495671031877,
+          "value_per_day": -154.54241199086675,
+          "oil_m3": 38.97596800299335,
+          "sor": 21.11420923378129,
+          "days": 106,
+          "energy_kwh": 2119.858508029725,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 844.2258218917863,
+          "inj_pressure_MPa": 11.867471440740951,
+          "quality_surface": 0.7173075193569529,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.6569280650017064,
+          "min_prod_days": 116.0,
+          "spm_init": 5.144575575696059
+        },
+        "pred_value_per_day": -132.79800980002912,
+        "pred_oil_m3": 48.25125004781175,
+        "sim": {
+          "feasible": true,
+          "value": -21011.939017349447,
+          "value_per_day": -162.88324819650734,
+          "oil_m3": 37.00817200786508,
+          "sor": 22.81187575847759,
+          "days": 129,
+          "energy_kwh": 2156.0855106722174,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 928.2437156775151,
+          "inj_pressure_MPa": 11.856339028717978,
+          "quality_surface": 0.7176710878969729,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.6862124396315282,
+          "min_prod_days": 120.0,
+          "spm_init": 5.395883032712216
+        },
+        "pred_value_per_day": -133.12747048900394,
+        "pred_oil_m3": 51.40736370733662,
+        "sim": {
+          "feasible": true,
+          "value": -20488.42950000352,
+          "value_per_day": -156.40022519086656,
+          "oil_m3": 42.94568635510194,
+          "sor": 21.61436443237191,
+          "days": 131,
+          "energy_kwh": 2364.673385619196,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 822.9467435043662,
+        "inj_pressure_MPa": 11.410825925667194,
+        "quality_surface": 0.7299938136158538,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.6801635108437423,
+        "min_prod_days": 96.0,
+        "spm_init": 5.513023292187478
+      },
+      "pred_value_per_day": -132.5260813662668,
+      "pred_oil_m3": 47.73963480996263,
+      "sim": {
+        "feasible": true,
+        "value": -16381.495671031877,
+        "value_per_day": -154.54241199086675,
+        "oil_m3": 38.97596800299335,
+        "sor": 21.11420923378129,
+        "days": 106,
+        "energy_kwh": 2119.858508029725,
+        "floating_days": 0,
+        "overload_days": 0
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S05",
+    "practice": {
+      "steam_t": 917.2934039352295,
+      "inj_pressure_MPa": 11.597012879380165,
+      "quality_surface": 0.7921947517701238,
+      "soak_days": 9,
+      "cutoff_m3d": 0.6329704213713372,
+      "min_prod_days": 111,
+      "spm_init": 2.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -11855.262160828002,
+      "value_per_day": -93.3485209514016,
+      "oil_m3": 70.84759172764103,
+      "sor": 12.947418275861445,
+      "days": 127,
+      "energy_kwh": 39234.751850946006,
+      "floating_days": 68,
+      "overload_days": 68
+    },
+    "practice_pred_value_per_day": -72.78775440304975,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 811.2421254582426,
+          "inj_pressure_MPa": 11.730483719883283,
+          "quality_surface": 0.7792145766209451,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.44161261334752433,
+          "min_prod_days": 101.0,
+          "spm_init": 2.844692900290456
+        },
+        "pred_value_per_day": -45.674850151027485,
+        "pred_oil_m3": 85.68720055068805,
+        "sim": {
+          "feasible": true,
+          "value": -4234.148462288867,
+          "value_per_day": -38.492258748080616,
+          "oil_m3": 79.38008789856377,
+          "sor": 10.219718155198976,
+          "days": 110,
+          "energy_kwh": 50593.84180007097,
+          "floating_days": 76,
+          "overload_days": 76
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 830.0121123123079,
+          "inj_pressure_MPa": 11.724887426512156,
+          "quality_surface": 0.7790539366683419,
+          "soak_days": 8.0,
+          "cutoff_m3d": 0.3556830680511732,
+          "min_prod_days": 89.0,
+          "spm_init": 2.670895936086563
+        },
+        "pred_value_per_day": -49.80709144998677,
+        "pred_oil_m3": 79.97614274077904,
+        "sim": {
+          "feasible": true,
+          "value": -7384.280260677591,
+          "value_per_day": -71.69204136580186,
+          "oil_m3": 69.49776021464304,
+          "sor": 11.943005209791293,
+          "days": 103,
+          "energy_kwh": 45018.18575245867,
+          "floating_days": 73,
+          "overload_days": 73
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 846.4391306490058,
+          "inj_pressure_MPa": 11.057125332674433,
+          "quality_surface": 0.7808842444995358,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.8600583759124301,
+          "min_prod_days": 104.0,
+          "spm_init": 2.0898191954544507
+        },
+        "pred_value_per_day": -50.499524907417666,
+        "pred_oil_m3": 80.21047199517399,
+        "sim": {
+          "feasible": true,
+          "value": -7108.219609145883,
+          "value_per_day": -62.90459831102551,
+          "oil_m3": 73.77055530705135,
+          "sor": 11.473942782806992,
+          "days": 113,
+          "energy_kwh": 41899.59176147564,
+          "floating_days": 69,
+          "overload_days": 69
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 925.35166031091,
+          "inj_pressure_MPa": 11.910210401437212,
+          "quality_surface": 0.7685557573327134,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.8941327067059858,
+          "min_prod_days": 120.0,
+          "spm_init": 2.4118919205380216
+        },
+        "pred_value_per_day": -50.502800650251835,
+        "pred_oil_m3": 88.36661302998799,
+        "sim": {
+          "feasible": true,
+          "value": -7856.029203750557,
+          "value_per_day": -59.51537275568604,
+          "oil_m3": 81.20168792250898,
+          "sor": 11.395719522406676,
+          "days": 132,
+          "energy_kwh": 38290.293606507315,
+          "floating_days": 74,
+          "overload_days": 74
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 857.8684828817773,
+          "inj_pressure_MPa": 11.973147858785778,
+          "quality_surface": 0.731818315394326,
+          "soak_days": 8.0,
+          "cutoff_m3d": 0.8919323816340904,
+          "min_prod_days": 116.0,
+          "spm_init": 2.1160220391248337
+        },
+        "pred_value_per_day": -51.1232980698428,
+        "pred_oil_m3": 82.60722890252643,
+        "sim": {
+          "feasible": true,
+          "value": -8872.047947166757,
+          "value_per_day": -68.24652267051351,
+          "oil_m3": 75.33729592243182,
+          "sor": 11.387035762008885,
+          "days": 130,
+          "energy_kwh": 43789.17760152045,
+          "floating_days": 72,
+          "overload_days": 72
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 811.2421254582426,
+        "inj_pressure_MPa": 11.730483719883283,
+        "quality_surface": 0.7792145766209451,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.44161261334752433,
+        "min_prod_days": 101.0,
+        "spm_init": 2.844692900290456
+      },
+      "pred_value_per_day": -45.674850151027485,
+      "pred_oil_m3": 85.68720055068805,
+      "sim": {
+        "feasible": true,
+        "value": -4234.148462288867,
+        "value_per_day": -38.492258748080616,
+        "oil_m3": 79.38008789856377,
+        "sor": 10.219718155198976,
+        "days": 110,
+        "energy_kwh": 50593.84180007097,
+        "floating_days": 76,
+        "overload_days": 76
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S06",
+    "practice": {
+      "steam_t": 960.865758025881,
+      "inj_pressure_MPa": 11.726273721925516,
+      "quality_surface": 0.7854040912860432,
+      "soak_days": 3,
+      "cutoff_m3d": 0.858140063145811,
+      "min_prod_days": 117,
+      "spm_init": 4.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -17697.98169035924,
+      "value_per_day": -139.35418653826173,
+      "oil_m3": 52.08952919646749,
+      "sor": 18.446428156448825,
+      "days": 127,
+      "energy_kwh": 6387.536366059223,
+      "floating_days": 1,
+      "overload_days": 1
+    },
+    "practice_pred_value_per_day": -118.72166100528237,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 809.5647649482165,
+          "inj_pressure_MPa": 11.647393099942736,
+          "quality_surface": 0.7791543771932413,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.3288018255995247,
+          "min_prod_days": 106.0,
+          "spm_init": 2.0194880766476238
+        },
+        "pred_value_per_day": -102.97278619538835,
+        "pred_oil_m3": 53.552469701304204,
+        "sim": {
+          "feasible": true,
+          "value": -15628.942199149253,
+          "value_per_day": -134.73226033749356,
+          "oil_m3": 44.42832099794558,
+          "sor": 18.221817677639713,
+          "days": 116,
+          "energy_kwh": 1970.7065900000532,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 808.8782563013331,
+          "inj_pressure_MPa": 11.529480292947671,
+          "quality_surface": 0.7006750532901639,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.7100679876243872,
+          "min_prod_days": 92.0,
+          "spm_init": 3.477892309086797
+        },
+        "pred_value_per_day": -104.03268176127074,
+        "pred_oil_m3": 49.22244949876077,
+        "sim": {
+          "feasible": true,
+          "value": -14409.798729656166,
+          "value_per_day": -138.55575701592468,
+          "oil_m3": 42.899880502230644,
+          "sor": 18.85502352994373,
+          "days": 104,
+          "energy_kwh": 8434.802521172807,
+          "floating_days": 2,
+          "overload_days": 2
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 872.4501374877412,
+          "inj_pressure_MPa": 11.864257305129522,
+          "quality_surface": 0.7483811994576668,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.624280952975569,
+          "min_prod_days": 83.0,
+          "spm_init": 5.484378389598396
+        },
+        "pred_value_per_day": -104.50445164327706,
+        "pred_oil_m3": 52.99712605385889,
+        "sim": {
+          "feasible": true,
+          "value": -16051.745575926318,
+          "value_per_day": -172.59941479490664,
+          "oil_m3": 48.30482896297187,
+          "sor": 18.06134409784411,
+          "days": 93,
+          "energy_kwh": 47290.775799194365,
+          "floating_days": 6,
+          "overload_days": 6
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 817.1269377242744,
+          "inj_pressure_MPa": 11.468884193180925,
+          "quality_surface": 0.7129804472746379,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.9954336976604304,
+          "min_prod_days": 85.0,
+          "spm_init": 5.808283333509308
+        },
+        "pred_value_per_day": -106.06952841431203,
+        "pred_oil_m3": 49.32162857292311,
+        "sim": {
+          "feasible": true,
+          "value": -17088.429993386046,
+          "value_per_day": -174.37173462638822,
+          "oil_m3": 42.124029175466205,
+          "sor": 19.398119166629574,
+          "days": 98,
+          "energy_kwh": 37910.03969292792,
+          "floating_days": 4,
+          "overload_days": 4
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 850.4439260310613,
+          "inj_pressure_MPa": 11.612430351463587,
+          "quality_surface": 0.7031920946952238,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8528420867254218,
+          "min_prod_days": 98.0,
+          "spm_init": 2.6871263381563013
+        },
+        "pred_value_per_day": -106.57298741228918,
+        "pred_oil_m3": 51.12590001968468,
+        "sim": {
+          "feasible": true,
+          "value": -14323.040156012321,
+          "value_per_day": -132.62074218529926,
+          "oil_m3": 45.626640489219774,
+          "sor": 18.639196682297836,
+          "days": 108,
+          "energy_kwh": 4688.393605131463,
+          "floating_days": 1,
+          "overload_days": 1
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 850.4439260310613,
+        "inj_pressure_MPa": 11.612430351463587,
+        "quality_surface": 0.7031920946952238,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.8528420867254218,
+        "min_prod_days": 98.0,
+        "spm_init": 2.6871263381563013
+      },
+      "pred_value_per_day": -106.57298741228918,
+      "pred_oil_m3": 51.12590001968468,
+      "sim": {
+        "feasible": true,
+        "value": -14323.040156012321,
+        "value_per_day": -132.62074218529926,
+        "oil_m3": 45.626640489219774,
+        "sor": 18.639196682297836,
+        "days": 108,
+        "energy_kwh": 4688.393605131463,
+        "floating_days": 1,
+        "overload_days": 1
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S07",
+    "practice": {
+      "steam_t": 1691.4780384725905,
+      "inj_pressure_MPa": 10.333885312900092,
+      "quality_surface": 0.7407299880217446,
+      "soak_days": 6,
+      "cutoff_m3d": 0.6306134040803145,
+      "min_prod_days": 106,
+      "spm_init": 4.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -42495.788286334384,
+      "value_per_day": -342.70797005108375,
+      "oil_m3": 49.99186950955744,
+      "sor": 33.83506268252708,
+      "days": 124,
+      "energy_kwh": 97904.56593907668,
+      "floating_days": 21,
+      "overload_days": 21
+    },
+    "practice_pred_value_per_day": -340.4945489740288,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 804.288317013093,
+          "inj_pressure_MPa": 11.720465026280351,
+          "quality_surface": 0.7027204288552851,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.7606614246881723,
+          "min_prod_days": 76.0,
+          "spm_init": 2.2062186718568353
+        },
+        "pred_value_per_day": -153.38060989165234,
+        "pred_oil_m3": 41.710357602360844,
+        "sim": {
+          "feasible": true,
+          "value": -15715.167240201055,
+          "value_per_day": -176.57491281124783,
+          "oil_m3": 40.03661935902664,
+          "sor": 20.088816935332936,
+          "days": 89,
+          "energy_kwh": 32200.08199935766,
+          "floating_days": 45,
+          "overload_days": 45
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 807.5178850018441,
+          "inj_pressure_MPa": 11.476340499263946,
+          "quality_surface": 0.7458111869114722,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.571602459363554,
+          "min_prod_days": 87.0,
+          "spm_init": 2.568132462490232
+        },
+        "pred_value_per_day": -157.22680372061572,
+        "pred_oil_m3": 43.68736005311409,
+        "sim": {
+          "feasible": true,
+          "value": -16486.8410019681,
+          "value_per_day": -169.9674330099804,
+          "oil_m3": 44.46090397686672,
+          "sor": 18.16242614909496,
+          "days": 97,
+          "energy_kwh": 42640.47548914501,
+          "floating_days": 47,
+          "overload_days": 47
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 853.0109319617976,
+          "inj_pressure_MPa": 11.900519949137466,
+          "quality_surface": 0.7468868909386522,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.6513829138325193,
+          "min_prod_days": 97.0,
+          "spm_init": 2.0769251588001607
+        },
+        "pred_value_per_day": -157.633491013745,
+        "pred_oil_m3": 44.589825214601696,
+        "sim": {
+          "feasible": true,
+          "value": -17449.245809963766,
+          "value_per_day": -161.56709083299782,
+          "oil_m3": 44.927649255904136,
+          "sor": 18.986324592749526,
+          "days": 108,
+          "energy_kwh": 28213.632750799534,
+          "floating_days": 45,
+          "overload_days": 45
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 881.5317180401177,
+          "inj_pressure_MPa": 11.567351212036407,
+          "quality_surface": 0.7583335065471544,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.3740113658694896,
+          "min_prod_days": 107.0,
+          "spm_init": 2.4562061086770797
+        },
+        "pred_value_per_day": -164.17459323817582,
+        "pred_oil_m3": 44.9947663620929,
+        "sim": {
+          "feasible": true,
+          "value": -20630.223800872307,
+          "value_per_day": -174.8324050921382,
+          "oil_m3": 45.18380391121499,
+          "sor": 19.509904915759304,
+          "days": 118,
+          "energy_kwh": 38724.95373876626,
+          "floating_days": 44,
+          "overload_days": 44
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 830.0511012837184,
+          "inj_pressure_MPa": 11.485142655927943,
+          "quality_surface": 0.7513131179741902,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.5273158295070333,
+          "min_prod_days": 95.0,
+          "spm_init": 3.192558906084848
+        },
+        "pred_value_per_day": -165.91615776421483,
+        "pred_oil_m3": 43.87073826399014,
+        "sim": {
+          "feasible": true,
+          "value": -20544.02580982317,
+          "value_per_day": -193.81156424361484,
+          "oil_m3": 44.89349684095848,
+          "sor": 18.489339429812986,
+          "days": 106,
+          "energy_kwh": 66281.00945316287,
+          "floating_days": 48,
+          "overload_days": 48
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 853.0109319617976,
+        "inj_pressure_MPa": 11.900519949137466,
+        "quality_surface": 0.7468868909386522,
+        "soak_days": 5.0,
+        "cutoff_m3d": 0.6513829138325193,
+        "min_prod_days": 97.0,
+        "spm_init": 2.0769251588001607
+      },
+      "pred_value_per_day": -157.633491013745,
+      "pred_oil_m3": 44.589825214601696,
+      "sim": {
+        "feasible": true,
+        "value": -17449.245809963766,
+        "value_per_day": -161.56709083299782,
+        "oil_m3": 44.927649255904136,
+        "sor": 18.986324592749526,
+        "days": 108,
+        "energy_kwh": 28213.632750799534,
+        "floating_days": 45,
+        "overload_days": 45
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S08",
+    "practice": {
+      "steam_t": 1135.7660885154758,
+      "inj_pressure_MPa": 11.076455716390628,
+      "quality_surface": 0.7951931034728148,
+      "soak_days": 6,
+      "cutoff_m3d": 0.7290198734586945,
+      "min_prod_days": 82,
+      "spm_init": 4.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -19436.034355514003,
+      "value_per_day": -202.45869120327086,
+      "oil_m3": 56.64534198694805,
+      "sor": 20.050476326494305,
+      "days": 96,
+      "energy_kwh": 50319.1184232671,
+      "floating_days": 15,
+      "overload_days": 15
+    },
+    "practice_pred_value_per_day": -225.17788531185565,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 831.3167235603357,
+          "inj_pressure_MPa": 11.719772573712914,
+          "quality_surface": 0.7772952239468381,
+          "soak_days": 9.0,
+          "cutoff_m3d": 0.5517009205162362,
+          "min_prod_days": 95.0,
+          "spm_init": 2.2474949107956332
+        },
+        "pred_value_per_day": -128.78214154480148,
+        "pred_oil_m3": 52.35387677437079,
+        "sim": {
+          "feasible": true,
+          "value": -15408.168261237246,
+          "value_per_day": -140.0742569203386,
+          "oil_m3": 49.802256387016264,
+          "sor": 16.692350585486018,
+          "days": 110,
+          "energy_kwh": 27920.311480456596,
+          "floating_days": 17,
+          "overload_days": 17
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 811.6307780736463,
+          "inj_pressure_MPa": 11.7982001022576,
+          "quality_surface": 0.7262561641008242,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.644361311625351,
+          "min_prod_days": 118.0,
+          "spm_init": 4.589133943866074
+        },
+        "pred_value_per_day": -128.9004998660932,
+        "pred_oil_m3": 59.10268861751885,
+        "sim": {
+          "feasible": true,
+          "value": -18334.130418892633,
+          "value_per_day": -144.36323164482388,
+          "oil_m3": 63.605518193935474,
+          "sor": 12.760383078696966,
+          "days": 127,
+          "energy_kwh": 101481.88740515744,
+          "floating_days": 29,
+          "overload_days": 29
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 909.3140937358065,
+          "inj_pressure_MPa": 11.65987865891426,
+          "quality_surface": 0.7259795172342182,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.9165739723373734,
+          "min_prod_days": 96.0,
+          "spm_init": 2.1695938755849347
+        },
+        "pred_value_per_day": -128.98603418842808,
+        "pred_oil_m3": 54.83114493225943,
+        "sim": {
+          "feasible": true,
+          "value": -13108.825255051113,
+          "value_per_day": -122.51238556122536,
+          "oil_m3": 56.43131070914805,
+          "sor": 16.11364475339748,
+          "days": 107,
+          "energy_kwh": 26979.905276792928,
+          "floating_days": 18,
+          "overload_days": 18
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 820.7741937772691,
+          "inj_pressure_MPa": 11.954244427406765,
+          "quality_surface": 0.7295838067740971,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.667852509342728,
+          "min_prod_days": 63.0,
+          "spm_init": 2.835239572591412
+        },
+        "pred_value_per_day": -129.48202433822513,
+        "pred_oil_m3": 52.80690497327141,
+        "sim": {
+          "feasible": true,
+          "value": -7469.388155323453,
+          "value_per_day": -102.32038568936237,
+          "oil_m3": 54.97267024496554,
+          "sor": 14.930586237120918,
+          "days": 73,
+          "energy_kwh": 33651.6189674841,
+          "floating_days": 23,
+          "overload_days": 23
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 826.169093556326,
+          "inj_pressure_MPa": 11.56788639701318,
+          "quality_surface": 0.7685643802237583,
+          "soak_days": 10.0,
+          "cutoff_m3d": 0.5145747730321426,
+          "min_prod_days": 106.0,
+          "spm_init": 2.7385491559203516
+        },
+        "pred_value_per_day": -130.66603560206357,
+        "pred_oil_m3": 51.69157542274056,
+        "sim": {
+          "feasible": true,
+          "value": -16859.51864909394,
+          "value_per_day": -138.19277581224543,
+          "oil_m3": 50.051469706030076,
+          "sor": 16.50639029000963,
+          "days": 122,
+          "energy_kwh": 27380.593144984065,
+          "floating_days": 17,
+          "overload_days": 17
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 820.7741937772691,
+        "inj_pressure_MPa": 11.954244427406765,
+        "quality_surface": 0.7295838067740971,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.667852509342728,
+        "min_prod_days": 63.0,
+        "spm_init": 2.835239572591412
+      },
+      "pred_value_per_day": -129.48202433822513,
+      "pred_oil_m3": 52.80690497327141,
+      "sim": {
+        "feasible": true,
+        "value": -7469.388155323453,
+        "value_per_day": -102.32038568936237,
+        "oil_m3": 54.97267024496554,
+        "sor": 14.930586237120918,
+        "days": 73,
+        "energy_kwh": 33651.6189674841,
+        "floating_days": 23,
+        "overload_days": 23
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S09",
+    "practice": {
+      "steam_t": 969.6197407404998,
+      "inj_pressure_MPa": 11.163739155083691,
+      "quality_surface": 0.7969279634982556,
+      "soak_days": 3,
+      "cutoff_m3d": 0.7874024315508045,
+      "min_prod_days": 97,
+      "spm_init": 4.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -18067.363412122486,
+      "value_per_day": -168.85386366469612,
+      "oil_m3": 65.5957161222365,
+      "sor": 14.781754023900431,
+      "days": 107,
+      "energy_kwh": 95899.56612501225,
+      "floating_days": 17,
+      "overload_days": 17
+    },
+    "practice_pred_value_per_day": -109.54729823938467,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 808.3916905357821,
+          "inj_pressure_MPa": 11.828111927324656,
+          "quality_surface": 0.7356494423070298,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.5783253796948459,
+          "min_prod_days": 74.0,
+          "spm_init": 4.233582287371542
+        },
+        "pred_value_per_day": -46.646443303379115,
+        "pred_oil_m3": 63.08513878229768,
+        "sim": {
+          "feasible": true,
+          "value": -12897.832933000056,
+          "value_per_day": -153.54563015476256,
+          "oil_m3": 61.63384440292426,
+          "sor": 13.116035489381666,
+          "days": 84,
+          "energy_kwh": 102772.871665092,
+          "floating_days": 22,
+          "overload_days": 22
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 860.7764815845509,
+          "inj_pressure_MPa": 11.963772275462413,
+          "quality_surface": 0.7023734670614752,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.7095081788450428,
+          "min_prod_days": 84.0,
+          "spm_init": 3.6721785957029476
+        },
+        "pred_value_per_day": -54.23484304750136,
+        "pred_oil_m3": 65.54246446080475,
+        "sim": {
+          "feasible": true,
+          "value": -11938.321015085956,
+          "value_per_day": -125.6665370009048,
+          "oil_m3": 62.49319080410459,
+          "sor": 13.773924334937536,
+          "days": 95,
+          "energy_kwh": 72635.0562187239,
+          "floating_days": 20,
+          "overload_days": 20
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 822.5741898719644,
+          "inj_pressure_MPa": 11.349639598663027,
+          "quality_surface": 0.7134953550477452,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.4895738399894188,
+          "min_prod_days": 64.0,
+          "spm_init": 3.947250964360142
+        },
+        "pred_value_per_day": -55.6850831800491,
+        "pred_oil_m3": 59.57053981718746,
+        "sim": {
+          "feasible": true,
+          "value": -11610.76175026231,
+          "value_per_day": -156.90218581435556,
+          "oil_m3": 56.99785952019006,
+          "sor": 14.431668080107258,
+          "days": 74,
+          "energy_kwh": 83393.4216587468,
+          "floating_days": 20,
+          "overload_days": 20
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 819.8277577665737,
+          "inj_pressure_MPa": 11.278157389713206,
+          "quality_surface": 0.7018317096518383,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.4030155677970621,
+          "min_prod_days": 97.0,
+          "spm_init": 2.016273536268117
+        },
+        "pred_value_per_day": -58.02129114326577,
+        "pred_oil_m3": 64.43207162354791,
+        "sim": {
+          "feasible": true,
+          "value": -11735.31337808106,
+          "value_per_day": -106.68466707346418,
+          "oil_m3": 53.8607498759069,
+          "sor": 15.22124663424526,
+          "days": 110,
+          "energy_kwh": 18497.757906919334,
+          "floating_days": 12,
+          "overload_days": 12
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 805.0892054523138,
+          "inj_pressure_MPa": 11.37931072870675,
+          "quality_surface": 0.73720635068002,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.3336402918068364,
+          "min_prod_days": 75.0,
+          "spm_init": 3.835268842546701
+        },
+        "pred_value_per_day": -58.98637034667855,
+        "pred_oil_m3": 61.84324220527195,
+        "sim": {
+          "feasible": true,
+          "value": -13890.781957109575,
+          "value_per_day": -157.84979496715425,
+          "oil_m3": 54.327797309123916,
+          "sor": 14.819102656994811,
+          "days": 88,
+          "energy_kwh": 74901.73972776857,
+          "floating_days": 18,
+          "overload_days": 18
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 819.8277577665737,
+        "inj_pressure_MPa": 11.278157389713206,
+        "quality_surface": 0.7018317096518383,
+        "soak_days": 7.0,
+        "cutoff_m3d": 0.4030155677970621,
+        "min_prod_days": 97.0,
+        "spm_init": 2.016273536268117
+      },
+      "pred_value_per_day": -58.02129114326577,
+      "pred_oil_m3": 64.43207162354791,
+      "sim": {
+        "feasible": true,
+        "value": -11735.31337808106,
+        "value_per_day": -106.68466707346418,
+        "oil_m3": 53.8607498759069,
+        "sor": 15.22124663424526,
+        "days": 110,
+        "energy_kwh": 18497.757906919334,
+        "floating_days": 12,
+        "overload_days": 12
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S10",
+    "practice": {
+      "steam_t": 968.7434051166616,
+      "inj_pressure_MPa": 9.33576364683167,
+      "quality_surface": 0.7314590543083138,
+      "soak_days": 8,
+      "cutoff_m3d": 0.7444102941400583,
+      "min_prod_days": 89,
+      "spm_init": 5.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -38327.38535379663,
+      "value_per_day": -368.53255147881373,
+      "oil_m3": 45.57957508615405,
+      "sor": 21.253892851909054,
+      "days": 104,
+      "energy_kwh": 221991.94372849006,
+      "floating_days": 66,
+      "overload_days": 66
+    },
+    "practice_pred_value_per_day": -322.6016045876664,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 827.7703170204331,
+          "inj_pressure_MPa": 11.851452493495266,
+          "quality_surface": 0.7285211739775774,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.7460187497613324,
+          "min_prod_days": 119.0,
+          "spm_init": 2.181949437006659
+        },
+        "pred_value_per_day": -123.46884301542832,
+        "pred_oil_m3": 59.88126835897308,
+        "sim": {
+          "feasible": true,
+          "value": -13678.047916875745,
+          "value_per_day": -106.03137920058717,
+          "oil_m3": 65.57340002975234,
+          "sor": 12.623568651996884,
+          "days": 129,
+          "energy_kwh": 56986.62350188809,
+          "floating_days": 81,
+          "overload_days": 81
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 823.9790694511084,
+          "inj_pressure_MPa": 11.761372845672154,
+          "quality_surface": 0.7115393999614981,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8988976604398996,
+          "min_prod_days": 103.0,
+          "spm_init": 2.4545362472801244
+        },
+        "pred_value_per_day": -130.53700999808802,
+        "pred_oil_m3": 59.20698737397029,
+        "sim": {
+          "feasible": true,
+          "value": -12690.322373550014,
+          "value_per_day": -112.30373781902668,
+          "oil_m3": 64.18018820487647,
+          "sor": 12.83852684913912,
+          "days": 113,
+          "energy_kwh": 67331.13473943954,
+          "floating_days": 82,
+          "overload_days": 82
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 867.9076978404652,
+          "inj_pressure_MPa": 11.949332710594915,
+          "quality_surface": 0.7028959713130772,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.9092242726031431,
+          "min_prod_days": 95.0,
+          "spm_init": 2.409138434804123
+        },
+        "pred_value_per_day": -133.66073706800893,
+        "pred_oil_m3": 59.519347862285095,
+        "sim": {
+          "feasible": true,
+          "value": -10585.921970625437,
+          "value_per_day": -101.78771125601382,
+          "oil_m3": 66.9695837517795,
+          "sor": 12.95972961482538,
+          "days": 104,
+          "energy_kwh": 63777.90758364928,
+          "floating_days": 82,
+          "overload_days": 82
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 833.0506003029523,
+          "inj_pressure_MPa": 11.603707694768373,
+          "quality_surface": 0.7218768563986152,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.9257105350483478,
+          "min_prod_days": 109.0,
+          "spm_init": 2.440199495330411
+        },
+        "pred_value_per_day": -141.31973589514664,
+        "pred_oil_m3": 56.28358485335733,
+        "sim": {
+          "feasible": true,
+          "value": -16459.68514637969,
+          "value_per_day": -134.91545201950564,
+          "oil_m3": 58.87287366982087,
+          "sor": 14.149990451884237,
+          "days": 122,
+          "energy_kwh": 65217.05999273063,
+          "floating_days": 79,
+          "overload_days": 79
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 826.0495005099082,
+          "inj_pressure_MPa": 11.504029457885983,
+          "quality_surface": 0.7065939131532875,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.9324204453695197,
+          "min_prod_days": 87.0,
+          "spm_init": 2.5545122865261445
+        },
+        "pred_value_per_day": -145.3702998078075,
+        "pred_oil_m3": 55.43075742619236,
+        "sim": {
+          "feasible": true,
+          "value": -12693.07270517485,
+          "value_per_day": -129.52115005280461,
+          "oil_m3": 59.424998822719346,
+          "sor": 13.900707057213996,
+          "days": 98,
+          "energy_kwh": 68877.36065158714,
+          "floating_days": 76,
+          "overload_days": 76
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 867.9076978404652,
+        "inj_pressure_MPa": 11.949332710594915,
+        "quality_surface": 0.7028959713130772,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.9092242726031431,
+        "min_prod_days": 95.0,
+        "spm_init": 2.409138434804123
+      },
+      "pred_value_per_day": -133.66073706800893,
+      "pred_oil_m3": 59.519347862285095,
+      "sim": {
+        "feasible": true,
+        "value": -10585.921970625437,
+        "value_per_day": -101.78771125601382,
+        "oil_m3": 66.9695837517795,
+        "sor": 12.95972961482538,
+        "days": 104,
+        "energy_kwh": 63777.90758364928,
+        "floating_days": 82,
+        "overload_days": 82
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S11",
+    "practice": {
+      "steam_t": 1454.378323775643,
+      "inj_pressure_MPa": 8.21346429663682,
+      "quality_surface": 0.7616734657722961,
+      "soak_days": 5,
+      "cutoff_m3d": 0.63124700168268,
+      "min_prod_days": 98,
+      "spm_init": 4.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -35234.86696315487,
+      "value_per_day": -311.81298197482187,
+      "oil_m3": 30.50308944506936,
+      "sor": 47.67970557194607,
+      "days": 113,
+      "energy_kwh": 1961.6283854674655,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -296.3727093281403,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 835.9665041258014,
+          "inj_pressure_MPa": 11.885656192448675,
+          "quality_surface": 0.7260142367582723,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.5765877360524453,
+          "min_prod_days": 118.0,
+          "spm_init": 3.3302449912116407
+        },
+        "pred_value_per_day": -135.1219358571184,
+        "pred_oil_m3": 47.834795296862424,
+        "sim": {
+          "feasible": true,
+          "value": -18363.076161107518,
+          "value_per_day": -144.59115087486234,
+          "oil_m3": 42.12328428418778,
+          "sor": 19.84571047418556,
+          "days": 127,
+          "energy_kwh": 2108.1868514983144,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 819.8299011445988,
+          "inj_pressure_MPa": 11.918783955304361,
+          "quality_surface": 0.7264870134804495,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.8627588094102243,
+          "min_prod_days": 116.0,
+          "spm_init": 3.7227470794209934
+        },
+        "pred_value_per_day": -136.78978206199884,
+        "pred_oil_m3": 46.92867297284886,
+        "sim": {
+          "feasible": true,
+          "value": -18858.40696763822,
+          "value_per_day": -148.49139344597023,
+          "oil_m3": 40.2275858060461,
+          "sor": 20.379793734014743,
+          "days": 127,
+          "energy_kwh": 2091.810749916019,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 831.6098093847598,
+          "inj_pressure_MPa": 11.823555087717665,
+          "quality_surface": 0.7310830709421283,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.6311755102576044,
+          "min_prod_days": 99.0,
+          "spm_init": 2.7557039173718545
+        },
+        "pred_value_per_day": -145.42238469723193,
+        "pred_oil_m3": 45.17991487850428,
+        "sim": {
+          "feasible": true,
+          "value": -17664.276860054968,
+          "value_per_day": -160.5843350914088,
+          "oil_m3": 37.77723000834508,
+          "sor": 22.013520027833042,
+          "days": 110,
+          "energy_kwh": 1900.6869425840757,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 853.4976166289533,
+          "inj_pressure_MPa": 11.756658438223742,
+          "quality_surface": 0.7428617700283408,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.6187340347751528,
+          "min_prod_days": 95.0,
+          "spm_init": 2.3531343700865888
+        },
+        "pred_value_per_day": -146.4567793237212,
+        "pred_oil_m3": 45.6892809535815,
+        "sim": {
+          "feasible": true,
+          "value": -16741.969750688055,
+          "value_per_day": -160.98047837200053,
+          "oil_m3": 39.14482376815023,
+          "sor": 21.80358817513422,
+          "days": 104,
+          "energy_kwh": 1890.6435748593726,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 816.7843527176736,
+          "inj_pressure_MPa": 11.952242369335771,
+          "quality_surface": 0.7434200182658091,
+          "soak_days": 8.0,
+          "cutoff_m3d": 0.5612216972769514,
+          "min_prod_days": 110.0,
+          "spm_init": 2.880694856530696
+        },
+        "pred_value_per_day": -148.658387438566,
+        "pred_oil_m3": 45.01432207911373,
+        "sim": {
+          "feasible": true,
+          "value": -20503.135102186578,
+          "value_per_day": -165.3478637273111,
+          "oil_m3": 35.6295399170425,
+          "sor": 22.92435868157212,
+          "days": 124,
+          "energy_kwh": 1893.3274353322283,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 835.9665041258014,
+        "inj_pressure_MPa": 11.885656192448675,
+        "quality_surface": 0.7260142367582723,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.5765877360524453,
+        "min_prod_days": 118.0,
+        "spm_init": 3.3302449912116407
+      },
+      "pred_value_per_day": -135.1219358571184,
+      "pred_oil_m3": 47.834795296862424,
+      "sim": {
+        "feasible": true,
+        "value": -18363.076161107518,
+        "value_per_day": -144.59115087486234,
+        "oil_m3": 42.12328428418778,
+        "sor": 19.84571047418556,
+        "days": 127,
+        "energy_kwh": 2108.1868514983144,
+        "floating_days": 0,
+        "overload_days": 0
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S12",
+    "practice": {
+      "steam_t": 1788.35608132801,
+      "inj_pressure_MPa": 8.46964845428752,
+      "quality_surface": 0.7487719638023838,
+      "soak_days": 7,
+      "cutoff_m3d": 0.4360373191856694,
+      "min_prod_days": 73,
+      "spm_init": 5.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -31099.397736094623,
+      "value_per_day": -338.036931914072,
+      "oil_m3": 48.62033716325994,
+      "sor": 36.782058407430895,
+      "days": 92,
+      "energy_kwh": 2627.4405547289007,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -314.00778854673666,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 806.7762330999474,
+          "inj_pressure_MPa": 11.720900420905677,
+          "quality_surface": 0.7651045067274699,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.7787173129684412,
+          "min_prod_days": 74.0,
+          "spm_init": 5.870164099657085
+        },
+        "pred_value_per_day": -44.803670030858584,
+        "pred_oil_m3": 60.93642316764121,
+        "sim": {
+          "feasible": true,
+          "value": -4670.196598097798,
+          "value_per_day": -54.94348938938587,
+          "oil_m3": 58.4716717958624,
+          "sor": 13.797728170259651,
+          "days": 85,
+          "energy_kwh": 2659.5371166879913,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 840.1770071635011,
+          "inj_pressure_MPa": 11.838932319001952,
+          "quality_surface": 0.7212349269365076,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.5073995573381874,
+          "min_prod_days": 74.0,
+          "spm_init": 4.5999266009640705
+        },
+        "pred_value_per_day": -48.20144092764976,
+        "pred_oil_m3": 61.67861305495235,
+        "sim": {
+          "feasible": true,
+          "value": -4050.4694584729223,
+          "value_per_day": -48.219874505630024,
+          "oil_m3": 60.19569621766961,
+          "sor": 13.95742652639806,
+          "days": 84,
+          "energy_kwh": 2598.949013136801,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 843.678058128045,
+          "inj_pressure_MPa": 11.811284010391036,
+          "quality_surface": 0.7750485627259673,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.5708029792375375,
+          "min_prod_days": 106.0,
+          "spm_init": 5.87159544856714
+        },
+        "pred_value_per_day": -51.071096332722085,
+        "pred_oil_m3": 70.20675132721728,
+        "sim": {
+          "feasible": true,
+          "value": -6290.504131645153,
+          "value_per_day": -54.70003592734916,
+          "oil_m3": 67.1049465920194,
+          "sor": 12.572516647057151,
+          "days": 115,
+          "energy_kwh": 3018.2515914699557,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 861.0056705023784,
+          "inj_pressure_MPa": 11.846615006703727,
+          "quality_surface": 0.7023666242726117,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.7896864734405208,
+          "min_prod_days": 91.0,
+          "spm_init": 5.910010991302206
+        },
+        "pred_value_per_day": -52.67611039031932,
+        "pred_oil_m3": 64.80888287159246,
+        "sim": {
+          "feasible": true,
+          "value": -5043.062909884917,
+          "value_per_day": -49.93131593945462,
+          "oil_m3": 64.37880766205508,
+          "sor": 13.374054316477435,
+          "days": 101,
+          "energy_kwh": 2899.8386867697905,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 822.9459107792431,
+          "inj_pressure_MPa": 11.703396061557303,
+          "quality_surface": 0.7394978194046496,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.49440429554546655,
+          "min_prod_days": 107.0,
+          "spm_init": 4.1491256384471695
+        },
+        "pred_value_per_day": -57.76016137511881,
+        "pred_oil_m3": 66.90377489812735,
+        "sim": {
+          "feasible": true,
+          "value": -7117.765409942527,
+          "value_per_day": -61.36004663743558,
+          "oil_m3": 63.74746019651611,
+          "sor": 12.90946977718523,
+          "days": 116,
+          "energy_kwh": 2771.6529000588516,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 840.1770071635011,
+        "inj_pressure_MPa": 11.838932319001952,
+        "quality_surface": 0.7212349269365076,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.5073995573381874,
+        "min_prod_days": 74.0,
+        "spm_init": 4.5999266009640705
+      },
+      "pred_value_per_day": -48.20144092764976,
+      "pred_oil_m3": 61.67861305495235,
+      "sim": {
+        "feasible": true,
+        "value": -4050.4694584729223,
+        "value_per_day": -48.219874505630024,
+        "oil_m3": 60.19569621766961,
+        "sor": 13.95742652639806,
+        "days": 84,
+        "energy_kwh": 2598.949013136801,
+        "floating_days": 0,
+        "overload_days": 0
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S13",
+    "practice": {
+      "steam_t": 1375.0166934481756,
+      "inj_pressure_MPa": 10.532390851644625,
+      "quality_surface": 0.7570346067132417,
+      "soak_days": 4,
+      "cutoff_m3d": 0.6887810673364897,
+      "min_prod_days": 117,
+      "spm_init": 2.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -27959.859786061817,
+      "value_per_day": -213.43404416841082,
+      "oil_m3": 63.55711267402921,
+      "sor": 21.634347999732793,
+      "days": 131,
+      "energy_kwh": 66731.65042506802,
+      "floating_days": 69,
+      "overload_days": 69
+    },
+    "practice_pred_value_per_day": -220.53377627673802,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 861.7710979037419,
+          "inj_pressure_MPa": 11.704636969856665,
+          "quality_surface": 0.7152421017318432,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.6914640286855186,
+          "min_prod_days": 118.0,
+          "spm_init": 2.0853843667477614
+        },
+        "pred_value_per_day": -115.1421485225137,
+        "pred_oil_m3": 66.34091382956528,
+        "sim": {
+          "feasible": true,
+          "value": -12677.850798018033,
+          "value_per_day": -99.04570935951588,
+          "oil_m3": 69.34948863888917,
+          "sor": 12.4264953472272,
+          "days": 128,
+          "energy_kwh": 59163.80636439782,
+          "floating_days": 82,
+          "overload_days": 82
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 816.6333476133395,
+          "inj_pressure_MPa": 11.168535179254897,
+          "quality_surface": 0.737012746069079,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.3576432221813208,
+          "min_prod_days": 111.0,
+          "spm_init": 2.332390355536812
+        },
+        "pred_value_per_day": -129.64815084674373,
+        "pred_oil_m3": 65.0044392934077,
+        "sim": {
+          "feasible": true,
+          "value": -13518.877347366059,
+          "value_per_day": -111.72625906914098,
+          "oil_m3": 65.02575538641909,
+          "sor": 12.558613779424036,
+          "days": 121,
+          "energy_kwh": 66265.32198253312,
+          "floating_days": 82,
+          "overload_days": 82
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 945.6647598998352,
+          "inj_pressure_MPa": 11.95623819586707,
+          "quality_surface": 0.7149195226640984,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.4130078324044327,
+          "min_prod_days": 107.0,
+          "spm_init": 2.4375067764915137
+        },
+        "pred_value_per_day": -130.76580156693348,
+        "pred_oil_m3": 68.66679917454327,
+        "sim": {
+          "feasible": true,
+          "value": -12396.406465110093,
+          "value_per_day": -105.95219200948797,
+          "oil_m3": 72.97146891909556,
+          "sor": 12.959376779824815,
+          "days": 117,
+          "energy_kwh": 71319.20352844334,
+          "floating_days": 84,
+          "overload_days": 84
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 895.4154278104444,
+          "inj_pressure_MPa": 11.616263335561765,
+          "quality_surface": 0.7541977004403794,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.48037189160256455,
+          "min_prod_days": 103.0,
+          "spm_init": 2.119963215824701
+        },
+        "pred_value_per_day": -132.95322478751996,
+        "pred_oil_m3": 64.84075941484397,
+        "sim": {
+          "feasible": true,
+          "value": -12518.498762453957,
+          "value_per_day": -110.78317488897308,
+          "oil_m3": 67.29055316537317,
+          "sor": 13.306703328918589,
+          "days": 113,
+          "energy_kwh": 59909.12215356756,
+          "floating_days": 81,
+          "overload_days": 81
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 916.4284744402644,
+          "inj_pressure_MPa": 11.529716035798826,
+          "quality_surface": 0.7728090782237933,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.31512205320002457,
+          "min_prod_days": 117.0,
+          "spm_init": 2.307234008971795
+        },
+        "pred_value_per_day": -133.81968718822898,
+        "pred_oil_m3": 67.05572661667276,
+        "sim": {
+          "feasible": true,
+          "value": -15784.36170427666,
+          "value_per_day": -123.3153258146614,
+          "oil_m3": 67.91112049403908,
+          "sor": 13.494527373034645,
+          "days": 128,
+          "energy_kwh": 66279.66831483315,
+          "floating_days": 81,
+          "overload_days": 81
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 861.7710979037419,
+        "inj_pressure_MPa": 11.704636969856665,
+        "quality_surface": 0.7152421017318432,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.6914640286855186,
+        "min_prod_days": 118.0,
+        "spm_init": 2.0853843667477614
+      },
+      "pred_value_per_day": -115.1421485225137,
+      "pred_oil_m3": 66.34091382956528,
+      "sim": {
+        "feasible": true,
+        "value": -12677.850798018033,
+        "value_per_day": -99.04570935951588,
+        "oil_m3": 69.34948863888917,
+        "sor": 12.4264953472272,
+        "days": 128,
+        "energy_kwh": 59163.80636439782,
+        "floating_days": 82,
+        "overload_days": 82
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S14",
+    "practice": {
+      "steam_t": 1837.8368921362776,
+      "inj_pressure_MPa": 8.708876617888505,
+      "quality_surface": 0.7219037341597401,
+      "soak_days": 10,
+      "cutoff_m3d": 0.9324002642567216,
+      "min_prod_days": 96,
+      "spm_init": 3.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -30124.358735349357,
+      "value_per_day": -253.14587172562486,
+      "oil_m3": 62.789636785488476,
+      "sor": 29.26974873919045,
+      "days": 119,
+      "energy_kwh": 10668.537169467605,
+      "floating_days": 4,
+      "overload_days": 4
+    },
+    "practice_pred_value_per_day": -306.86979421391464,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 815.90108174532,
+          "inj_pressure_MPa": 11.715455047589128,
+          "quality_surface": 0.7358757030144653,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.7679933222040713,
+          "min_prod_days": 68.0,
+          "spm_init": 3.893413878287619
+        },
+        "pred_value_per_day": -77.10096632547591,
+        "pred_oil_m3": 55.69035274241101,
+        "sim": {
+          "feasible": true,
+          "value": -1875.4705133618554,
+          "value_per_day": -24.35675991379033,
+          "oil_m3": 78.26017562641768,
+          "sor": 10.425495154011674,
+          "days": 77,
+          "energy_kwh": 74587.62448864986,
+          "floating_days": 40,
+          "overload_days": 40
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 826.1398047927312,
+          "inj_pressure_MPa": 11.922869183832212,
+          "quality_surface": 0.7475930035394343,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.8595496378908746,
+          "min_prod_days": 64.0,
+          "spm_init": 3.264528435563075
+        },
+        "pred_value_per_day": -79.17608535049088,
+        "pred_oil_m3": 55.26865829770309,
+        "sim": {
+          "feasible": true,
+          "value": 437.2430852999896,
+          "value_per_day": 5.9896313054793096,
+          "oil_m3": 77.2390827377692,
+          "sor": 10.695877987022708,
+          "days": 73,
+          "energy_kwh": 49793.678632009854,
+          "floating_days": 39,
+          "overload_days": 39
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 834.3536842689714,
+          "inj_pressure_MPa": 11.880595794367721,
+          "quality_surface": 0.7320377455274809,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.5965745223462761,
+          "min_prod_days": 77.0,
+          "spm_init": 3.19364773928013
+        },
+        "pred_value_per_day": -90.06957183078723,
+        "pred_oil_m3": 55.63453883998002,
+        "sim": {
+          "feasible": true,
+          "value": -1813.152072279452,
+          "value_per_day": -20.60400082135741,
+          "oil_m3": 76.30684573831829,
+          "sor": 10.934191764789354,
+          "days": 88,
+          "energy_kwh": 45384.57870269487,
+          "floating_days": 38,
+          "overload_days": 38
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 869.2031916175072,
+          "inj_pressure_MPa": 11.821595586236903,
+          "quality_surface": 0.7087973276337132,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8841826358363256,
+          "min_prod_days": 115.0,
+          "spm_init": 5.5656284589683995
+        },
+        "pred_value_per_day": -90.58820458857461,
+        "pred_oil_m3": 62.18210617422029,
+        "sim": {
+          "feasible": true,
+          "value": -13921.971762639783,
+          "value_per_day": -111.37577410111827,
+          "oil_m3": 89.95511153270311,
+          "sor": 9.662632582046314,
+          "days": 125,
+          "energy_kwh": 165947.1895148808,
+          "floating_days": 43,
+          "overload_days": 43
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 887.5400318721569,
+          "inj_pressure_MPa": 11.887324470884595,
+          "quality_surface": 0.729692838432008,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.6215118161444089,
+          "min_prod_days": 117.0,
+          "spm_init": 3.1948287277901253
+        },
+        "pred_value_per_day": -92.6723621921224,
+        "pred_oil_m3": 61.63911701091496,
+        "sim": {
+          "feasible": true,
+          "value": -6442.845920294181,
+          "value_per_day": -50.73107023853686,
+          "oil_m3": 85.73069879397855,
+          "sor": 10.352651318112141,
+          "days": 127,
+          "energy_kwh": 63647.186231267675,
+          "floating_days": 37,
+          "overload_days": 37
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 826.1398047927312,
+        "inj_pressure_MPa": 11.922869183832212,
+        "quality_surface": 0.7475930035394343,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.8595496378908746,
+        "min_prod_days": 64.0,
+        "spm_init": 3.264528435563075
+      },
+      "pred_value_per_day": -79.17608535049088,
+      "pred_oil_m3": 55.26865829770309,
+      "sim": {
+        "feasible": true,
+        "value": 437.2430852999896,
+        "value_per_day": 5.9896313054793096,
+        "oil_m3": 77.2390827377692,
+        "sor": 10.695877987022708,
+        "days": 73,
+        "energy_kwh": 49793.678632009854,
+        "floating_days": 39,
+        "overload_days": 39
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S15",
+    "practice": {
+      "steam_t": 1541.0846618602538,
+      "inj_pressure_MPa": 11.013480475251235,
+      "quality_surface": 0.7192782857833123,
+      "soak_days": 8,
+      "cutoff_m3d": 0.8255007899511578,
+      "min_prod_days": 118,
+      "spm_init": 6.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -22668.411430212636,
+      "value_per_day": -165.46285715483677,
+      "oil_m3": 69.65738206833338,
+      "sor": 22.123780941816925,
+      "days": 137,
+      "energy_kwh": 3160.8944487895005,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -159.16340999251284,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 812.2199316753579,
+          "inj_pressure_MPa": 11.77613065231071,
+          "quality_surface": 0.7224503437700904,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.4764008752526623,
+          "min_prod_days": 83.0,
+          "spm_init": 3.8034901986389973
+        },
+        "pred_value_per_day": -14.57404245369091,
+        "pred_oil_m3": 66.4297985051958,
+        "sim": {
+          "feasible": true,
+          "value": -9189.844743672711,
+          "value_per_day": -99.88961677905121,
+          "oil_m3": 66.1345111969232,
+          "sor": 12.281332650314425,
+          "days": 92,
+          "energy_kwh": 73892.05167327958,
+          "floating_days": 20,
+          "overload_days": 20
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 817.9971555463826,
+          "inj_pressure_MPa": 11.60772424408139,
+          "quality_surface": 0.7042842100619773,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.9656860061003479,
+          "min_prod_days": 85.0,
+          "spm_init": 4.895627492721863
+        },
+        "pred_value_per_day": -22.80913215425742,
+        "pred_oil_m3": 65.49400387870745,
+        "sim": {
+          "feasible": true,
+          "value": -14712.290437186472,
+          "value_per_day": -156.51372805517522,
+          "oil_m3": 67.23445208907621,
+          "sor": 12.166339281870716,
+          "days": 94,
+          "energy_kwh": 131382.92872387834,
+          "floating_days": 20,
+          "overload_days": 20
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 830.9075215307706,
+          "inj_pressure_MPa": 11.739867510147905,
+          "quality_surface": 0.7172320671991927,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.3191306606998367,
+          "min_prod_days": 67.0,
+          "spm_init": 2.9818436946481612
+        },
+        "pred_value_per_day": -28.549220153516387,
+        "pred_oil_m3": 63.149746000408044,
+        "sim": {
+          "feasible": true,
+          "value": -7264.058258272922,
+          "value_per_day": -93.12895202914002,
+          "oil_m3": 58.53605448559591,
+          "sor": 14.194798895016639,
+          "days": 78,
+          "energy_kwh": 38720.3296411446,
+          "floating_days": 16,
+          "overload_days": 16
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 820.7179290899707,
+          "inj_pressure_MPa": 11.788928270879,
+          "quality_surface": 0.7059119189737579,
+          "soak_days": 8.0,
+          "cutoff_m3d": 0.9803306729225112,
+          "min_prod_days": 83.0,
+          "spm_init": 5.795922313049116
+        },
+        "pred_value_per_day": -29.245032312752823,
+        "pred_oil_m3": 63.66534218723785,
+        "sim": {
+          "feasible": true,
+          "value": -23265.073801242066,
+          "value_per_day": -239.84612166228933,
+          "oil_m3": 59.283492338495925,
+          "sor": 13.843953800897031,
+          "days": 97,
+          "energy_kwh": 176736.49564490526,
+          "floating_days": 18,
+          "overload_days": 18
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 809.4316507409113,
+          "inj_pressure_MPa": 11.23691010620015,
+          "quality_surface": 0.7358022580404363,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8052791268669853,
+          "min_prod_days": 69.0,
+          "spm_init": 4.747026549622432
+        },
+        "pred_value_per_day": -29.43203459908885,
+        "pred_oil_m3": 59.975476298922516,
+        "sim": {
+          "feasible": true,
+          "value": -14199.88448880559,
+          "value_per_day": -179.74537327602013,
+          "oil_m3": 59.97365875836743,
+          "sor": 13.496452734392843,
+          "days": 79,
+          "energy_kwh": 115504.12458770191,
+          "floating_days": 18,
+          "overload_days": 18
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 830.9075215307706,
+        "inj_pressure_MPa": 11.739867510147905,
+        "quality_surface": 0.7172320671991927,
+        "soak_days": 5.0,
+        "cutoff_m3d": 0.3191306606998367,
+        "min_prod_days": 67.0,
+        "spm_init": 2.9818436946481612
+      },
+      "pred_value_per_day": -28.549220153516387,
+      "pred_oil_m3": 63.149746000408044,
+      "sim": {
+        "feasible": true,
+        "value": -7264.058258272922,
+        "value_per_day": -93.12895202914002,
+        "oil_m3": 58.53605448559591,
+        "sor": 14.194798895016639,
+        "days": 78,
+        "energy_kwh": 38720.3296411446,
+        "floating_days": 16,
+        "overload_days": 16
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S16",
+    "practice": {
+      "steam_t": 1198.5753876370688,
+      "inj_pressure_MPa": 10.825225737600004,
+      "quality_surface": 0.7876870375685162,
+      "soak_days": 9,
+      "cutoff_m3d": 0.9891560993042996,
+      "min_prod_days": 89,
+      "spm_init": 2.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -22262.78871514559,
+      "value_per_day": -210.02630863344896,
+      "oil_m3": 45.62559803279249,
+      "sor": 26.26980114924996,
+      "days": 106,
+      "energy_kwh": 2115.385764822924,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -173.70930324088278,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 840.4056810334994,
+          "inj_pressure_MPa": 11.75613075117185,
+          "quality_surface": 0.7308706373240275,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.3494207127175119,
+          "min_prod_days": 72.0,
+          "spm_init": 4.616423284439261
+        },
+        "pred_value_per_day": -37.0050649608939,
+        "pred_oil_m3": 65.48903161050772,
+        "sim": {
+          "feasible": true,
+          "value": -5736.6379754246045,
+          "value_per_day": -70.82269105462474,
+          "oil_m3": 55.50509452006657,
+          "sor": 15.141054858120642,
+          "days": 81,
+          "energy_kwh": 2306.1086526848976,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 837.0227923495322,
+          "inj_pressure_MPa": 11.568688298573443,
+          "quality_surface": 0.7088097946124068,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.866860670023906,
+          "min_prod_days": 70.0,
+          "spm_init": 5.699298660127252
+        },
+        "pred_value_per_day": -41.2910816255689,
+        "pred_oil_m3": 61.261939075972734,
+        "sim": {
+          "feasible": true,
+          "value": -4924.53989671652,
+          "value_per_day": -62.33594805970279,
+          "oil_m3": 56.054124950012,
+          "sor": 14.932403156698514,
+          "days": 79,
+          "energy_kwh": 2361.8308018337375,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 816.3248377442019,
+          "inj_pressure_MPa": 11.837460712364468,
+          "quality_surface": 0.7176420066601088,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.3544762604252658,
+          "min_prod_days": 82.0,
+          "spm_init": 2.096408637938876
+        },
+        "pred_value_per_day": -52.28605790728697,
+        "pred_oil_m3": 62.751849245935,
+        "sim": {
+          "feasible": true,
+          "value": -10069.31605946891,
+          "value_per_day": -108.2722156932141,
+          "oil_m3": 48.231257315151616,
+          "sor": 16.925224080520856,
+          "days": 93,
+          "energy_kwh": 1964.6791994675798,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 829.4321509517335,
+          "inj_pressure_MPa": 11.63420844706028,
+          "quality_surface": 0.7366815063750326,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.5330502685945754,
+          "min_prod_days": 74.0,
+          "spm_init": 4.643507432244524
+        },
+        "pred_value_per_day": -55.106922353827926,
+        "pred_oil_m3": 61.43918391135146,
+        "sim": {
+          "feasible": true,
+          "value": -8438.519103660263,
+          "value_per_day": -98.12231515884027,
+          "oil_m3": 50.64815099889876,
+          "sor": 16.376355989180492,
+          "days": 86,
+          "energy_kwh": 2160.5001694041707,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 912.7723926561385,
+          "inj_pressure_MPa": 11.720655074514513,
+          "quality_surface": 0.7677905686471828,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.8004045031318108,
+          "min_prod_days": 82.0,
+          "spm_init": 5.561670184187147
+        },
+        "pred_value_per_day": -61.54217957022906,
+        "pred_oil_m3": 65.160776927344,
+        "sim": {
+          "feasible": true,
+          "value": -7555.206286408389,
+          "value_per_day": -82.12180746096075,
+          "oil_m3": 59.528783566486474,
+          "sor": 15.333294886442317,
+          "days": 92,
+          "energy_kwh": 2525.597105454844,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 837.0227923495322,
+        "inj_pressure_MPa": 11.568688298573443,
+        "quality_surface": 0.7088097946124068,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.866860670023906,
+        "min_prod_days": 70.0,
+        "spm_init": 5.699298660127252
+      },
+      "pred_value_per_day": -41.2910816255689,
+      "pred_oil_m3": 61.261939075972734,
+      "sim": {
+        "feasible": true,
+        "value": -4924.53989671652,
+        "value_per_day": -62.33594805970279,
+        "oil_m3": 56.054124950012,
+        "sor": 14.932403156698514,
+        "days": 79,
+        "energy_kwh": 2361.8308018337375,
+        "floating_days": 0,
+        "overload_days": 0
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S17",
+    "practice": {
+      "steam_t": 1129.2479696133023,
+      "inj_pressure_MPa": 8.708681686638709,
+      "quality_surface": 0.7610454540148002,
+      "soak_days": 4,
+      "cutoff_m3d": 0.4271663820551697,
+      "min_prod_days": 107,
+      "spm_init": 4.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -28193.329656770078,
+      "value_per_day": -236.91873661151325,
+      "oil_m3": 32.45593989239181,
+      "sor": 34.79326044346095,
+      "days": 119,
+      "energy_kwh": 1790.0590955655637,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -198.34515795043507,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 842.1200986097086,
+          "inj_pressure_MPa": 11.870183921264639,
+          "quality_surface": 0.7477060506138238,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.9238231203598803,
+          "min_prod_days": 117.0,
+          "spm_init": 2.621029304282067
+        },
+        "pred_value_per_day": -106.73021427992289,
+        "pred_oil_m3": 57.20882581502146,
+        "sim": {
+          "feasible": true,
+          "value": -19932.235931650528,
+          "value_per_day": -156.9467396192955,
+          "oil_m3": 39.25028506402677,
+          "sor": 21.455133312688194,
+          "days": 127,
+          "energy_kwh": 1777.509450750904,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 804.4521705591088,
+          "inj_pressure_MPa": 11.888713701151755,
+          "quality_surface": 0.7592314097636524,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.6312372555988042,
+          "min_prod_days": 113.0,
+          "spm_init": 5.341977458795133
+        },
+        "pred_value_per_day": -107.15842583165157,
+        "pred_oil_m3": 58.59258943710056,
+        "sim": {
+          "feasible": true,
+          "value": -16458.736985179745,
+          "value_per_day": -134.90768020639135,
+          "oil_m3": 43.901360622537766,
+          "sor": 18.324082879247367,
+          "days": 122,
+          "energy_kwh": 2026.9326108987655,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 828.2205947630965,
+          "inj_pressure_MPa": 11.855542619427661,
+          "quality_surface": 0.738906857752796,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.6176402250072762,
+          "min_prod_days": 114.0,
+          "spm_init": 3.7711968549363055
+        },
+        "pred_value_per_day": -109.45148968919598,
+        "pred_oil_m3": 57.136163468953434,
+        "sim": {
+          "feasible": true,
+          "value": -18468.442934092618,
+          "value_per_day": -148.93905592010177,
+          "oil_m3": 40.717433895071,
+          "sor": 20.34068740425599,
+          "days": 124,
+          "energy_kwh": 1885.5094477762066,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 831.5294412092952,
+          "inj_pressure_MPa": 11.634818943676356,
+          "quality_surface": 0.7755424686768408,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.3586934100437674,
+          "min_prod_days": 84.0,
+          "spm_init": 2.3616155762454936
+        },
+        "pred_value_per_day": -110.21198061239772,
+        "pred_oil_m3": 53.909503563709976,
+        "sim": {
+          "feasible": true,
+          "value": -15817.668143174897,
+          "value_per_day": -170.08245315241825,
+          "oil_m3": 37.08188613889744,
+          "sor": 22.42414094295634,
+          "days": 93,
+          "energy_kwh": 1575.153137200872,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 834.7401212413556,
+          "inj_pressure_MPa": 11.885239722815868,
+          "quality_surface": 0.7164767660418567,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.8880860863514619,
+          "min_prod_days": 77.0,
+          "spm_init": 3.060136960292144
+        },
+        "pred_value_per_day": -111.22316957471484,
+        "pred_oil_m3": 51.9945872869777,
+        "sim": {
+          "feasible": true,
+          "value": -15386.14928646384,
+          "value_per_day": -172.87808187038024,
+          "oil_m3": 35.55368847559333,
+          "sor": 23.478298793510064,
+          "days": 89,
+          "energy_kwh": 1572.7916164370065,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 804.4521705591088,
+        "inj_pressure_MPa": 11.888713701151755,
+        "quality_surface": 0.7592314097636524,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.6312372555988042,
+        "min_prod_days": 113.0,
+        "spm_init": 5.341977458795133
+      },
+      "pred_value_per_day": -107.15842583165157,
+      "pred_oil_m3": 58.59258943710056,
+      "sim": {
+        "feasible": true,
+        "value": -16458.736985179745,
+        "value_per_day": -134.90768020639135,
+        "oil_m3": 43.901360622537766,
+        "sor": 18.324082879247367,
+        "days": 122,
+        "energy_kwh": 2026.9326108987655,
+        "floating_days": 0,
+        "overload_days": 0
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S18",
+    "practice": {
+      "steam_t": 1668.159903676478,
+      "inj_pressure_MPa": 9.65941103421327,
+      "quality_surface": 0.7595322196017593,
+      "soak_days": 7,
+      "cutoff_m3d": 0.5473089452872592,
+      "min_prod_days": 96,
+      "spm_init": 5.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -29823.681963906787,
+      "value_per_day": -259.3363649035373,
+      "oil_m3": 64.86447405044316,
+      "sor": 25.717620131771977,
+      "days": 115,
+      "energy_kwh": 50852.82858807605,
+      "floating_days": 12,
+      "overload_days": 12
+    },
+    "practice_pred_value_per_day": -272.64959090595914,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 808.2533360835547,
+          "inj_pressure_MPa": 11.865589518509719,
+          "quality_surface": 0.7291812560108528,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.7565542920630333,
+          "min_prod_days": 108.0,
+          "spm_init": 2.413957576581941
+        },
+        "pred_value_per_day": -45.35985856413275,
+        "pred_oil_m3": 70.53248106251408,
+        "sim": {
+          "feasible": true,
+          "value": -6311.497779287394,
+          "value_per_day": -53.944425463994826,
+          "oil_m3": 71.97577487111072,
+          "sor": 11.22951906430906,
+          "days": 117,
+          "energy_kwh": 33581.70049111576,
+          "floating_days": 32,
+          "overload_days": 32
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 895.2807712937802,
+          "inj_pressure_MPa": 11.857850577881122,
+          "quality_surface": 0.7418845440334553,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.6199209052307572,
+          "min_prod_days": 84.0,
+          "spm_init": 2.264284352991867
+        },
+        "pred_value_per_day": -54.846543221434686,
+        "pred_oil_m3": 68.24354053059136,
+        "sim": {
+          "feasible": true,
+          "value": -6286.330797029885,
+          "value_per_day": -66.87585954287111,
+          "oil_m3": 67.72700432789746,
+          "sor": 13.218963103097188,
+          "days": 94,
+          "energy_kwh": 29426.88331620149,
+          "floating_days": 30,
+          "overload_days": 30
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 848.0310624081721,
+          "inj_pressure_MPa": 11.912535753848152,
+          "quality_surface": 0.7612141067711525,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.4268395348715602,
+          "min_prod_days": 115.0,
+          "spm_init": 2.686025429102327
+        },
+        "pred_value_per_day": -58.50132395705889,
+        "pred_oil_m3": 71.03717823389555,
+        "sim": {
+          "feasible": true,
+          "value": -8880.938983667162,
+          "value_per_day": -71.0475118693373,
+          "oil_m3": 73.06778526744327,
+          "sor": 11.606086858992677,
+          "days": 125,
+          "energy_kwh": 40625.473433291336,
+          "floating_days": 32,
+          "overload_days": 32
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 820.7548177682181,
+          "inj_pressure_MPa": 11.970647539161465,
+          "quality_surface": 0.7003065665677957,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.4749823951990744,
+          "min_prod_days": 101.0,
+          "spm_init": 2.7976224188948606
+        },
+        "pred_value_per_day": -63.62191572658069,
+        "pred_oil_m3": 67.19036371437173,
+        "sim": {
+          "feasible": true,
+          "value": -8806.800388173397,
+          "value_per_day": -77.25263498397716,
+          "oil_m3": 67.21918265277378,
+          "sor": 12.210127903635703,
+          "days": 114,
+          "energy_kwh": 42161.948570393906,
+          "floating_days": 32,
+          "overload_days": 32
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 827.0262446278244,
+          "inj_pressure_MPa": 11.78230254729346,
+          "quality_surface": 0.7194415176758495,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.6716852716466193,
+          "min_prod_days": 116.0,
+          "spm_init": 2.4293940874904947
+        },
+        "pred_value_per_day": -65.07856774625793,
+        "pred_oil_m3": 67.60651085946465,
+        "sim": {
+          "feasible": true,
+          "value": -10601.94942944188,
+          "value_per_day": -82.18565449179752,
+          "oil_m3": 66.9470936225485,
+          "sor": 12.353430147253968,
+          "days": 129,
+          "energy_kwh": 33255.40193310167,
+          "floating_days": 30,
+          "overload_days": 30
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 808.2533360835547,
+        "inj_pressure_MPa": 11.865589518509719,
+        "quality_surface": 0.7291812560108528,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.7565542920630333,
+        "min_prod_days": 108.0,
+        "spm_init": 2.413957576581941
+      },
+      "pred_value_per_day": -45.35985856413275,
+      "pred_oil_m3": 70.53248106251408,
+      "sim": {
+        "feasible": true,
+        "value": -6311.497779287394,
+        "value_per_day": -53.944425463994826,
+        "oil_m3": 71.97577487111072,
+        "sor": 11.22951906430906,
+        "days": 117,
+        "energy_kwh": 33581.70049111576,
+        "floating_days": 32,
+        "overload_days": 32
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S19",
+    "practice": {
+      "steam_t": 883.525306311118,
+      "inj_pressure_MPa": 9.252769250447791,
+      "quality_surface": 0.7687896345525987,
+      "soak_days": 6,
+      "cutoff_m3d": 0.4143419236959854,
+      "min_prod_days": 115,
+      "spm_init": 5.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -25841.110471016495,
+      "value_per_day": -203.47331079540547,
+      "oil_m3": 28.627105489235188,
+      "sor": 30.86324276281984,
+      "days": 127,
+      "energy_kwh": 1865.0073803355376,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -169.0906785932524,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 812.520347742333,
+          "inj_pressure_MPa": 11.882046068893292,
+          "quality_surface": 0.7139193403419845,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8329549879028921,
+          "min_prod_days": 92.0,
+          "spm_init": 5.812570372624704
+        },
+        "pred_value_per_day": -96.52036066076491,
+        "pred_oil_m3": 51.332086067391785,
+        "sim": {
+          "feasible": true,
+          "value": -15336.340732222543,
+          "value_per_day": -150.3562816884563,
+          "oil_m3": 39.10324337310658,
+          "sor": 20.778847933139666,
+          "days": 102,
+          "energy_kwh": 2103.7394395607794,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 830.3035834378436,
+          "inj_pressure_MPa": 11.923309980392345,
+          "quality_surface": 0.7198833894927286,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.7915962522415422,
+          "min_prod_days": 68.0,
+          "spm_init": 4.838212396943119
+        },
+        "pred_value_per_day": -107.89466530844506,
+        "pred_oil_m3": 48.051943928735156,
+        "sim": {
+          "feasible": true,
+          "value": -13037.230678594111,
+          "value_per_day": -167.14398305889887,
+          "oil_m3": 37.062485157922495,
+          "sor": 22.4028038028194,
+          "days": 78,
+          "energy_kwh": 1853.6831717424304,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 808.3141320934524,
+          "inj_pressure_MPa": 11.53309469005493,
+          "quality_surface": 0.7062860439925122,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.43177615271459613,
+          "min_prod_days": 80.0,
+          "spm_init": 4.447433375047224
+        },
+        "pred_value_per_day": -113.78281678748442,
+        "pred_oil_m3": 47.16003687032672,
+        "sim": {
+          "feasible": true,
+          "value": -15422.623362408547,
+          "value_per_day": -169.47937760888513,
+          "oil_m3": 34.75519281077001,
+          "sor": 23.25736290673002,
+          "days": 91,
+          "energy_kwh": 1799.3625946572597,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 805.4674533207747,
+          "inj_pressure_MPa": 11.567778291799574,
+          "quality_surface": 0.762837397206297,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.6061499983240553,
+          "min_prod_days": 118.0,
+          "spm_init": 5.196336628463419
+        },
+        "pred_value_per_day": -113.82553733602467,
+        "pred_oil_m3": 50.2368297185063,
+        "sim": {
+          "feasible": true,
+          "value": -20502.82396717883,
+          "value_per_day": -158.93661990061108,
+          "oil_m3": 37.28279073993301,
+          "sor": 21.60426935149066,
+          "days": 129,
+          "energy_kwh": 2099.780538601195,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 815.250363156889,
+          "inj_pressure_MPa": 11.766180310305474,
+          "quality_surface": 0.784982375672497,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.5914930342890686,
+          "min_prod_days": 93.0,
+          "spm_init": 3.245753161366539
+        },
+        "pred_value_per_day": -115.47175339705254,
+        "pred_oil_m3": 49.30230890538654,
+        "sim": {
+          "feasible": true,
+          "value": -17418.915943266715,
+          "value_per_day": -169.11568876957975,
+          "oil_m3": 36.2881483533199,
+          "sor": 22.46602265894628,
+          "days": 103,
+          "energy_kwh": 1830.8689095326008,
+          "floating_days": 0,
+          "overload_days": 0
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 812.520347742333,
+        "inj_pressure_MPa": 11.882046068893292,
+        "quality_surface": 0.7139193403419845,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.8329549879028921,
+        "min_prod_days": 92.0,
+        "spm_init": 5.812570372624704
+      },
+      "pred_value_per_day": -96.52036066076491,
+      "pred_oil_m3": 51.332086067391785,
+      "sim": {
+        "feasible": true,
+        "value": -15336.340732222543,
+        "value_per_day": -150.3562816884563,
+        "oil_m3": 39.10324337310658,
+        "sor": 20.778847933139666,
+        "days": 102,
+        "energy_kwh": 2103.7394395607794,
+        "floating_days": 0,
+        "overload_days": 0
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S20",
+    "practice": {
+      "steam_t": 1674.099822639972,
+      "inj_pressure_MPa": 10.064961890334663,
+      "quality_surface": 0.7213830533368327,
+      "soak_days": 7,
+      "cutoff_m3d": 0.8801926399177692,
+      "min_prod_days": 72,
+      "spm_init": 5.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -32297.687190590892,
+      "value_per_day": -354.91963945704276,
+      "oil_m3": 71.2581172299513,
+      "sor": 23.49346134472821,
+      "days": 91,
+      "energy_kwh": 146620.2400726972,
+      "floating_days": 19,
+      "overload_days": 19
+    },
+    "practice_pred_value_per_day": -334.13121649899483,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 853.8107342488469,
+          "inj_pressure_MPa": 11.720583031847049,
+          "quality_surface": 0.7226557153761114,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8644884203956611,
+          "min_prod_days": 83.0,
+          "spm_init": 2.1106880604520146
+        },
+        "pred_value_per_day": -37.541662439862286,
+        "pred_oil_m3": 71.54826841919048,
+        "sim": {
+          "feasible": true,
+          "value": -5146.041736839459,
+          "value_per_day": -55.33378211655332,
+          "oil_m3": 70.46719903776224,
+          "sor": 12.116427868678354,
+          "days": 93,
+          "energy_kwh": 42222.22969785725,
+          "floating_days": 32,
+          "overload_days": 32
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 823.5301551747381,
+          "inj_pressure_MPa": 11.485638875548947,
+          "quality_surface": 0.7559793547543339,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.8710605464603091,
+          "min_prod_days": 107.0,
+          "spm_init": 2.7153412446135854
+        },
+        "pred_value_per_day": -44.65902680228305,
+        "pred_oil_m3": 75.75064955445099,
+        "sim": {
+          "feasible": true,
+          "value": -6347.778099299692,
+          "value_per_day": -54.72222499396286,
+          "oil_m3": 75.78393540057509,
+          "sor": 10.866816968817492,
+          "days": 116,
+          "energy_kwh": 46278.77985613533,
+          "floating_days": 34,
+          "overload_days": 34
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 873.8769413896845,
+          "inj_pressure_MPa": 11.675244885050924,
+          "quality_surface": 0.7312155849936963,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.3622359139527313,
+          "min_prod_days": 85.0,
+          "spm_init": 2.330347890161284
+        },
+        "pred_value_per_day": -49.02739010023435,
+        "pred_oil_m3": 73.92054449387699,
+        "sim": {
+          "feasible": true,
+          "value": -6142.283758688467,
+          "value_per_day": -64.65561851251017,
+          "oil_m3": 71.85424149934757,
+          "sor": 12.161800377471375,
+          "days": 95,
+          "energy_kwh": 50188.1380618293,
+          "floating_days": 32,
+          "overload_days": 32
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 886.8137851724273,
+          "inj_pressure_MPa": 11.74247503957157,
+          "quality_surface": 0.7310273941285297,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.6805596245833874,
+          "min_prod_days": 86.0,
+          "spm_init": 2.254034487810915
+        },
+        "pred_value_per_day": -51.210491236829554,
+        "pred_oil_m3": 72.77463506296216,
+        "sim": {
+          "feasible": true,
+          "value": -6241.675322178697,
+          "value_per_day": -65.01745127269476,
+          "oil_m3": 72.30367441191939,
+          "sor": 12.265127497119765,
+          "days": 96,
+          "energy_kwh": 48970.17862573639,
+          "floating_days": 33,
+          "overload_days": 33
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 916.6476195515414,
+          "inj_pressure_MPa": 11.662701664204453,
+          "quality_surface": 0.7946725837228805,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.9495615187839085,
+          "min_prod_days": 89.0,
+          "spm_init": 2.3535123558356807
+        },
+        "pred_value_per_day": -58.5187633267693,
+        "pred_oil_m3": 74.2356311909954,
+        "sim": {
+          "feasible": true,
+          "value": -7276.818416434642,
+          "value_per_day": -73.50321632762265,
+          "oil_m3": 74.27707761691336,
+          "sor": 12.340921977022086,
+          "days": 99,
+          "energy_kwh": 50482.95053130112,
+          "floating_days": 32,
+          "overload_days": 32
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 823.5301551747381,
+        "inj_pressure_MPa": 11.485638875548947,
+        "quality_surface": 0.7559793547543339,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.8710605464603091,
+        "min_prod_days": 107.0,
+        "spm_init": 2.7153412446135854
+      },
+      "pred_value_per_day": -44.65902680228305,
+      "pred_oil_m3": 75.75064955445099,
+      "sim": {
+        "feasible": true,
+        "value": -6347.778099299692,
+        "value_per_day": -54.72222499396286,
+        "oil_m3": 75.78393540057509,
+        "sor": 10.866816968817492,
+        "days": 116,
+        "energy_kwh": 46278.77985613533,
+        "floating_days": 34,
+        "overload_days": 34
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S21",
+    "practice": {
+      "steam_t": 1115.6444416296683,
+      "inj_pressure_MPa": 8.04432881754963,
+      "quality_surface": 0.7891896296458577,
+      "soak_days": 4,
+      "cutoff_m3d": 0.7750333856140642,
+      "min_prod_days": 84,
+      "spm_init": 2.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -1550.317214085786,
+      "value_per_day": -16.14913764672694,
+      "oil_m3": 95.82860253392235,
+      "sor": 11.642081926789464,
+      "days": 96,
+      "energy_kwh": 47469.02086886413,
+      "floating_days": 58,
+      "overload_days": 58
+    },
+    "practice_pred_value_per_day": -91.63938574489931,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 812.8321242460777,
+          "inj_pressure_MPa": 11.951808176942748,
+          "quality_surface": 0.7423130166929197,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.504703049334281,
+          "min_prod_days": 63.0,
+          "spm_init": 2.1495975254417945
+        },
+        "pred_value_per_day": 109.22065143125278,
+        "pred_oil_m3": 100.88255628420193,
+        "sim": {
+          "feasible": true,
+          "value": 24869.53710635732,
+          "value_per_day": 267.4143774877131,
+          "oil_m3": 140.23421848548915,
+          "sor": 5.796246686611557,
+          "days": 93,
+          "energy_kwh": 56170.31723421703,
+          "floating_days": 67,
+          "overload_days": 67
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 928.6226606358177,
+          "inj_pressure_MPa": 11.984509490351812,
+          "quality_surface": 0.7494937594682273,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.8723605488978051,
+          "min_prod_days": 63.0,
+          "spm_init": 2.7794616598544675
+        },
+        "pred_value_per_day": 85.70526047520653,
+        "pred_oil_m3": 99.3813523272525,
+        "sim": {
+          "feasible": true,
+          "value": 20692.93020011355,
+          "value_per_day": 275.905736001514,
+          "oil_m3": 129.60547738905245,
+          "sor": 7.164995487407209,
+          "days": 75,
+          "energy_kwh": 52754.1094301089,
+          "floating_days": 49,
+          "overload_days": 49
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 862.739305482168,
+          "inj_pressure_MPa": 11.321095884890278,
+          "quality_surface": 0.739963475649961,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8743252300810017,
+          "min_prod_days": 68.0,
+          "spm_init": 2.864634741932976
+        },
+        "pred_value_per_day": 77.00921956143307,
+        "pred_oil_m3": 95.72685944995982,
+        "sim": {
+          "feasible": true,
+          "value": 20145.69849788126,
+          "value_per_day": 258.2781858702726,
+          "oil_m3": 127.83425676576239,
+          "sor": 6.748889752322117,
+          "days": 78,
+          "energy_kwh": 60615.20475090033,
+          "floating_days": 55,
+          "overload_days": 55
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 940.276383885951,
+          "inj_pressure_MPa": 11.571911910132588,
+          "quality_surface": 0.7107357320892393,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8554655307358403,
+          "min_prod_days": 73.0,
+          "spm_init": 2.2002169906204583
+        },
+        "pred_value_per_day": 75.40108137890363,
+        "pred_oil_m3": 98.99224536166925,
+        "sim": {
+          "feasible": true,
+          "value": 20488.254243894407,
+          "value_per_day": 243.90778861779057,
+          "oil_m3": 132.37568234109736,
+          "sor": 7.103089987956442,
+          "days": 84,
+          "energy_kwh": 54950.42960258657,
+          "floating_days": 57,
+          "overload_days": 57
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 961.9185412336626,
+          "inj_pressure_MPa": 11.742436381254679,
+          "quality_surface": 0.7019035451403761,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.4947707116626643,
+          "min_prod_days": 70.0,
+          "spm_init": 3.0558489459651845
+        },
+        "pred_value_per_day": 72.48433456675686,
+        "pred_oil_m3": 104.0765472701026,
+        "sim": {
+          "feasible": true,
+          "value": 22697.825654211163,
+          "value_per_day": 241.46623036394854,
+          "oil_m3": 145.62927928906078,
+          "sor": 6.605255110301977,
+          "days": 94,
+          "energy_kwh": 72705.0831476471,
+          "floating_days": 71,
+          "overload_days": 71
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 928.6226606358177,
+        "inj_pressure_MPa": 11.984509490351812,
+        "quality_surface": 0.7494937594682273,
+        "soak_days": 5.0,
+        "cutoff_m3d": 0.8723605488978051,
+        "min_prod_days": 63.0,
+        "spm_init": 2.7794616598544675
+      },
+      "pred_value_per_day": 85.70526047520653,
+      "pred_oil_m3": 99.3813523272525,
+      "sim": {
+        "feasible": true,
+        "value": 20692.93020011355,
+        "value_per_day": 275.905736001514,
+        "oil_m3": 129.60547738905245,
+        "sor": 7.164995487407209,
+        "days": 75,
+        "energy_kwh": 52754.1094301089,
+        "floating_days": 49,
+        "overload_days": 49
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S22",
+    "practice": {
+      "steam_t": 1076.974565131146,
+      "inj_pressure_MPa": 9.05500277640493,
+      "quality_surface": 0.7004279463739348,
+      "soak_days": 10,
+      "cutoff_m3d": 0.3973327010081583,
+      "min_prod_days": 116,
+      "spm_init": 4.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -24903.89193704806,
+      "value_per_day": -185.84993982871688,
+      "oil_m3": 57.932313059939155,
+      "sor": 18.590222075491162,
+      "days": 134,
+      "energy_kwh": 78425.86958603347,
+      "floating_days": 69,
+      "overload_days": 69
+    },
+    "practice_pred_value_per_day": -186.68877185356146,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 818.8110494758457,
+          "inj_pressure_MPa": 11.932080769830826,
+          "quality_surface": 0.7330194098486579,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.9187037546433415,
+          "min_prod_days": 79.0,
+          "spm_init": 2.416885436839752
+        },
+        "pred_value_per_day": -52.84243980408239,
+        "pred_oil_m3": 66.87662418474642,
+        "sim": {
+          "feasible": true,
+          "value": 10.576485583158501,
+          "value_per_day": 0.11883691666470225,
+          "oil_m3": 78.94235877472046,
+          "sor": 10.372264804152923,
+          "days": 89,
+          "energy_kwh": 40475.425938687054,
+          "floating_days": 63,
+          "overload_days": 63
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 851.700114108713,
+          "inj_pressure_MPa": 11.399596535045028,
+          "quality_surface": 0.7042120778342035,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.7842279036031505,
+          "min_prod_days": 71.0,
+          "spm_init": 2.448438473375356
+        },
+        "pred_value_per_day": -64.66316188108598,
+        "pred_oil_m3": 63.893654480915295,
+        "sim": {
+          "feasible": true,
+          "value": -1169.8100980853342,
+          "value_per_day": -14.442099976362151,
+          "oil_m3": 74.11165999381353,
+          "sor": 11.492120324653484,
+          "days": 81,
+          "energy_kwh": 38651.45059468495,
+          "floating_days": 55,
+          "overload_days": 55
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 930.3858743431034,
+          "inj_pressure_MPa": 11.943765574490502,
+          "quality_surface": 0.7579117774643696,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.6776301328210016,
+          "min_prod_days": 84.0,
+          "spm_init": 2.058866932522874
+        },
+        "pred_value_per_day": -71.8198831709837,
+        "pred_oil_m3": 69.20107044721,
+        "sim": {
+          "feasible": true,
+          "value": -1470.2440644639792,
+          "value_per_day": -15.640894302808288,
+          "oil_m3": 81.17273823760492,
+          "sor": 11.46180225705486,
+          "days": 94,
+          "energy_kwh": 31358.264878556784,
+          "floating_days": 65,
+          "overload_days": 65
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 817.42429758652,
+          "inj_pressure_MPa": 11.752225184168232,
+          "quality_surface": 0.7585019944537268,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8778739544800408,
+          "min_prod_days": 110.0,
+          "spm_init": 2.8411175560914406
+        },
+        "pred_value_per_day": -76.65794830132373,
+        "pred_oil_m3": 70.02471406263062,
+        "sim": {
+          "feasible": true,
+          "value": -2946.539910599131,
+          "value_per_day": -24.55449925499276,
+          "oil_m3": 83.74523289320308,
+          "sor": 9.760845714393657,
+          "days": 120,
+          "energy_kwh": 42535.53389971829,
+          "floating_days": 86,
+          "overload_days": 86
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 823.0640174392976,
+          "inj_pressure_MPa": 11.988845342788158,
+          "quality_surface": 0.7015821392782203,
+          "soak_days": 10.0,
+          "cutoff_m3d": 0.7369245841564609,
+          "min_prod_days": 81.0,
+          "spm_init": 2.0782274874942606
+        },
+        "pred_value_per_day": -78.346759325428,
+        "pred_oil_m3": 61.05214010528641,
+        "sim": {
+          "feasible": true,
+          "value": -4807.824957383287,
+          "value_per_day": -49.565205746219455,
+          "oil_m3": 68.32043189483763,
+          "sor": 12.047113793223682,
+          "days": 97,
+          "energy_kwh": 31927.627091057646,
+          "floating_days": 64,
+          "overload_days": 64
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 818.8110494758457,
+        "inj_pressure_MPa": 11.932080769830826,
+        "quality_surface": 0.7330194098486579,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.9187037546433415,
+        "min_prod_days": 79.0,
+        "spm_init": 2.416885436839752
+      },
+      "pred_value_per_day": -52.84243980408239,
+      "pred_oil_m3": 66.87662418474642,
+      "sim": {
+        "feasible": true,
+        "value": 10.576485583158501,
+        "value_per_day": 0.11883691666470225,
+        "oil_m3": 78.94235877472046,
+        "sor": 10.372264804152923,
+        "days": 89,
+        "energy_kwh": 40475.425938687054,
+        "floating_days": 63,
+        "overload_days": 63
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S23",
+    "practice": {
+      "steam_t": 1642.320565083212,
+      "inj_pressure_MPa": 9.777864954539206,
+      "quality_surface": 0.7152001185549535,
+      "soak_days": 9,
+      "cutoff_m3d": 0.3579941636083721,
+      "min_prod_days": 71,
+      "spm_init": 2.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -33366.47841512456,
+      "value_per_day": -366.6645979684018,
+      "oil_m3": 34.152225869426964,
+      "sor": 48.0882438340107,
+      "days": 91,
+      "energy_kwh": 1836.243369413497,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -375.5238785560895,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 824.3327041506466,
+          "inj_pressure_MPa": 11.193723698374116,
+          "quality_surface": 0.745700476978805,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.9271631712246907,
+          "min_prod_days": 118.0,
+          "spm_init": 2.6896657314108903
+        },
+        "pred_value_per_day": -152.7318603044847,
+        "pred_oil_m3": 45.375413417572446,
+        "sim": {
+          "feasible": true,
+          "value": -20554.717600111,
+          "value_per_day": -161.84817007961416,
+          "oil_m3": 43.670206358785556,
+          "sor": 18.87631804113991,
+          "days": 127,
+          "energy_kwh": 31131.224812893157,
+          "floating_days": 36,
+          "overload_days": 36
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 805.1298953464525,
+          "inj_pressure_MPa": 11.931788056043843,
+          "quality_surface": 0.7811987386818443,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.7717622539516232,
+          "min_prod_days": 108.0,
+          "spm_init": 2.7508708308326906
+        },
+        "pred_value_per_day": -153.87761749568605,
+        "pred_oil_m3": 46.87029073260659,
+        "sim": {
+          "feasible": true,
+          "value": -19427.2924038675,
+          "value_per_day": -163.25455801569328,
+          "oil_m3": 43.413217942679715,
+          "sor": 18.54573177250991,
+          "days": 119,
+          "energy_kwh": 31947.103478651177,
+          "floating_days": 38,
+          "overload_days": 38
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 804.4421447406879,
+          "inj_pressure_MPa": 11.446512401804279,
+          "quality_surface": 0.7045780935942304,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.6283533107655459,
+          "min_prod_days": 83.0,
+          "spm_init": 2.1929481316611774
+        },
+        "pred_value_per_day": -154.03618688399592,
+        "pred_oil_m3": 42.84898713029293,
+        "sim": {
+          "feasible": true,
+          "value": -15696.98144540099,
+          "value_per_day": -166.9891643127765,
+          "oil_m3": 39.12591713973213,
+          "sor": 20.560339630320943,
+          "days": 94,
+          "energy_kwh": 20231.60288773385,
+          "floating_days": 35,
+          "overload_days": 35
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 841.4476272027813,
+          "inj_pressure_MPa": 11.380514942520962,
+          "quality_surface": 0.7797950965774595,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.5508926092199722,
+          "min_prod_days": 113.0,
+          "spm_init": 2.5260761690377396
+        },
+        "pred_value_per_day": -156.02218511260008,
+        "pred_oil_m3": 45.880930068266025,
+        "sim": {
+          "feasible": true,
+          "value": -20664.774844076146,
+          "value_per_day": -168.0062995453345,
+          "oil_m3": 42.568554438681424,
+          "sor": 19.76688281522123,
+          "days": 123,
+          "energy_kwh": 26478.57513335423,
+          "floating_days": 35,
+          "overload_days": 35
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 849.661531642021,
+          "inj_pressure_MPa": 10.383495187449856,
+          "quality_surface": 0.7421555590177117,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.5288509704851788,
+          "min_prod_days": 117.0,
+          "spm_init": 2.0305803265054556
+        },
+        "pred_value_per_day": -158.87113121798535,
+        "pred_oil_m3": 43.434148417775354,
+        "sim": {
+          "feasible": true,
+          "value": -22323.202066680715,
+          "value_per_day": -175.7732446195332,
+          "oil_m3": 37.62196563587947,
+          "sor": 22.584187648922637,
+          "days": 127,
+          "energy_kwh": 16826.222309199293,
+          "floating_days": 28,
+          "overload_days": 28
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 824.3327041506466,
+        "inj_pressure_MPa": 11.193723698374116,
+        "quality_surface": 0.745700476978805,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.9271631712246907,
+        "min_prod_days": 118.0,
+        "spm_init": 2.6896657314108903
+      },
+      "pred_value_per_day": -152.7318603044847,
+      "pred_oil_m3": 45.375413417572446,
+      "sim": {
+        "feasible": true,
+        "value": -20554.717600111,
+        "value_per_day": -161.84817007961416,
+        "oil_m3": 43.670206358785556,
+        "sor": 18.87631804113991,
+        "days": 127,
+        "energy_kwh": 31131.224812893157,
+        "floating_days": 36,
+        "overload_days": 36
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S24",
+    "practice": {
+      "steam_t": 1184.6840600262503,
+      "inj_pressure_MPa": 8.059163053498827,
+      "quality_surface": 0.7546337989400648,
+      "soak_days": 8,
+      "cutoff_m3d": 0.5353830893940983,
+      "min_prod_days": 109,
+      "spm_init": 6.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -24989.77166334705,
+      "value_per_day": -199.91817330677642,
+      "oil_m3": 72.11885995311707,
+      "sor": 16.426827334713668,
+      "days": 125,
+      "energy_kwh": 124296.47409325372,
+      "floating_days": 45,
+      "overload_days": 45
+    },
+    "practice_pred_value_per_day": -174.2788017034143,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 829.8042886250673,
+          "inj_pressure_MPa": 11.57782836201209,
+          "quality_surface": 0.7048599053110756,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8961105648728603,
+          "min_prod_days": 68.0,
+          "spm_init": 2.7026228209137213
+        },
+        "pred_value_per_day": 43.10484991948369,
+        "pred_oil_m3": 75.83596718077844,
+        "sim": {
+          "feasible": true,
+          "value": 8642.222334588812,
+          "value_per_day": 110.7977222383181,
+          "oil_m3": 93.69884567337091,
+          "sor": 8.856078030221632,
+          "days": 78,
+          "energy_kwh": 35828.93002760152,
+          "floating_days": 52,
+          "overload_days": 52
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 902.1194574186306,
+          "inj_pressure_MPa": 11.745489289246377,
+          "quality_surface": 0.7287119551748663,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.5773084127425026,
+          "min_prod_days": 75.0,
+          "spm_init": 2.2433822166843402
+        },
+        "pred_value_per_day": 20.251014671703008,
+        "pred_oil_m3": 79.18024646600789,
+        "sim": {
+          "feasible": true,
+          "value": 7772.507286455657,
+          "value_per_day": 90.37799170297275,
+          "oil_m3": 96.57719603948516,
+          "sor": 9.340915810496332,
+          "days": 86,
+          "energy_kwh": 27699.645638770427,
+          "floating_days": 57,
+          "overload_days": 57
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 901.2866770286794,
+          "inj_pressure_MPa": 11.942066946900892,
+          "quality_surface": 0.7605240186071421,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.6351639726096495,
+          "min_prod_days": 69.0,
+          "spm_init": 2.4289413275035447
+        },
+        "pred_value_per_day": 18.1496559336051,
+        "pred_oil_m3": 78.02148783760514,
+        "sim": {
+          "feasible": true,
+          "value": 9045.731770444247,
+          "value_per_day": 114.50293380309174,
+          "oil_m3": 98.43405540498301,
+          "sor": 9.156248549554869,
+          "days": 79,
+          "energy_kwh": 30678.360242066992,
+          "floating_days": 51,
+          "overload_days": 51
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 912.6227058990547,
+          "inj_pressure_MPa": 11.858794448021964,
+          "quality_surface": 0.7115133128132884,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8819351504913924,
+          "min_prod_days": 67.0,
+          "spm_init": 3.6818226723248673
+        },
+        "pred_value_per_day": 16.56325368446678,
+        "pred_oil_m3": 79.044881604044,
+        "sim": {
+          "feasible": true,
+          "value": 7577.400908206146,
+          "value_per_day": 97.14616548982238,
+          "oil_m3": 98.58445692499444,
+          "sor": 9.257267670434105,
+          "days": 78,
+          "energy_kwh": 50097.1461312485,
+          "floating_days": 54,
+          "overload_days": 54
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 837.1877699798653,
+          "inj_pressure_MPa": 10.913710925490413,
+          "quality_surface": 0.7289589183404951,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.49479065210277035,
+          "min_prod_days": 84.0,
+          "spm_init": 2.4521019128659116
+        },
+        "pred_value_per_day": 13.702721266233606,
+        "pred_oil_m3": 77.77584188359793,
+        "sim": {
+          "feasible": true,
+          "value": 6939.408623943709,
+          "value_per_day": 74.61729703165278,
+          "oil_m3": 94.99415272125228,
+          "sor": 8.813045287497658,
+          "days": 93,
+          "energy_kwh": 31962.602238174655,
+          "floating_days": 60,
+          "overload_days": 60
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 901.2866770286794,
+        "inj_pressure_MPa": 11.942066946900892,
+        "quality_surface": 0.7605240186071421,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.6351639726096495,
+        "min_prod_days": 69.0,
+        "spm_init": 2.4289413275035447
+      },
+      "pred_value_per_day": 18.1496559336051,
+      "pred_oil_m3": 78.02148783760514,
+      "sim": {
+        "feasible": true,
+        "value": 9045.731770444247,
+        "value_per_day": 114.50293380309174,
+        "oil_m3": 98.43405540498301,
+        "sor": 9.156248549554869,
+        "days": 79,
+        "energy_kwh": 30678.360242066992,
+        "floating_days": 51,
+        "overload_days": 51
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S25",
+    "practice": {
+      "steam_t": 1144.0392596144677,
+      "inj_pressure_MPa": 10.541381655837574,
+      "quality_surface": 0.7916804907238005,
+      "soak_days": 9,
+      "cutoff_m3d": 0.4998580741090406,
+      "min_prod_days": 102,
+      "spm_init": 4.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -31490.102573666867,
+      "value_per_day": -264.62271070308293,
+      "oil_m3": 62.02125992611041,
+      "sor": 18.44592097899058,
+      "days": 119,
+      "energy_kwh": 158241.93641131453,
+      "floating_days": 41,
+      "overload_days": 41
+    },
+    "practice_pred_value_per_day": -250.00774422631045,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 840.0260612923049,
+          "inj_pressure_MPa": 11.980427388179788,
+          "quality_surface": 0.7105546969941009,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.609791988773338,
+          "min_prod_days": 111.0,
+          "spm_init": 2.6696778130199728
+        },
+        "pred_value_per_day": -84.99405801758681,
+        "pred_oil_m3": 68.21345004284552,
+        "sim": {
+          "feasible": true,
+          "value": -12000.013462740808,
+          "value_per_day": -97.5610850629334,
+          "oil_m3": 70.1283455531124,
+          "sor": 11.978409795167673,
+          "days": 123,
+          "energy_kwh": 68425.33237124106,
+          "floating_days": 53,
+          "overload_days": 53
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 825.143258434117,
+          "inj_pressure_MPa": 11.561058429150124,
+          "quality_surface": 0.740621455586598,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.8211988854161254,
+          "min_prod_days": 100.0,
+          "spm_init": 2.174399957288536
+        },
+        "pred_value_per_day": -85.65287965812577,
+        "pred_oil_m3": 64.57746724013631,
+        "sim": {
+          "feasible": true,
+          "value": -8803.646923676937,
+          "value_per_day": -80.03315385160852,
+          "oil_m3": 67.66171965663308,
+          "sor": 12.195126914029382,
+          "days": 110,
+          "energy_kwh": 45225.936389716764,
+          "floating_days": 50,
+          "overload_days": 50
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 922.0865576891362,
+          "inj_pressure_MPa": 11.958062716419313,
+          "quality_surface": 0.7367656141973474,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.8509452084172658,
+          "min_prod_days": 103.0,
+          "spm_init": 2.7487063414620074
+        },
+        "pred_value_per_day": -87.22449528080766,
+        "pred_oil_m3": 69.90058643266508,
+        "sim": {
+          "feasible": true,
+          "value": -10479.717509807218,
+          "value_per_day": -92.74086291864795,
+          "oil_m3": 75.194046637316,
+          "sor": 12.262760137602953,
+          "days": 113,
+          "energy_kwh": 70617.06141261959,
+          "floating_days": 53,
+          "overload_days": 53
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 892.8012199309945,
+          "inj_pressure_MPa": 11.738932615194166,
+          "quality_surface": 0.7898552904796744,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.5296099684856846,
+          "min_prod_days": 108.0,
+          "spm_init": 2.1169519278164555
+        },
+        "pred_value_per_day": -90.41132830415984,
+        "pred_oil_m3": 70.02982779518551,
+        "sim": {
+          "feasible": true,
+          "value": -9578.627821983322,
+          "value_per_day": -81.86861386310531,
+          "oil_m3": 72.26298386147364,
+          "sor": 12.354890044984476,
+          "days": 117,
+          "energy_kwh": 43407.419929652235,
+          "floating_days": 50,
+          "overload_days": 50
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 808.3865951563763,
+          "inj_pressure_MPa": 11.150663550442195,
+          "quality_surface": 0.7674565474365403,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.9932435800220132,
+          "min_prod_days": 118.0,
+          "spm_init": 2.2985489213420824
+        },
+        "pred_value_per_day": -93.5990901175854,
+        "pred_oil_m3": 64.32414769657774,
+        "sim": {
+          "feasible": true,
+          "value": -12059.691973671099,
+          "value_per_day": -94.21634354430546,
+          "oil_m3": 66.98870165272635,
+          "sor": 12.067506537850269,
+          "days": 128,
+          "energy_kwh": 48675.72807770747,
+          "floating_days": 48,
+          "overload_days": 48
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 825.143258434117,
+        "inj_pressure_MPa": 11.561058429150124,
+        "quality_surface": 0.740621455586598,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.8211988854161254,
+        "min_prod_days": 100.0,
+        "spm_init": 2.174399957288536
+      },
+      "pred_value_per_day": -85.65287965812577,
+      "pred_oil_m3": 64.57746724013631,
+      "sim": {
+        "feasible": true,
+        "value": -8803.646923676937,
+        "value_per_day": -80.03315385160852,
+        "oil_m3": 67.66171965663308,
+        "sor": 12.195126914029382,
+        "days": 110,
+        "energy_kwh": 45225.936389716764,
+        "floating_days": 50,
+        "overload_days": 50
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S26",
+    "practice": {
+      "steam_t": 1996.585457525513,
+      "inj_pressure_MPa": 11.270064605401762,
+      "quality_surface": 0.7769887413786001,
+      "soak_days": 9,
+      "cutoff_m3d": 0.5975527735089202,
+      "min_prod_days": 107,
+      "spm_init": 2.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -43779.093285116076,
+      "value_per_day": -336.76225603935444,
+      "oil_m3": 54.70376070517419,
+      "sor": 36.49813891747053,
+      "days": 130,
+      "energy_kwh": 49693.2490827806,
+      "floating_days": 26,
+      "overload_days": 26
+    },
+    "practice_pred_value_per_day": -323.0638769297096,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 809.5237111528627,
+          "inj_pressure_MPa": 11.760016509974367,
+          "quality_surface": 0.7564073280772515,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.4335268724270049,
+          "min_prod_days": 111.0,
+          "spm_init": 2.363468623951415
+        },
+        "pred_value_per_day": -137.3834121953633,
+        "pred_oil_m3": 54.98252200441998,
+        "sim": {
+          "feasible": true,
+          "value": -16113.429434576708,
+          "value_per_day": -133.16883830228684,
+          "oil_m3": 53.19659998775525,
+          "sor": 15.21758366773813,
+          "days": 121,
+          "energy_kwh": 40097.78610829783,
+          "floating_days": 58,
+          "overload_days": 58
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 834.8826587219046,
+          "inj_pressure_MPa": 11.988538124930372,
+          "quality_surface": 0.7693852718964046,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.8865915809681072,
+          "min_prod_days": 97.0,
+          "spm_init": 2.563565756687919
+        },
+        "pred_value_per_day": -146.18587116980063,
+        "pred_oil_m3": 53.04514642555163,
+        "sim": {
+          "feasible": true,
+          "value": -15630.101973530323,
+          "value_per_day": -144.72316642157708,
+          "oil_m3": 52.550856403024106,
+          "sor": 15.887137068119412,
+          "days": 108,
+          "energy_kwh": 45390.41887892694,
+          "floating_days": 59,
+          "overload_days": 59
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 825.498657121269,
+          "inj_pressure_MPa": 11.873174105784079,
+          "quality_surface": 0.7969755971910986,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.9965134547190191,
+          "min_prod_days": 101.0,
+          "spm_init": 2.369909617422707
+        },
+        "pred_value_per_day": -149.49975452619765,
+        "pred_oil_m3": 52.486093975491855,
+        "sim": {
+          "feasible": true,
+          "value": -16159.584081951609,
+          "value_per_day": -144.28200073171078,
+          "oil_m3": 51.64328432273827,
+          "sor": 15.984627390512541,
+          "days": 112,
+          "energy_kwh": 40065.5411014291,
+          "floating_days": 57,
+          "overload_days": 57
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 876.4039414256416,
+          "inj_pressure_MPa": 11.370078909381238,
+          "quality_surface": 0.711353245696643,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.9252559285150143,
+          "min_prod_days": 113.0,
+          "spm_init": 2.5560265157440374
+        },
+        "pred_value_per_day": -149.941978436047,
+        "pred_oil_m3": 53.96619128828334,
+        "sim": {
+          "feasible": true,
+          "value": -17455.386841923104,
+          "value_per_day": -143.07694132723856,
+          "oil_m3": 54.16813684923413,
+          "sor": 16.17932593592672,
+          "days": 122,
+          "energy_kwh": 46305.55301456587,
+          "floating_days": 57,
+          "overload_days": 57
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 901.3217863780467,
+          "inj_pressure_MPa": 11.800738977195488,
+          "quality_surface": 0.7322646051628751,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.4135798966775252,
+          "min_prod_days": 107.0,
+          "spm_init": 2.440364048553591
+        },
+        "pred_value_per_day": -150.0185284315022,
+        "pred_oil_m3": 55.58958801903962,
+        "sim": {
+          "feasible": true,
+          "value": -17892.226759386987,
+          "value_per_day": -150.3548467175377,
+          "oil_m3": 52.82993912021891,
+          "sor": 17.06081440538885,
+          "days": 119,
+          "energy_kwh": 42063.921495913426,
+          "floating_days": 57,
+          "overload_days": 57
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 809.5237111528627,
+        "inj_pressure_MPa": 11.760016509974367,
+        "quality_surface": 0.7564073280772515,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.4335268724270049,
+        "min_prod_days": 111.0,
+        "spm_init": 2.363468623951415
+      },
+      "pred_value_per_day": -137.3834121953633,
+      "pred_oil_m3": 54.98252200441998,
+      "sim": {
+        "feasible": true,
+        "value": -16113.429434576708,
+        "value_per_day": -133.16883830228684,
+        "oil_m3": 53.19659998775525,
+        "sor": 15.21758366773813,
+        "days": 121,
+        "energy_kwh": 40097.78610829783,
+        "floating_days": 58,
+        "overload_days": 58
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S27",
+    "practice": {
+      "steam_t": 1941.7914361327544,
+      "inj_pressure_MPa": 8.05855031945424,
+      "quality_surface": 0.7357123971294692,
+      "soak_days": 9,
+      "cutoff_m3d": 0.333721615474305,
+      "min_prod_days": 77,
+      "spm_init": 2.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -31996.536745749785,
+      "value_per_day": -323.19734086615944,
+      "oil_m3": 55.60605941818493,
+      "sor": 34.92050068733566,
+      "days": 99,
+      "energy_kwh": 2263.9518307333706,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -336.3764556972245,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 810.4988225480995,
+          "inj_pressure_MPa": 11.904523684363046,
+          "quality_surface": 0.7255967925193116,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.3877724476339571,
+          "min_prod_days": 100.0,
+          "spm_init": 5.775037757101828
+        },
+        "pred_value_per_day": -51.59238100883006,
+        "pred_oil_m3": 64.03911675845572,
+        "sim": {
+          "feasible": true,
+          "value": -7036.190505880608,
+          "value_per_day": -64.55220647596887,
+          "oil_m3": 96.26342846012683,
+          "sor": 8.419592315723675,
+          "days": 109,
+          "energy_kwh": 159633.86431812003,
+          "floating_days": 40,
+          "overload_days": 40
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 824.0598086505328,
+          "inj_pressure_MPa": 11.475065745318128,
+          "quality_surface": 0.7338847753655009,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.5756420248352128,
+          "min_prod_days": 98.0,
+          "spm_init": 4.6087726973110215
+        },
+        "pred_value_per_day": -64.33237007988828,
+        "pred_oil_m3": 61.41402260094231,
+        "sim": {
+          "feasible": true,
+          "value": -4504.841288589858,
+          "value_per_day": -42.10132045411082,
+          "oil_m3": 91.54028571073702,
+          "sor": 9.002154649751944,
+          "days": 107,
+          "energy_kwh": 112705.65521503505,
+          "floating_days": 36,
+          "overload_days": 36
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 872.4396241199672,
+          "inj_pressure_MPa": 11.745683647996204,
+          "quality_surface": 0.7458840558018539,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.44147637974691617,
+          "min_prod_days": 78.0,
+          "spm_init": 4.647888163221614
+        },
+        "pred_value_per_day": -64.68237305331634,
+        "pred_oil_m3": 60.677107174541106,
+        "sim": {
+          "feasible": true,
+          "value": -3192.5008599932335,
+          "value_per_day": -36.69541218383027,
+          "oil_m3": 90.18570426809178,
+          "sor": 9.673812842071927,
+          "days": 87,
+          "energy_kwh": 112279.78091817508,
+          "floating_days": 36,
+          "overload_days": 36
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 827.3228009208234,
+          "inj_pressure_MPa": 11.92548426750746,
+          "quality_surface": 0.7182369879754307,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.5254570439822244,
+          "min_prod_days": 62.0,
+          "spm_init": 4.053598083213993
+        },
+        "pred_value_per_day": -65.24383123736679,
+        "pred_oil_m3": 55.79931947514802,
+        "sim": {
+          "feasible": true,
+          "value": -3075.445659250712,
+          "value_per_day": -41.00594212334283,
+          "oil_m3": 76.4613139244368,
+          "sor": 10.820148889128802,
+          "days": 75,
+          "energy_kwh": 80985.38445806959,
+          "floating_days": 34,
+          "overload_days": 34
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 816.7619495882468,
+          "inj_pressure_MPa": 11.657985413603281,
+          "quality_surface": 0.7296681154759092,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.3011993121301162,
+          "min_prod_days": 80.0,
+          "spm_init": 5.964442107242563
+        },
+        "pred_value_per_day": -66.49034978282637,
+        "pred_oil_m3": 58.454697563523474,
+        "sim": {
+          "feasible": true,
+          "value": -11915.476271329331,
+          "value_per_day": -128.12340076698206,
+          "oil_m3": 80.95356530057917,
+          "sor": 10.08926471064769,
+          "days": 93,
+          "energy_kwh": 163218.40081463737,
+          "floating_days": 36,
+          "overload_days": 36
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 872.4396241199672,
+        "inj_pressure_MPa": 11.745683647996204,
+        "quality_surface": 0.7458840558018539,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.44147637974691617,
+        "min_prod_days": 78.0,
+        "spm_init": 4.647888163221614
+      },
+      "pred_value_per_day": -64.68237305331634,
+      "pred_oil_m3": 60.677107174541106,
+      "sim": {
+        "feasible": true,
+        "value": -3192.5008599932335,
+        "value_per_day": -36.69541218383027,
+        "oil_m3": 90.18570426809178,
+        "sor": 9.673812842071927,
+        "days": 87,
+        "energy_kwh": 112279.78091817508,
+        "floating_days": 36,
+        "overload_days": 36
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S28",
+    "practice": {
+      "steam_t": 1223.2528795739347,
+      "inj_pressure_MPa": 10.691117891136669,
+      "quality_surface": 0.7942908627797652,
+      "soak_days": 9,
+      "cutoff_m3d": 0.5960497539166436,
+      "min_prod_days": 109,
+      "spm_init": 4.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -23062.558291024343,
+      "value_per_day": -181.59494717342002,
+      "oil_m3": 61.884143925600384,
+      "sor": 19.766822355086283,
+      "days": 127,
+      "energy_kwh": 43711.55475778437,
+      "floating_days": 8,
+      "overload_days": 8
+    },
+    "practice_pred_value_per_day": -171.21625996551225,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 826.7196946172004,
+          "inj_pressure_MPa": 11.826943274344076,
+          "quality_surface": 0.7803072371681258,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.3196795396533387,
+          "min_prod_days": 67.0,
+          "spm_init": 2.261614176250333
+        },
+        "pred_value_per_day": -51.351703894462176,
+        "pred_oil_m3": 66.7381732718133,
+        "sim": {
+          "feasible": true,
+          "value": -7030.625102151018,
+          "value_per_day": -90.13621925834639,
+          "oil_m3": 59.04246707588744,
+          "sor": 14.00211975483029,
+          "days": 78,
+          "energy_kwh": 33613.73468087958,
+          "floating_days": 16,
+          "overload_days": 16
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 850.557072290329,
+          "inj_pressure_MPa": 11.95092159125968,
+          "quality_surface": 0.7494934074573903,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.6800754251843197,
+          "min_prod_days": 100.0,
+          "spm_init": 2.9073387594397433
+        },
+        "pred_value_per_day": -53.804676654889285,
+        "pred_oil_m3": 71.59533583993101,
+        "sim": {
+          "feasible": true,
+          "value": -10601.572190607727,
+          "value_per_day": -96.37792900552479,
+          "oil_m3": 68.4783169690603,
+          "sor": 12.42082326110067,
+          "days": 110,
+          "energy_kwh": 60728.656417379614,
+          "floating_days": 19,
+          "overload_days": 19
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 845.9678538277236,
+          "inj_pressure_MPa": 11.287636053242322,
+          "quality_surface": 0.7010189520428733,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.9672350448802549,
+          "min_prod_days": 62.0,
+          "spm_init": 2.0949692836265137
+        },
+        "pred_value_per_day": -54.2451127657294,
+        "pred_oil_m3": 61.079936450117174,
+        "sim": {
+          "feasible": true,
+          "value": -7150.509461348589,
+          "value_per_day": -97.95218440203547,
+          "oil_m3": 55.154710584055586,
+          "sor": 15.33808889339509,
+          "days": 73,
+          "energy_kwh": 28476.991545304794,
+          "floating_days": 14,
+          "overload_days": 14
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 850.4671701529119,
+          "inj_pressure_MPa": 11.921249450699221,
+          "quality_surface": 0.7168721225593457,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.5314700308978699,
+          "min_prod_days": 112.0,
+          "spm_init": 3.2608116712101887
+        },
+        "pred_value_per_day": -56.73036994103684,
+        "pred_oil_m3": 75.8204492980136,
+        "sim": {
+          "feasible": true,
+          "value": -12961.972186613042,
+          "value_per_day": -106.24567366076263,
+          "oil_m3": 70.30591444062996,
+          "sor": 12.09666607595427,
+          "days": 122,
+          "energy_kwh": 77513.19693530178,
+          "floating_days": 20,
+          "overload_days": 20
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 812.5268994144054,
+          "inj_pressure_MPa": 11.37843140786454,
+          "quality_surface": 0.734252708430655,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.705648696971241,
+          "min_prod_days": 101.0,
+          "spm_init": 2.387101290110885
+        },
+        "pred_value_per_day": -57.204173350537836,
+        "pred_oil_m3": 68.24126891337791,
+        "sim": {
+          "feasible": true,
+          "value": -10720.515055093372,
+          "value_per_day": -95.71888442047654,
+          "oil_m3": 61.38522728994812,
+          "sor": 13.23652180314493,
+          "days": 112,
+          "energy_kwh": 36968.454048628264,
+          "floating_days": 16,
+          "overload_days": 16
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 826.7196946172004,
+        "inj_pressure_MPa": 11.826943274344076,
+        "quality_surface": 0.7803072371681258,
+        "soak_days": 5.0,
+        "cutoff_m3d": 0.3196795396533387,
+        "min_prod_days": 67.0,
+        "spm_init": 2.261614176250333
+      },
+      "pred_value_per_day": -51.351703894462176,
+      "pred_oil_m3": 66.7381732718133,
+      "sim": {
+        "feasible": true,
+        "value": -7030.625102151018,
+        "value_per_day": -90.13621925834639,
+        "oil_m3": 59.04246707588744,
+        "sor": 14.00211975483029,
+        "days": 78,
+        "energy_kwh": 33613.73468087958,
+        "floating_days": 16,
+        "overload_days": 16
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S29",
+    "practice": {
+      "steam_t": 986.0160715132972,
+      "inj_pressure_MPa": 8.757199032476905,
+      "quality_surface": 0.7720547365125151,
+      "soak_days": 9,
+      "cutoff_m3d": 0.5011301236364735,
+      "min_prod_days": 117,
+      "spm_init": 5.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -37293.491920873945,
+      "value_per_day": -280.40219489378904,
+      "oil_m3": 27.677327065192646,
+      "sor": 35.625408089111446,
+      "days": 133,
+      "energy_kwh": 80354.91343618312,
+      "floating_days": 16,
+      "overload_days": 16
+    },
+    "practice_pred_value_per_day": -262.0418991400908,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 828.785840820131,
+          "inj_pressure_MPa": 11.900899606503806,
+          "quality_surface": 0.7600048964167373,
+          "soak_days": 8.0,
+          "cutoff_m3d": 0.8520329276342701,
+          "min_prod_days": 118.0,
+          "spm_init": 2.388873598540626
+        },
+        "pred_value_per_day": -189.6363451674039,
+        "pred_oil_m3": 35.143339506523674,
+        "sim": {
+          "feasible": true,
+          "value": -24779.376289040272,
+          "value_per_day": -187.7225476442445,
+          "oil_m3": 36.18084487376736,
+          "sor": 22.90675753182966,
+          "days": 132,
+          "energy_kwh": 30947.037392709393,
+          "floating_days": 31,
+          "overload_days": 31
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 808.4657396410892,
+          "inj_pressure_MPa": 10.636555066502691,
+          "quality_surface": 0.7419221487750949,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.9843440489735238,
+          "min_prod_days": 118.0,
+          "spm_init": 2.119815063582632
+        },
+        "pred_value_per_day": -190.3221810768091,
+        "pred_oil_m3": 32.85681120544466,
+        "sim": {
+          "feasible": true,
+          "value": -24589.574958279612,
+          "value_per_day": -189.15057660215086,
+          "oil_m3": 33.14638081885059,
+          "sor": 24.390769660780244,
+          "days": 130,
+          "energy_kwh": 24189.834610972182,
+          "floating_days": 27,
+          "overload_days": 27
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 810.9516663807113,
+          "inj_pressure_MPa": 10.993186144541017,
+          "quality_surface": 0.7130162373224128,
+          "soak_days": 10.0,
+          "cutoff_m3d": 0.3198209200892713,
+          "min_prod_days": 113.0,
+          "spm_init": 2.5410572867610783
+        },
+        "pred_value_per_day": -192.29006357360885,
+        "pred_oil_m3": 31.780340222416026,
+        "sim": {
+          "feasible": true,
+          "value": -26170.43536486102,
+          "value_per_day": -202.87159197566683,
+          "oil_m3": 31.092726461169548,
+          "sor": 26.08171616578804,
+          "days": 129,
+          "energy_kwh": 34824.35059801905,
+          "floating_days": 27,
+          "overload_days": 27
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 825.1953310424951,
+          "inj_pressure_MPa": 11.106097807506341,
+          "quality_surface": 0.7064446809868754,
+          "soak_days": 10.0,
+          "cutoff_m3d": 0.7149357583118722,
+          "min_prod_days": 119.0,
+          "spm_init": 2.953750438962765
+        },
+        "pred_value_per_day": -193.15593113726777,
+        "pred_oil_m3": 32.24904699110261,
+        "sim": {
+          "feasible": true,
+          "value": -28082.08379683138,
+          "value_per_day": -208.0154355320843,
+          "oil_m3": 32.2796414142642,
+          "sor": 25.563955945243116,
+          "days": 135,
+          "energy_kwh": 47842.16472215105,
+          "floating_days": 28,
+          "overload_days": 28
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 848.0104576137014,
+          "inj_pressure_MPa": 11.831326611617659,
+          "quality_surface": 0.7116582806227009,
+          "soak_days": 7.0,
+          "cutoff_m3d": 0.3340654902380157,
+          "min_prod_days": 104.0,
+          "spm_init": 2.0376190472480253
+        },
+        "pred_value_per_day": -193.50888661630808,
+        "pred_oil_m3": 35.5819901583083,
+        "sim": {
+          "feasible": true,
+          "value": -21737.35580280596,
+          "value_per_day": -185.78936583594836,
+          "oil_m3": 35.99663620356996,
+          "sor": 23.55804728025115,
+          "days": 117,
+          "energy_kwh": 22690.6266129257,
+          "floating_days": 29,
+          "overload_days": 29
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 848.0104576137014,
+        "inj_pressure_MPa": 11.831326611617659,
+        "quality_surface": 0.7116582806227009,
+        "soak_days": 7.0,
+        "cutoff_m3d": 0.3340654902380157,
+        "min_prod_days": 104.0,
+        "spm_init": 2.0376190472480253
+      },
+      "pred_value_per_day": -193.50888661630808,
+      "pred_oil_m3": 35.5819901583083,
+      "sim": {
+        "feasible": true,
+        "value": -21737.35580280596,
+        "value_per_day": -185.78936583594836,
+        "oil_m3": 35.99663620356996,
+        "sor": 23.55804728025115,
+        "days": 117,
+        "energy_kwh": 22690.6266129257,
+        "floating_days": 29,
+        "overload_days": 29
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S30",
+    "practice": {
+      "steam_t": 1498.1881026468377,
+      "inj_pressure_MPa": 9.95569505385626,
+      "quality_surface": 0.7563815354119593,
+      "soak_days": 9,
+      "cutoff_m3d": 0.8918840596013806,
+      "min_prod_days": 105,
+      "spm_init": 2.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -31872.982287551902,
+      "value_per_day": -257.0401797383218,
+      "oil_m3": 46.14229023704626,
+      "sor": 32.46887172158584,
+      "days": 124,
+      "energy_kwh": 12899.527133378853,
+      "floating_days": 8,
+      "overload_days": 8
+    },
+    "practice_pred_value_per_day": -257.883303549049,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 872.4156946627313,
+          "inj_pressure_MPa": 11.803710172971298,
+          "quality_surface": 0.7347065012940477,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.5539974171379302,
+          "min_prod_days": 94.0,
+          "spm_init": 2.5363724189468706
+        },
+        "pred_value_per_day": -108.56195817141928,
+        "pred_oil_m3": 55.189077850785104,
+        "sim": {
+          "feasible": true,
+          "value": -10256.528522489902,
+          "value_per_day": -99.57794682029031,
+          "oil_m3": 60.388552105376164,
+          "sor": 14.446706606583195,
+          "days": 103,
+          "energy_kwh": 28870.279374998536,
+          "floating_days": 37,
+          "overload_days": 37
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 825.8416969489367,
+          "inj_pressure_MPa": 11.978475182946843,
+          "quality_surface": 0.7965428828081648,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.5270021713369438,
+          "min_prod_days": 101.0,
+          "spm_init": 2.481293110288439
+        },
+        "pred_value_per_day": -109.78756765485625,
+        "pred_oil_m3": 54.823151000454644,
+        "sim": {
+          "feasible": true,
+          "value": -10390.239256763874,
+          "value_per_day": -94.45672051603522,
+          "oil_m3": 61.28026541160129,
+          "sor": 13.476470628872182,
+          "days": 110,
+          "energy_kwh": 27848.339787744822,
+          "floating_days": 38,
+          "overload_days": 38
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 813.6561253018931,
+          "inj_pressure_MPa": 11.91675014129575,
+          "quality_surface": 0.7010548109091755,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.924338354880061,
+          "min_prod_days": 109.0,
+          "spm_init": 3.7614401455565503
+        },
+        "pred_value_per_day": -110.04585345218945,
+        "pred_oil_m3": 56.91717862093208,
+        "sim": {
+          "feasible": true,
+          "value": -14367.432826196116,
+          "value_per_day": -120.73472963190014,
+          "oil_m3": 62.3264319984192,
+          "sor": 13.054752200840408,
+          "days": 119,
+          "energy_kwh": 70119.10849446483,
+          "floating_days": 42,
+          "overload_days": 42
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 816.7790193520864,
+          "inj_pressure_MPa": 11.797246682179628,
+          "quality_surface": 0.7763373976512326,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.3377820310763674,
+          "min_prod_days": 115.0,
+          "spm_init": 3.1514797967567025
+        },
+        "pred_value_per_day": -111.86716668773651,
+        "pred_oil_m3": 54.986234658862166,
+        "sim": {
+          "feasible": true,
+          "value": -15111.548119714429,
+          "value_per_day": -119.93292158503515,
+          "oil_m3": 59.32079151757291,
+          "sor": 13.768848972794432,
+          "days": 126,
+          "energy_kwh": 46157.0740813883,
+          "floating_days": 39,
+          "overload_days": 39
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 808.7179046870348,
+          "inj_pressure_MPa": 11.265930322765406,
+          "quality_surface": 0.7035512140674882,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.6530847044714979,
+          "min_prod_days": 63.0,
+          "spm_init": 2.067691620067324
+        },
+        "pred_value_per_day": -112.06162187801633,
+        "pred_oil_m3": 47.89072949793742,
+        "sim": {
+          "feasible": true,
+          "value": -7866.977437126334,
+          "value_per_day": -109.26357551564352,
+          "oil_m3": 51.5135345070136,
+          "sor": 15.699134459060023,
+          "days": 72,
+          "energy_kwh": 28632.20735537689,
+          "floating_days": 35,
+          "overload_days": 35
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 825.8416969489367,
+        "inj_pressure_MPa": 11.978475182946843,
+        "quality_surface": 0.7965428828081648,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.5270021713369438,
+        "min_prod_days": 101.0,
+        "spm_init": 2.481293110288439
+      },
+      "pred_value_per_day": -109.78756765485625,
+      "pred_oil_m3": 54.823151000454644,
+      "sim": {
+        "feasible": true,
+        "value": -10390.239256763874,
+        "value_per_day": -94.45672051603522,
+        "oil_m3": 61.28026541160129,
+        "sor": 13.476470628872182,
+        "days": 110,
+        "energy_kwh": 27848.339787744822,
+        "floating_days": 38,
+        "overload_days": 38
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S31",
+    "practice": {
+      "steam_t": 1128.7005394391988,
+      "inj_pressure_MPa": 9.197918721831924,
+      "quality_surface": 0.7235423634802205,
+      "soak_days": 7,
+      "cutoff_m3d": 0.936684186307627,
+      "min_prod_days": 76,
+      "spm_init": 4.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -25663.039143178037,
+      "value_per_day": -282.0114191558026,
+      "oil_m3": 37.89139840798258,
+      "sor": 29.78777735480503,
+      "days": 91,
+      "energy_kwh": 48119.8469915238,
+      "floating_days": 18,
+      "overload_days": 18
+    },
+    "practice_pred_value_per_day": -289.2075919871561,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 814.9025681136927,
+          "inj_pressure_MPa": 11.466816914341365,
+          "quality_surface": 0.704339770656629,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.43215712454106187,
+          "min_prod_days": 103.0,
+          "spm_init": 2.0149858228816013
+        },
+        "pred_value_per_day": -127.29294952924073,
+        "pred_oil_m3": 47.98461929007413,
+        "sim": {
+          "feasible": true,
+          "value": -14053.472957174756,
+          "value_per_day": -124.36701732013059,
+          "oil_m3": 50.938954259666176,
+          "sor": 15.997630496292665,
+          "days": 113,
+          "energy_kwh": 25150.844756941202,
+          "floating_days": 33,
+          "overload_days": 33
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 863.5102975196595,
+          "inj_pressure_MPa": 11.983398468005737,
+          "quality_surface": 0.7386182568167382,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.525200135150218,
+          "min_prod_days": 112.0,
+          "spm_init": 2.1643119489963256
+        },
+        "pred_value_per_day": -128.12369570739725,
+        "pred_oil_m3": 51.45241823736012,
+        "sim": {
+          "feasible": true,
+          "value": -15457.603632131792,
+          "value_per_day": -126.70166911583436,
+          "oil_m3": 54.61096432725742,
+          "sor": 15.812031670875738,
+          "days": 122,
+          "energy_kwh": 28539.294809484298,
+          "floating_days": 34,
+          "overload_days": 34
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 809.8824601402841,
+          "inj_pressure_MPa": 11.594363544851667,
+          "quality_surface": 0.7595402511599859,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.7997693100745915,
+          "min_prod_days": 103.0,
+          "spm_init": 2.598592767115905
+        },
+        "pred_value_per_day": -136.39929802383284,
+        "pred_oil_m3": 47.12725072700165,
+        "sim": {
+          "feasible": true,
+          "value": -15617.671139848775,
+          "value_per_day": -135.805835998685,
+          "oil_m3": 49.489991025212774,
+          "sor": 16.364570761948368,
+          "days": 115,
+          "energy_kwh": 27364.536700329834,
+          "floating_days": 35,
+          "overload_days": 35
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 860.3293391922758,
+          "inj_pressure_MPa": 11.471637348293925,
+          "quality_surface": 0.7440389024254358,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.41342326618188247,
+          "min_prod_days": 118.0,
+          "spm_init": 3.0381451643243147
+        },
+        "pred_value_per_day": -139.659806561702,
+        "pred_oil_m3": 49.569226271645185,
+        "sim": {
+          "feasible": true,
+          "value": -17577.429720196942,
+          "value_per_day": -137.3236696890386,
+          "oil_m3": 54.05760634419067,
+          "sor": 15.91504688007207,
+          "days": 128,
+          "energy_kwh": 38192.816986548976,
+          "floating_days": 37,
+          "overload_days": 37
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 856.0802723535473,
+          "inj_pressure_MPa": 11.372383668260373,
+          "quality_surface": 0.730432948412784,
+          "soak_days": 8.0,
+          "cutoff_m3d": 0.7211163996820625,
+          "min_prod_days": 119.0,
+          "spm_init": 2.1510877933827053
+        },
+        "pred_value_per_day": -142.08760881279002,
+        "pred_oil_m3": 46.747669541844836,
+        "sim": {
+          "feasible": true,
+          "value": -19434.297306113072,
+          "value_per_day": -146.1225361361885,
+          "oil_m3": 46.62442495900019,
+          "sor": 18.361197443321885,
+          "days": 133,
+          "energy_kwh": 18746.639217687578,
+          "floating_days": 30,
+          "overload_days": 30
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 814.9025681136927,
+        "inj_pressure_MPa": 11.466816914341365,
+        "quality_surface": 0.704339770656629,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.43215712454106187,
+        "min_prod_days": 103.0,
+        "spm_init": 2.0149858228816013
+      },
+      "pred_value_per_day": -127.29294952924073,
+      "pred_oil_m3": 47.98461929007413,
+      "sim": {
+        "feasible": true,
+        "value": -14053.472957174756,
+        "value_per_day": -124.36701732013059,
+        "oil_m3": 50.938954259666176,
+        "sor": 15.997630496292665,
+        "days": 113,
+        "energy_kwh": 25150.844756941202,
+        "floating_days": 33,
+        "overload_days": 33
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S32",
+    "practice": {
+      "steam_t": 1399.983340785751,
+      "inj_pressure_MPa": 10.347727378723706,
+      "quality_surface": 0.7795888098456554,
+      "soak_days": 7,
+      "cutoff_m3d": 0.9281970478864668,
+      "min_prod_days": 78,
+      "spm_init": 3.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -15721.503675589931,
+      "value_per_day": -165.48951237463086,
+      "oil_m3": 66.66036110029032,
+      "sor": 21.00173652944184,
+      "days": 95,
+      "energy_kwh": 2660.217736029732,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -143.94987412754952,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 808.0075503115768,
+          "inj_pressure_MPa": 11.970294156107173,
+          "quality_surface": 0.7581201863348789,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.47018746477081313,
+          "min_prod_days": 77.0,
+          "spm_init": 5.157088803996178
+        },
+        "pred_value_per_day": 10.22753966616022,
+        "pred_oil_m3": 80.25397862432133,
+        "sim": {
+          "feasible": true,
+          "value": -3844.900366968279,
+          "value_per_day": -44.194257091589414,
+          "oil_m3": 77.43000834063696,
+          "sor": 10.435328209664117,
+          "days": 87,
+          "energy_kwh": 75394.67245585249,
+          "floating_days": 17,
+          "overload_days": 17
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 822.3663731505925,
+          "inj_pressure_MPa": 11.161962679164706,
+          "quality_surface": 0.7030070004096278,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.890991051276364,
+          "min_prod_days": 66.0,
+          "spm_init": 3.7569017298282237
+        },
+        "pred_value_per_day": 8.657858633677614,
+        "pred_oil_m3": 73.64922153971958,
+        "sim": {
+          "feasible": true,
+          "value": -1874.213184891214,
+          "value_per_day": -24.989509131882855,
+          "oil_m3": 69.9171799835737,
+          "sor": 11.762007182552251,
+          "days": 75,
+          "energy_kwh": 42412.73166446946,
+          "floating_days": 13,
+          "overload_days": 13
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 805.6189640615486,
+          "inj_pressure_MPa": 11.842355122176004,
+          "quality_surface": 0.7796115518944263,
+          "soak_days": 3.0,
+          "cutoff_m3d": 0.37827610018874774,
+          "min_prod_days": 75.0,
+          "spm_init": 2.640319706599205
+        },
+        "pred_value_per_day": 5.888335337020679,
+        "pred_oil_m3": 79.67875121245558,
+        "sim": {
+          "feasible": true,
+          "value": 456.8795941780336,
+          "value_per_day": 5.439042787833733,
+          "oil_m3": 74.08035644037213,
+          "sor": 10.874933690552606,
+          "days": 84,
+          "energy_kwh": 20607.44446447836,
+          "floating_days": 11,
+          "overload_days": 11
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 808.5946878874606,
+          "inj_pressure_MPa": 11.80093392661384,
+          "quality_surface": 0.7677639080783111,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.9098605943919862,
+          "min_prod_days": 63.0,
+          "spm_init": 5.013916050605173
+        },
+        "pred_value_per_day": 0.2095855233899822,
+        "pred_oil_m3": 73.40580015622825,
+        "sim": {
+          "feasible": true,
+          "value": -4891.587184033895,
+          "value_per_day": -65.22116245378527,
+          "oil_m3": 68.55602116289,
+          "sor": 11.794656022499161,
+          "days": 75,
+          "energy_kwh": 63683.58245091132,
+          "floating_days": 15,
+          "overload_days": 15
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 865.6688079497294,
+          "inj_pressure_MPa": 11.898436047338524,
+          "quality_surface": 0.7317652957927605,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.7747230550058031,
+          "min_prod_days": 84.0,
+          "spm_init": 4.656436711871558
+        },
+        "pred_value_per_day": -1.4823531197452897,
+        "pred_oil_m3": 80.31749455673251,
+        "sim": {
+          "feasible": true,
+          "value": -6120.969065586702,
+          "value_per_day": -63.76009443319481,
+          "oil_m3": 75.17867963317629,
+          "sor": 11.514817926753139,
+          "days": 96,
+          "energy_kwh": 64898.10596965516,
+          "floating_days": 14,
+          "overload_days": 14
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 805.6189640615486,
+        "inj_pressure_MPa": 11.842355122176004,
+        "quality_surface": 0.7796115518944263,
+        "soak_days": 3.0,
+        "cutoff_m3d": 0.37827610018874774,
+        "min_prod_days": 75.0,
+        "spm_init": 2.640319706599205
+      },
+      "pred_value_per_day": 5.888335337020679,
+      "pred_oil_m3": 79.67875121245558,
+      "sim": {
+        "feasible": true,
+        "value": 456.8795941780336,
+        "value_per_day": 5.439042787833733,
+        "oil_m3": 74.08035644037213,
+        "sor": 10.874933690552606,
+        "days": 84,
+        "energy_kwh": 20607.44446447836,
+        "floating_days": 11,
+        "overload_days": 11
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S33",
+    "practice": {
+      "steam_t": 1604.7881110923615,
+      "inj_pressure_MPa": 9.812121888120917,
+      "quality_surface": 0.7485969168063896,
+      "soak_days": 8,
+      "cutoff_m3d": 0.8705884511956453,
+      "min_prod_days": 93,
+      "spm_init": 4.0
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -26320.750333290627,
+      "value_per_day": -235.0066994043806,
+      "oil_m3": 57.239781408933815,
+      "sor": 28.036237588459606,
+      "days": 112,
+      "energy_kwh": 2732.883439188082,
+      "floating_days": 0,
+      "overload_days": 0
+    },
+    "practice_pred_value_per_day": -259.11643799374826,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 819.8637854034852,
+          "inj_pressure_MPa": 11.956457475053327,
+          "quality_surface": 0.7379453310406237,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.7488700805487468,
+          "min_prod_days": 81.0,
+          "spm_init": 2.643094217857748
+        },
+        "pred_value_per_day": -91.35297148835718,
+        "pred_oil_m3": 53.55509315411129,
+        "sim": {
+          "feasible": true,
+          "value": -7103.73449382449,
+          "value_per_day": -77.2145053676575,
+          "oil_m3": 59.27392283919096,
+          "sor": 13.831778733925882,
+          "days": 92,
+          "energy_kwh": 19854.155438849924,
+          "floating_days": 5,
+          "overload_days": 5
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 807.025045724165,
+          "inj_pressure_MPa": 11.74919399756327,
+          "quality_surface": 0.7596658790225315,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.3245877068936486,
+          "min_prod_days": 105.0,
+          "spm_init": 3.9510308465914203
+        },
+        "pred_value_per_day": -91.7723548637503,
+        "pred_oil_m3": 57.82019297410755,
+        "sim": {
+          "feasible": true,
+          "value": -11825.499296068348,
+          "value_per_day": -102.8304286614639,
+          "oil_m3": 64.1050726557819,
+          "sor": 12.589098058706844,
+          "days": 115,
+          "energy_kwh": 54478.0956639372,
+          "floating_days": 8,
+          "overload_days": 8
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 830.4323389677405,
+          "inj_pressure_MPa": 11.885633776366308,
+          "quality_surface": 0.7670129303019753,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.40754299212232203,
+          "min_prod_days": 113.0,
+          "spm_init": 2.14181349912917
+        },
+        "pred_value_per_day": -93.47565246967092,
+        "pred_oil_m3": 58.32429548050582,
+        "sim": {
+          "feasible": true,
+          "value": -10089.8981994828,
+          "value_per_day": -82.03169267872194,
+          "oil_m3": 61.904801352180364,
+          "sor": 13.414667696667953,
+          "days": 123,
+          "energy_kwh": 9790.503565711255,
+          "floating_days": 3,
+          "overload_days": 3
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 818.9048594128623,
+          "inj_pressure_MPa": 11.770641970028894,
+          "quality_surface": 0.7362522307479572,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.8198220282567658,
+          "min_prod_days": 102.0,
+          "spm_init": 5.471787135002086
+        },
+        "pred_value_per_day": -93.86290417897024,
+        "pred_oil_m3": 56.72325491232777,
+        "sim": {
+          "feasible": true,
+          "value": -14895.606756739111,
+          "value_per_day": -130.66321716437815,
+          "oil_m3": 62.788715691770065,
+          "sor": 13.042229808185088,
+          "days": 114,
+          "energy_kwh": 80521.9540878447,
+          "floating_days": 8,
+          "overload_days": 8
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 818.9849909874438,
+          "inj_pressure_MPa": 11.764128561280097,
+          "quality_surface": 0.7625817151352845,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.6555648135890368,
+          "min_prod_days": 112.0,
+          "spm_init": 3.286511772997685
+        },
+        "pred_value_per_day": -94.54816508036176,
+        "pred_oil_m3": 57.39528309263386,
+        "sim": {
+          "feasible": true,
+          "value": -11849.790498016777,
+          "value_per_day": -96.33976014647786,
+          "oil_m3": 62.2412679571401,
+          "sor": 13.158231152222095,
+          "days": 123,
+          "energy_kwh": 31680.02133922942,
+          "floating_days": 6,
+          "overload_days": 6
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 819.8637854034852,
+        "inj_pressure_MPa": 11.956457475053327,
+        "quality_surface": 0.7379453310406237,
+        "soak_days": 5.0,
+        "cutoff_m3d": 0.7488700805487468,
+        "min_prod_days": 81.0,
+        "spm_init": 2.643094217857748
+      },
+      "pred_value_per_day": -91.35297148835718,
+      "pred_oil_m3": 53.55509315411129,
+      "sim": {
+        "feasible": true,
+        "value": -7103.73449382449,
+        "value_per_day": -77.2145053676575,
+        "oil_m3": 59.27392283919096,
+        "sor": 13.831778733925882,
+        "days": 92,
+        "energy_kwh": 19854.155438849924,
+        "floating_days": 5,
+        "overload_days": 5
+      }
+    }
+  },
+  {
+    "well_id": "BGW-S34",
+    "practice": {
+      "steam_t": 985.1308185020472,
+      "inj_pressure_MPa": 10.028680519286018,
+      "quality_surface": 0.7994409619182841,
+      "soak_days": 9,
+      "cutoff_m3d": 0.3250535071657298,
+      "min_prod_days": 98,
+      "spm_init": 4.5
+    },
+    "practice_sim": {
+      "feasible": true,
+      "value": -28028.81984456389,
+      "value_per_day": -245.86684074178848,
+      "oil_m3": 43.27961858685106,
+      "sor": 22.76200324005035,
+      "days": 114,
+      "energy_kwh": 82236.86731174703,
+      "floating_days": 60,
+      "overload_days": 60
+    },
+    "practice_pred_value_per_day": -302.91480122343506,
+    "candidates": [
+      {
+        "controls": {
+          "steam_t": 830.5777130229269,
+          "inj_pressure_MPa": 11.597092885369381,
+          "quality_surface": 0.7063637796449274,
+          "soak_days": 5.0,
+          "cutoff_m3d": 0.6759516615545729,
+          "min_prod_days": 119.0,
+          "spm_init": 2.170271825759798
+        },
+        "pred_value_per_day": -133.46225090118662,
+        "pred_oil_m3": 51.86979017157774,
+        "sim": {
+          "feasible": true,
+          "value": -16322.912109574507,
+          "value_per_day": -125.56086238134236,
+          "oil_m3": 55.00974497078621,
+          "sor": 15.098737750266217,
+          "days": 130,
+          "energy_kwh": 36837.87350263723,
+          "floating_days": 68,
+          "overload_days": 69
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 833.6113968787276,
+          "inj_pressure_MPa": 11.826632407713902,
+          "quality_surface": 0.7697037147388159,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.5070089950844502,
+          "min_prod_days": 90.0,
+          "spm_init": 2.1212915126902194
+        },
+        "pred_value_per_day": -138.29886662521952,
+        "pred_oil_m3": 52.17503084482677,
+        "sim": {
+          "feasible": true,
+          "value": -12146.604647522254,
+          "value_per_day": -121.46604647522254,
+          "oil_m3": 55.24235949899384,
+          "sor": 15.09007588450147,
+          "days": 100,
+          "energy_kwh": 34546.85618509788,
+          "floating_days": 69,
+          "overload_days": 69
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 840.2294162348843,
+          "inj_pressure_MPa": 11.738735409292891,
+          "quality_surface": 0.7174069958727204,
+          "soak_days": 4.0,
+          "cutoff_m3d": 0.7074390119427442,
+          "min_prod_days": 118.0,
+          "spm_init": 3.1524661974233914
+        },
+        "pred_value_per_day": -144.77378048370377,
+        "pred_oil_m3": 54.15190731225298,
+        "sim": {
+          "feasible": true,
+          "value": -15482.916863392296,
+          "value_per_day": -120.96028799525232,
+          "oil_m3": 59.86210203607735,
+          "sor": 14.036082724400483,
+          "days": 128,
+          "energy_kwh": 49770.81819345879,
+          "floating_days": 72,
+          "overload_days": 72
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 833.6827067169471,
+          "inj_pressure_MPa": 11.300010881527774,
+          "quality_surface": 0.7104890175435916,
+          "soak_days": 6.0,
+          "cutoff_m3d": 0.7440256819550247,
+          "min_prod_days": 108.0,
+          "spm_init": 2.6472588281817164
+        },
+        "pred_value_per_day": -152.5590053153354,
+        "pred_oil_m3": 49.22774043970054,
+        "sim": {
+          "feasible": true,
+          "value": -15879.615642199424,
+          "value_per_day": -132.33013035166186,
+          "oil_m3": 52.566326228080456,
+          "sor": 15.8596342285682,
+          "days": 120,
+          "energy_kwh": 35516.13421417267,
+          "floating_days": 68,
+          "overload_days": 68
+        }
+      },
+      {
+        "controls": {
+          "steam_t": 867.5012733421767,
+          "inj_pressure_MPa": 11.789880786053764,
+          "quality_surface": 0.7552139775727056,
+          "soak_days": 9.0,
+          "cutoff_m3d": 0.4438502822397951,
+          "min_prod_days": 116.0,
+          "spm_init": 2.0166016279133685
+        },
+        "pred_value_per_day": -153.9528395586538,
+        "pred_oil_m3": 49.659628014315594,
+        "sim": {
+          "feasible": true,
+          "value": -19725.79885455437,
+          "value_per_day": -150.5786172103387,
+          "oil_m3": 49.4009543731638,
+          "sor": 17.560415266257113,
+          "days": 131,
+          "energy_kwh": 32200.569420770298,
+          "floating_days": 65,
+          "overload_days": 65
+        }
+      }
+    ],
+    "best": {
+      "controls": {
+        "steam_t": 840.2294162348843,
+        "inj_pressure_MPa": 11.738735409292891,
+        "quality_surface": 0.7174069958727204,
+        "soak_days": 4.0,
+        "cutoff_m3d": 0.7074390119427442,
+        "min_prod_days": 118.0,
+        "spm_init": 3.1524661974233914
+      },
+      "pred_value_per_day": -144.77378048370377,
+      "pred_oil_m3": 54.15190731225298,
+      "sim": {
+        "feasible": true,
+        "value": -15482.916863392296,
+        "value_per_day": -120.96028799525232,
+        "oil_m3": 59.86210203607735,
+        "sor": 14.036082724400483,
+        "days": 128,
+        "energy_kwh": 49770.81819345879,
+        "floating_days": 72,
+        "overload_days": 72
+      }
+    }
+  }
+]

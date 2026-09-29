@@ -1,0 +1,31 @@
+{
+  "n_live_cards": 314,
+  "exact_agreement": 0.8152866242038217,
+  "grouped_agreement": 0.9394904458598726,
+  "confusion": {
+    "fluid_pound": {
+      "fluid_pound": 147,
+      "normal": 0,
+      "rod_floating": 0
+    },
+    "gas_interference": {
+      "fluid_pound": 39,
+      "normal": 0,
+      "rod_floating": 0
+    },
+    "normal": {
+      "fluid_pound": 13,
+      "normal": 58,
+      "rod_floating": 0
+    },
+    "rod_floating": {
+      "fluid_pound": 6,
+      "normal": 0,
+      "rod_floating": 51
+    }
+  },
+  "n_fault_cards": 24,
+  "fault_agreement": 1.0,
+  "days": 90,
+  "every": 15
+}

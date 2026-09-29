@@ -1,0 +1,509 @@
+# Baghewala Well-to-Surface Digital Twin — field and equipment parameters
+#
+# EVERY parameter carries:
+#   status : published | problem_statement | assumption | physical_constant
+#   source : where the number comes from (URL / document / reasoning)
+#   unit   : converted to SI by twin/units.py (unknown units raise an error)
+#   value  : a single number, OR
+#   range  : [low, high] -> sampled per well (heterogeneity); `dist` = uniform | loguniform
+#
+# "assumption" values are NOT Baghewala data. They are placeholders chosen from
+# generic petroleum-engineering literature ranges and MUST be replaced with OIL's
+# field data before any operational use. `python -m twin.cli params` lists them.
+
+field:
+  n_producing_wells:
+    value: 34
+    unit: dimensionless
+    status: published
+    source: "Oil India Ltd, Rajasthan Fields page (https://www.oil-india.com/rajasthan-fields): '56 nos. of wells have already been drilled out of which 34 nos. of wells are in production'"
+  field_rate_bopd_reported:
+    value: 1202
+    unit: dimensionless
+    status: published
+    source: "BusinessToday, 2026-04-05: record 1,202 bbl/d from Jodhpur sandstone, Baghewala (used ONLY as a sanity check, never as a model input)"
+  css_first_date:
+    value: "2018-12-01"
+    unit: date
+    status: published
+    source: "Oil & Gas Journal, Dec 2018: 'OIL starts CSS of well in Rajasthan' (BGW-8, India's first CSS)"
+  history_end_date:
+    value: "2026-06-30"
+    unit: date
+    status: assumption
+    source: "End of synthetic history window (choose to match the real data extract)"
+  css_start_spread_years:
+    value: 4.0
+    unit: dimensionless
+    status: assumption
+    source: "Wells assumed to be brought onto CSS progressively over this many years after the first CSS"
+  cold_to_hot_rate_ratio_reported:
+    value: [5.0, 6.0]
+    unit: dimensionless
+    status: published
+    source: "OIL CSS pilot summary (Scribd doc 444099090): 'five to six fold increase in production after steam injection' (sanity check only)"
+
+reservoir:
+  depth:
+    value: 1150
+    unit: m
+    status: published
+    source: "OIL Rajasthan Fields page: 'Jodhpur Sandstone (Heavy Oil Reservoir with avg. depth of 1150 m)'"
+  temperature:
+    range: [46.0, 48.0]
+    dist: uniform
+    unit: degC
+    status: problem_statement
+    source: "Problem statement: reservoir temperature 46-48 C"
+  porosity:
+    range: [0.10, 0.18]
+    dist: uniform
+    unit: fraction
+    status: assumption
+    source: "Basha et al., GEOHORIZONS Jan 2015 report 'poor porosity (<10%)' regionally but oil occurs 'where the sand has a relatively high porosity'; pay porosity not published"
+  permeability:
+    range: [300.0, 2000.0]
+    dist: loguniform
+    unit: mD
+    status: assumption
+    source: "Not published. Generic heavy-oil sandstone range. NOTE: with this range the synthetic field produces well below the published ~1,100 bopd (see README, 'Sanity checks against published figures')"
+  net_pay:
+    range: [8.0, 25.0]
+    dist: uniform
+    unit: m
+    status: assumption
+    source: "Not published"
+  initial_pressure:
+    range: [5.0, 8.0]
+    dist: uniform
+    unit: MPa
+    status: assumption
+    source: "Problem statement says 'low reservoir pressure'; hydrostatic at 1150 m is ~11.3 MPa, so a sub-hydrostatic range is assumed"
+  initial_oil_saturation:
+    range: [0.60, 0.75]
+    dist: uniform
+    unit: fraction
+    status: assumption
+    source: "Not published; typical heavy-oil sand range"
+  connate_water_saturation:
+    value: 0.25
+    unit: fraction
+    status: assumption
+    source: "Not published; generic"
+  residual_oil_saturation:
+    value: 0.20
+    unit: fraction
+    status: assumption
+    source: "Not published; generic (hot residual oil)"
+  corey_exponent_oil:
+    value: 2.0
+    unit: dimensionless
+    status: assumption
+    source: "Generic Corey exponent"
+  corey_exponent_water:
+    value: 3.0
+    unit: dimensionless
+    status: assumption
+    source: "Generic Corey exponent"
+  krw_endpoint:
+    value: 0.3
+    unit: fraction
+    status: assumption
+    source: "Generic"
+  kro_endpoint:
+    value: 0.8
+    unit: fraction
+    status: assumption
+    source: "Generic"
+  drainage_radius:
+    range: [60.0, 120.0]
+    dist: uniform
+    unit: m
+    status: assumption
+    source: "Well spacing not published"
+  wellbore_radius:
+    value: 0.108
+    unit: m
+    status: assumption
+    source: "8.5 in open hole assumed"
+  skin_cold:
+    range: [2.0, 10.0]
+    dist: uniform
+    unit: dimensionless
+    status: assumption
+    source: "Near-wellbore damage (asphaltene deposition is cited in problem statement). Not published"
+  effective_compressibility:
+    value: 5.0e-9
+    unit: 1/Pa
+    status: assumption
+    source: "Effective tank compressibility for pressure support/depletion; not published"
+  condensate_bank_saturation_increase:
+    value: 0.30
+    unit: fraction
+    status: assumption
+    source: "Max rise of heated-zone water saturation from condensate; condensate beyond this occupies a bank outside the heated zone and is produced first (not published)"
+  pressure_dissipation_time:
+    value: 15.0
+    unit: d
+    status: assumption
+    source: "e-folding time for injection over-pressure (above initial pressure) to leak off beyond the drainage area; no influx below initial pressure (depletion drive). Must be calibrated on shut-in pressure data"
+  condensate_dispersal_time:
+    value: 60.0
+    unit: d
+    status: assumption
+    source: "e-folding time for un-produced condensate in the bank beyond the heated zone to disperse into the formation (gravity segregation/imbibition). Not published; calibrate on water-recovery ratio per cycle"
+  min_drainage_pressure_fraction:
+    value: 0.35
+    unit: fraction
+    status: assumption
+    source: "Floor on depletion as fraction of initial pressure (tank model limit)"
+  rock_volumetric_heat_capacity:
+    value: 2.4e+6
+    unit: J/m3.K
+    status: assumption
+    source: "Generic fluid-saturated sandstone, ~2.0-2.6 MJ/m3K (Prats, Thermal Recovery, SPE Monograph 7, 1982)"
+  rock_thermal_conductivity:
+    value: 2.0
+    unit: W/m.K
+    status: assumption
+    source: "Generic saturated sandstone"
+  rock_thermal_diffusivity:
+    value: 8.0e-7
+    unit: m2/s
+    status: assumption
+    source: "Generic saturated sandstone"
+  caprock_thermal_conductivity:
+    value: 1.7
+    unit: W/m.K
+    status: assumption
+    source: "Generic shale/carbonate cap (Bilara carbonates/shale are the seal per Basha et al. 2015)"
+  caprock_thermal_diffusivity:
+    value: 7.0e-7
+    unit: m2/s
+    status: assumption
+    source: "Generic shale"
+  fracture_gradient:
+    value: 17.0
+    unit: kPa/m
+    status: assumption
+    source: "Not published; generic"
+
+oil:
+  api_gravity:
+    range: [17.0, 19.0]
+    dist: uniform
+    unit: dimensionless
+    status: problem_statement
+    source: "Problem statement: 17-19 API (Basha et al. 2015 quote 14-18 API)"
+  viscosity_at_ref:
+    range: [10000.0, 13000.0]
+    dist: uniform
+    unit: cP
+    status: published
+    source: "OIL Rajasthan Fields page: 'crude oil viscosity is in the range of 10,000-13,000 cP at 50 deg C'"
+  viscosity_ref_temperature:
+    value: 50.0
+    unit: degC
+    status: published
+    source: "OIL Rajasthan Fields page (same statement)"
+  walther_slope_B:
+    range: [3.3, 3.7]
+    dist: uniform
+    unit: dimensionless
+    status: assumption
+    source: "ASTM D341 slope not published; typical heavy-oil range. Only ONE viscosity point is published, so the slope must be measured (lab viscosity vs temperature) to replace this"
+  thermal_expansion:
+    value: 7.0e-4
+    unit: 1/K
+    status: assumption
+    source: "Generic crude"
+  specific_heat:
+    value: 2000.0
+    unit: J/kg.K
+    status: assumption
+    source: "Generic heavy crude"
+  formation_volume_factor:
+    value: 1.02
+    unit: dimensionless
+    status: assumption
+    source: "Low-GOR dead heavy oil assumed"
+  bulk_modulus:
+    value: 1.5e+9
+    unit: Pa
+    status: assumption
+    source: "Liquid bulk modulus in the pump chamber (generic crude/water ~1.5-2.2 GPa)"
+  emulsion_inversion_watercut:
+    value: 0.7
+    unit: fraction
+    status: assumption
+    source: "Above this water cut the tubing flow is treated as water-continuous (drag uses water viscosity); below it oil-continuous (drag uses oil viscosity, emulsion viscosity increase ignored). High asphaltene content (problem statement) favours stable W/O emulsions, hence a high inversion point is assumed. Must be measured."
+
+wellbore:
+  surface_temperature:
+    value: 25.0
+    unit: degC
+    status: assumption
+    source: "Mean surface temperature, Bikaner region (approx.); geothermal gradient is derived from this and reservoir temperature"
+  vit_overall_U:
+    value: 2.0
+    unit: W/m2.K
+    status: assumption
+    source: "VIT is used in Baghewala (OIL Rajasthan Fields page); U value not published, typical VIT 1-3 W/m2K"
+  tubing_outer_radius:
+    value: 0.0572
+    unit: m
+    status: assumption
+    source: "4.5 in VIT outer tube assumed"
+  tubing_inner_diameter:
+    value: 0.076
+    unit: m
+    status: assumption
+    source: "3.5 in inner tubing, ID 2.992 in assumed"
+  earth_thermal_conductivity:
+    value: 2.0
+    unit: W/m.K
+    status: assumption
+    source: "Generic"
+  earth_thermal_diffusivity:
+    value: 1.0e-6
+    unit: m2/s
+    status: assumption
+    source: "Generic"
+  wellhead_pressure:
+    value: 1.0
+    unit: MPa
+    status: assumption
+    source: "Flowline back-pressure assumed"
+  casing_pressure:
+    value: 0.2
+    unit: MPa
+    status: assumption
+    source: "Annulus vented to low pressure assumed"
+  min_pump_submergence:
+    value: 30.0
+    unit: m
+    status: assumption
+    source: "Minimum fluid column above pump when pumped off"
+
+steam:
+  generator_max_rate:
+    value: 150.0
+    unit: t/d
+    status: assumption
+    source: "Portable steam generator capacity not published"
+  surface_quality:
+    range: [0.70, 0.80]
+    dist: uniform
+    unit: fraction
+    status: assumption
+    source: "Once-through generators typically 70-80%"
+  boiler_efficiency:
+    value: 0.85
+    unit: fraction
+    status: assumption
+    source: "Generic"
+
+css_practice:   # "historical practice" envelope used to synthesise the operating history
+  steam_mass:
+    range: [800.0, 2000.0]
+    dist: uniform
+    unit: t
+    status: assumption
+    source: "Per-cycle steam volumes not published"
+  injection_pressure:
+    range: [8.0, 12.0]
+    dist: uniform
+    unit: MPa
+    status: assumption
+    source: "Must exceed reservoir pressure and stay below fracture pressure (~19.5 MPa at 17 kPa/m)"
+  soak_days:
+    range: [3.0, 10.0]
+    dist: uniform
+    unit: d
+    status: assumption
+    source: "Not published"
+  cutoff_oil_rate:
+    range: [0.3, 1.0]
+    dist: uniform
+    unit: m3/d
+    status: assumption
+    source: "Production cut-off (2-6 bbl/d) for starting the next cycle; not published"
+  min_production_days:
+    range: [60.0, 120.0]
+    dist: uniform
+    unit: d
+    status: assumption
+    source: "Operators do not re-steam before this many production days (steam-generator scheduling across the field); not published"
+  max_production_days:
+    value: 365
+    unit: d
+    status: assumption
+    source: "Hard cap on cycle length"
+
+srp:
+  pump_setting_offset:
+    value: 20.0
+    unit: m
+    status: assumption
+    source: "Pump set this far above reservoir depth"
+  plunger_diameter:
+    value: 0.05715
+    unit: m
+    status: assumption
+    source: "2.25 in plunger assumed"
+  plunger_length:
+    value: 1.22
+    unit: m
+    status: assumption
+    source: "4 ft plunger assumed"
+  plunger_clearance:
+    value: 7.6e-5
+    unit: m
+    status: assumption
+    source: "Diametral fit 0.003 in assumed; radial clearance = half"
+  pump_coulomb_friction:
+    value: 400.0
+    unit: N
+    status: assumption
+    source: "Generic"
+  plunger_mass:
+    value: 15.0
+    unit: kg
+    status: assumption
+    source: "Plunger + valve cage mass (generic)"
+  pump_dead_volume_length:
+    value: 0.15
+    unit: m
+    status: assumption
+    source: "Pump spacing (unswept length at bottom of stroke)"
+  rod_diameter:
+    value: 0.0222
+    unit: m
+    status: assumption
+    source: "7/8 in steel rods (single taper) assumed"
+  rod_density:
+    value: 7850.0
+    unit: kg/m3
+    status: physical_constant
+    source: "Carbon steel"
+  rod_youngs_modulus:
+    value: 2.07e+11
+    unit: Pa
+    status: physical_constant
+    source: "Steel, 30e6 psi"
+  rod_tensile_strength:
+    value: 793.0
+    unit: MPa
+    status: assumption
+    source: "API grade D rods assumed (min tensile 115 ksi)"
+  goodman_service_factor:
+    value: 0.9
+    unit: fraction
+    status: assumption
+    source: "API RP 11BR service factor for salt-water service"
+  stroke_length:
+    range: [2.5, 4.3]
+    dist: uniform
+    unit: m
+    status: assumption
+    source: "Conventional and hydraulic SRP units are used (OIL Rajasthan Fields page); stroke not published"
+  manual_spm_range:
+    range: [2.0, 6.0]
+    dist: uniform
+    unit: dimensionless
+    status: assumption
+    source: "Initial SPM set by operator at start of production"
+  spm_min:
+    value: 1.0
+    unit: dimensionless
+    status: assumption
+    source: "Unit minimum speed"
+  spm_max:
+    value: 8.0
+    unit: dimensionless
+    status: assumption
+    source: "Unit maximum speed"
+  max_speed_ratio:
+    value: 3.0
+    unit: dimensionless
+    status: assumption
+    source: "Max downstroke/upstroke duration ratio a VFD/hydraulic unit can apply"
+  manual_reaction_days:
+    value: 7
+    unit: dimensionless
+    status: assumption
+    source: "Days of persistent symptom before a manual SPM change (reactive practice)"
+  manual_spm_step:
+    value: 0.5
+    unit: dimensionless
+    status: assumption
+    source: "Size of manual SPM change"
+  low_fillage_threshold:
+    value: 0.6
+    unit: fraction
+    status: assumption
+    source: "Fillage below which operator slows unit"
+  target_fillage:
+    value: 0.9
+    unit: fraction
+    status: assumption
+    source: "Twin controller target pump fillage"
+  floating_safety_margin:
+    value: 0.15
+    unit: fraction
+    status: assumption
+    source: "Twin keeps downstroke speed this fraction below the floating limit"
+  twin_infeasible_days_to_cutoff:
+    value: 3
+    unit: dimensionless
+    status: assumption
+    source: "Operating rule for the twin: if no SPM/speed-ratio within unit limits avoids rod floating and Goodman overload for this many consecutive days, end the production period (lift-limited cut-off -> re-steam) instead of pumping into rod damage"
+  surface_efficiency:
+    value: 0.55
+    unit: fraction
+    status: assumption
+    source: "Motor+gearbox/hydraulic efficiency (polished-rod to electrical)"
+
+economics:   # only used by the optimiser objective; replace with OIL figures
+  oil_price:
+    value: 70.0
+    unit: USD/bbl
+    status: assumption
+    source: "Placeholder"
+  fuel_cost_per_GJ:
+    value: 8.0
+    unit: USD/GJ
+    status: assumption
+    source: "Placeholder steam-generator fuel cost"
+  power_cost:
+    value: 0.10
+    unit: USD/kWh
+    status: assumption
+    source: "Placeholder"
+  opex_per_day:
+    value: 150.0
+    unit: USD/d
+    status: assumption
+    source: "Placeholder fixed well cost per day"
+
+measurement_noise:
+  rate_relative_sd:
+    value: 0.05
+    unit: fraction
+    status: assumption
+    source: "Daily test/meter noise"
+  temperature_sd:
+    value: 1.0
+    unit: K
+    status: assumption
+    source: "Gauge noise"
+  load_relative_sd:
+    value: 0.01
+    unit: fraction
+    status: assumption
+    source: "Load cell noise (fraction of rod weight in air)"
+  position_sd:
+    value: 0.005
+    unit: fraction
+    status: assumption
+    source: "Position transducer noise (fraction of stroke)"

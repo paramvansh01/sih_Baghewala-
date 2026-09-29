@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baghewala Live Twin</title>
+<style>
+:root{--bg:#f6f7f9;--panel:#fff;--fg:#1c1f24;--muted:#626a75;--line:#e1e4e8;--soft:#f0f2f5;
+ --blue:#2563eb;--orange:#d97706;--green:#059669;--red:#dc2626;--purple:#7c3aed;--gray:#8b949e;--teal:#0d9488}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--panel:#171a20;--fg:#e6e8eb;--muted:#9aa3ad;--line:#2a2f37;--soft:#1e232a;
+ --blue:#60a5fa;--orange:#fbbf24;--green:#34d399;--red:#f87171;--purple:#a78bfa;--gray:#8b949e;--teal:#2dd4bf}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--panel);border-bottom:1px solid var(--line);padding:10px 16px;
+ display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+h1{font-size:15px;margin:0;font-weight:650}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;background:var(--soft);color:var(--muted)}
+.badge.sim{background:rgba(217,119,6,.15);color:var(--orange)}
+.badge.alarm{background:rgba(220,38,38,.15);color:var(--red)}
+.badge.ok{background:rgba(5,150,105,.15);color:var(--green)}
+.badge.info{background:rgba(37,99,235,.13);color:var(--blue)}
+.badge.warn{background:rgba(217,119,6,.15);color:var(--orange)}
+button,select{font:inherit;color:var(--fg);background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer}
+button.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.ctl{display:flex;gap:8px;align-items:center;margin-left:auto;flex-wrap:wrap}
+main{padding:14px 16px 40px;max-width:1500px;margin:0 auto;display:grid;gap:14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.panel h2{font-size:13px;margin:0 0 8px;font-weight:650}
+.muted{color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.k{background:var(--soft);border-radius:8px;padding:7px 9px}
+.k .v{font-size:17px;font-weight:650;font-variant-numeric:tabular-nums}
+.k .l{font-size:11px;color:var(--muted)}
+.k .d{font-size:11px;font-weight:600}
+.good{color:var(--green)} .bad{color:var(--red)}
+.split{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:14px;align-items:start}
+.tablewrap{max-height:720px;overflow:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:4px 6px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{position:sticky;top:0;background:var(--panel);font-weight:600;color:var(--muted);font-size:11px}
+td:first-child,th:first-child{text-align:left}
+tr.sel{background:rgba(37,99,235,.10)} tr:hover{background:var(--soft);cursor:pointer}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}
+.charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.chart svg{width:100%;height:210px;display:block}
+.chart .t{font-size:12px;font-weight:600;margin-bottom:2px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11px;color:var(--muted)}
+.legend i{display:inline-block;width:14px;height:3px;margin-right:4px;vertical-align:middle}
+.cardrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,260px);gap:12px;align-items:start}
+.bar{display:flex;align-items:center;gap:6px;font-size:11px;margin:2px 0}
+.bar .n{width:108px;color:var(--muted)} .bar .b{flex:1;background:var(--soft);height:9px;border-radius:5px;overflow:hidden}
+.bar .b span{display:block;height:100%;background:var(--blue)} .bar .p{width:40px;text-align:right;font-variant-numeric:tabular-nums}
+.alerts{max-height:260px;overflow:auto;font-size:12px}
+.alerts div{padding:3px 0;border-bottom:1px solid var(--line)}
+.recs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:12px}
+.kv span:nth-child(odd){color:var(--muted)}
+svg text{fill:var(--muted);font-size:10px}
+@media (max-width:1100px){.split,.kpis,.charts,.recs,.cardrow{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Baghewala Well-to-Surface Digital Twin — live</h1>
+  <span class="badge sim" id="feed">SIMULATED FIELD FEED</span>
+  <span>Date <b id="date">–</b></span>
+  <span class="muted" id="tick"></span>
+  <div class="ctl">
+    <button id="play">Pause</button>
+    <label class="muted">speed
+      <select id="speed">
+        <option value="0.1">10 days/s</option><option value="0.25">4 days/s</option>
+        <option value="0.5">2 days/s</option><option value="1" selected>1 day/s</option>
+        <option value="2">1 day / 2 s</option><option value="5">1 day / 5 s</option>
+      </select></label>
+    <a href="/report/" target="_blank" class="muted">batch report ↗</a>
+  </div>
+</header>
+<main>
+  <div class="kpis">
+    <div class="panel"><h2>Current practice <span class="muted">(manual SPM rules, historical CSS settings)</span></h2><div class="kgrid" id="k-practice"></div>
+      <div class="muted" style="margin-top:6px" id="elapsed"></div></div>
+    <div class="panel"><h2>Digital twin control <span class="muted">(twin SPM/speed + optimised, physics-verified CSS)</span></h2><div class="kgrid" id="k-twin"></div></div>
+  </div>
+  <div class="split">
+    <div class="panel">
+      <h2>Wells <span class="muted">— click to inspect · values shown for</span>
+        <button id="f-practice">practice</button><button id="f-twin" class="on">twin</button></h2>
+      <div class="tablewrap"><table id="wells"><thead><tr>
+        <th>well</th><th>phase</th><th>day</th><th>oil m³/d</th><th>T °C</th><th>SPM</th><th>down/up</th><th>fill</th><th>status</th>
+      </tr></thead><tbody></tbody></table></div>
+    </div>
+    <div class="panel" id="detail">
+      <h2 id="d-title">–</h2>
+      <div class="muted" id="d-sub"></div>
+      <div class="charts" style="margin-top:10px">
+        <div class="chart"><div class="t">Oil & water rate — measured vs ML forecast for this cycle</div><svg id="c-rate"></svg><div class="legend" id="l-rate"></div></div>
+        <div class="chart"><div class="t">Heated-zone / bottom-hole temperature — measured vs ML forecast</div><svg id="c-temp"></svg><div class="legend" id="l-temp"></div></div>
+        <div class="chart"><div class="t">SRP: SPM and down/up speed ratio — applied vs twin recommendation</div><svg id="c-spm"></svg><div class="legend" id="l-spm"></div></div>
+        <div class="chart"><div class="t">Polished-rod load envelope (below 0 = rod floating) & Goodman loading</div><svg id="c-load"></svg><div class="legend" id="l-load"></div></div>
+      </div>
+      <div class="cardrow" style="margin-top:12px">
+        <div class="chart"><div class="t">Dynamometer card at today's operating point (FD rod/pump model) — CNN diagnosis</div><svg id="c-card" style="height:240px"></svg><div class="legend" id="l-card"></div></div>
+        <div>
+          <div class="t" style="font-weight:600;font-size:12px">Card diagnosis (CNN probabilities)</div>
+          <div id="diag"></div>
+          <div style="margin-top:8px" class="muted">Inject pump fault (card simulation only)
+            <select id="fault"></select></div>
+        </div>
+      </div>
+      <div class="recs" style="margin-top:12px">
+        <div><div class="t" style="font-weight:600;font-size:12px;margin-bottom:4px">SRP recommendation today</div><div class="kv" id="srp"></div></div>
+        <div><div class="t" style="font-weight:600;font-size:12px;margin-bottom:4px">CSS cycle settings</div><div class="kv" id="css"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="panel"><h2>Alerts & events <span class="muted">(both fleets, newest first)</span></h2><div class="alerts" id="alerts"></div></div>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+let S = null, viewFleet = "twin";
+const fmt = (v, d = 1) => v == null || Number.isNaN(v) ? "–" : Number(v).toLocaleString(undefined, {maximumFractionDigits: d, minimumFractionDigits: d});
+const post = (url, body) => fetch(url, {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+
+// ---------- tiny SVG chart ----------
+function chart(svg, opt) {
+  const W = svg.clientWidth || 500, H = svg.clientHeight || 210, m = {l: 44, r: opt.right ? 40 : 10, t: 8, b: 20};
+  const xs = opt.series.flatMap(s => s.x.filter((_, i) => s.y[i] != null));
+  const x0 = opt.xmin ?? Math.min(...xs, 0), x1 = opt.xmax ?? Math.max(...xs, 1);
+  const ys = opt.series.filter(s => !s.right).flatMap(s => s.y.filter(v => v != null));
+  let y0 = opt.ymin ?? Math.min(...ys, opt.zero ? 0 : Infinity), y1 = opt.ymax ?? Math.max(...ys, opt.zero ? 0 : -Infinity);
+  if (!isFinite(y0) || !isFinite(y1)) { y0 = 0; y1 = 1; }
+  if (y1 - y0 < 1e-9) { y1 = y0 + 1; }
+  const pad = (y1 - y0) * 0.06; y0 -= opt.zero && y0 >= 0 ? 0 : pad; y1 += pad;
+  const rs = opt.series.filter(s => s.right).flatMap(s => s.y.filter(v => v != null));
+  let r0 = opt.rmin ?? Math.min(...rs, 0), r1 = opt.rmax ?? Math.max(...rs, 1);
+  const X = x => m.l + (x - x0) / (x1 - x0 || 1) * (W - m.l - m.r);
+  const Y = y => H - m.b - (y - y0) / (y1 - y0) * (H - m.t - m.b);
+  const R = y => H - m.b - (y - r0) / (r1 - r0 || 1) * (H - m.t - m.b);
+  let g = "";
+  for (let i = 0; i <= 4; i++) {
+    const v = y0 + (y1 - y0) * i / 4, y = Y(v);
+    g += `<line x1="${m.l}" x2="${W - m.r}" y1="${y}" y2="${y}" stroke="${css('--line')}"/>`;
+    g += `<text x="${m.l - 4}" y="${y + 3}" text-anchor="end">${fmt(v, Math.abs(y1 - y0) < 5 ? 2 : 0)}</text>`;
+    if (opt.right) g += `<text x="${W - m.r + 4}" y="${R(r0 + (r1 - r0) * i / 4) + 3}">${fmt(r0 + (r1 - r0) * i / 4, 1)}</text>`;
+  }
+  if (opt.xlabel) for (let i = 0; i <= 4; i++) {
+    const xv = Math.round(x0 + (x1 - x0) * i / 4);
+    g += `<text x="${X(xv)}" y="${H - 5}" text-anchor="middle">${opt.xlabel(xv)}</text>`;
+  }
+  if (opt.zeroLine && y0 < 0 && y1 > 0) g += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(0)}" y2="${Y(0)}" stroke="${css('--red')}" stroke-dasharray="3 3"/>`;
+  if (opt.now != null) g += `<line x1="${X(opt.now)}" x2="${X(opt.now)}" y1="${m.t}" y2="${H - m.b}" stroke="${css('--gray')}" stroke-dasharray="2 3"/><text x="${X(opt.now) + 3}" y="${m.t + 9}">today</text>`;
+  for (const s of opt.series) {
+    const f = s.right ? R : Y; let d = "", pen = false, prev = null;
+    s.x.forEach((xv, i) => {
+      const yv = s.y[i];
+      if (yv == null) { pen = false; return; }
+      if (s.step && pen) d += `L${X(xv)},${f(prev)}`;
+      d += (pen ? "L" : "M") + X(xv) + "," + f(yv); pen = true; prev = yv;
+    });
+    if (s.dots) s.x.forEach((xv, i) => { if (s.y[i] != null) g += `<circle cx="${X(xv)}" cy="${f(s.y[i])}" r="1.6" fill="${s.color}"/>`; });
+    else g += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="${s.w || 1.6}" ${s.dash ? `stroke-dasharray="${s.dash}"` : ""}/>`;
+  }
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.innerHTML = g;
+}
+function legend(el, items) { el.innerHTML = items.map(([c, t, dash]) => `<span><i style="background:${dash ? `repeating-linear-gradient(90deg,${c} 0 4px,transparent 4px 7px)` : c}"></i>${t}</span>`).join(""); }
+
+// ---------- rendering ----------
+function kpis(el, k, other, isTwin) {
+  const item = (label, v, d, better, ov) => {
+    let delta = "";
+    if (isTwin && ov != null && v != null && ov !== 0) {
+      const pct = (v - ov) / Math.abs(ov) * 100, good = better === "up" ? pct > 0 : pct < 0;
+      if (Math.abs(pct) >= 0.5) delta = `<div class="d ${good ? "good" : "bad"}">${pct > 0 ? "+" : ""}${fmt(pct, 0)}% vs practice</div>`;
+    }
+    return `<div class="k"><div class="v">${fmt(v, d)}</div><div class="l">${label}</div>${delta}</div>`;
+  };
+  const o = other || {};
+  el.innerHTML = [
+    item("oil now, bbl/d", k.oil_bopd, 0, "up", o.oil_bopd),
+    item("SRP energy today, kWh", k.energy_kwh_day, 0, "down", o.energy_kwh_day),
+    item("producing / injecting / soaking", null) .replace("–", `${k.producing} / ${k.injecting} / ${k.soaking}`),
+    item("wells floating now", k.floating_now, 0, "down", o.floating_now),
+    item("cum. oil since start, m³", k.cum_oil_m3, 0, "up", o.cum_oil_m3),
+    item("SOR since start, t/m³", k.sor, 1, "down", o.sor),
+    item("SRP kWh per m³ oil", k.kwh_per_m3, 0, "down", o.kwh_per_m3),
+    item("rod-floating well-days", k.floating_days, 0, "down", o.floating_days),
+    item("impact strokes", k.impact_strokes, 0, "down", o.impact_strokes),
+    item("net value, USD (placeholder prices)", k.net_value_usd, 0, "up", o.net_value_usd),
+  ].join("");
+}
+
+function status(r) {
+  if (!r || !r.phase) return "";
+  if (r.phase === "injection") return `<span class="badge info">steam</span>`;
+  if (r.phase === "soak") return `<span class="badge info">soak</span>`;
+  if (r.phase === "shut-in") return `<span class="badge warn">shut-in</span>`;
+  const b = [];
+  if (r.floating) b.push(`<span class="badge alarm">floating</span>`);
+  if (r.overload) b.push(`<span class="badge alarm">overload</span>`);
+  if (r.fill != null && r.fill < 0.6) b.push(`<span class="badge warn">low fill</span>`);
+  if (r.rec_feasible === false) b.push(`<span class="badge warn">no safe SPM</span>`);
+  return b.join(" ") || `<span class="badge ok">ok</span>`;
+}
+
+function renderTable() {
+  const tb = $("#wells tbody");
+  tb.innerHTML = S.wells.map(w => {
+    const r = w[viewFleet] || {};
+    const sel = S.selected.well === w.id ? "sel" : "";
+    return `<tr class="${sel}" data-id="${w.id}"><td>${w.id}</td><td>${r.phase || "–"}</td><td>${r.prod_day ?? ""}</td>
+      <td>${r.oil != null ? fmt(r.oil, 2) : ""}</td><td>${fmt(r.t_bottom, 0)}</td><td>${r.spm != null ? fmt(r.spm, 2) : ""}</td>
+      <td>${r.ratio != null ? fmt(r.ratio, 2) : ""}</td><td>${r.fill != null ? fmt(r.fill, 2) : ""}</td><td>${status(r)}</td></tr>`;
+  }).join("");
+  tb.querySelectorAll("tr").forEach(tr => tr.onclick = () => post("/api/select", {well: tr.dataset.id, fleet: viewFleet}));
+}
+
+function renderDetail() {
+  const D = S.detail, s = D.series, n = s.date.length, idx = [...Array(n).keys()];
+  const P = D.prediction, ps = D.prod_start_index;
+  const dateAt = i => { if (i < n) return (s.date[i] || "").slice(2); const d = new Date(s.date[n - 1]); d.setDate(d.getDate() + (i - n + 1)); return d.toISOString().slice(2, 10); };
+  const horizon = P ? Math.round(P.cycle_prod_days * 1.2) + 5 : 0;
+  const xmax = Math.max(n - 1, ps != null ? ps + horizon : 0);
+  const predX = P && ps != null ? P.prod_day.slice(0, horizon).map(d => ps + d - 1) : [];
+  const phaseTxt = s.phase[n - 1];
+  $("#d-title").innerHTML = `${D.well} <span class="muted">— ${D.fleet === "twin" ? "digital-twin control" : "current practice"} · cycle ${D.well_state.cycle_no} · ${phaseTxt}</span>`;
+  const st = D.static;
+  $("#d-sub").textContent = `k ${fmt(st.k_mD, 0)} mD · h ${fmt(st.h, 1)} m · φ ${fmt(st.phi, 3)} · µ@50°C ${fmt(st.mu_ref_cP, 0)} cP · stroke ${fmt(st.stroke, 2)} m · pump ${fmt(st.pump_depth, 0)} m · heated radius ${fmt(D.well_state.heated_radius_m, 1)} m`;
+  const common = {xmin: 0, xmax, xlabel: dateAt, now: n - 1};
+  chart($("#c-rate"), {...common, zero: true, series: [
+    {x: idx, y: s.water_m3d, color: css("--teal"), w: 1.1},
+    {x: idx, y: s.oil_m3d, color: css("--green"), dots: false, w: 1.8},
+    {x: predX, y: P ? P.oil.slice(0, horizon) : [], color: css("--purple"), dash: "5 4"},
+  ]});
+  legend($("#l-rate"), [[css("--green"), "oil (measured)"], [css("--teal"), "water (measured)"], [css("--purple"), `oil forecast (trajectory model) · cycle total forecast ${P ? fmt(P.cycle_oil_m3, 0) : "–"} m³ over ${P ? fmt(P.cycle_prod_days, 0) : "–"} d`, true]]);
+  chart($("#c-temp"), {...common, series: [
+    {x: idx, y: s.t_bottom_true.map((v, i) => s.phase[i] === "production" ? null : v), color: css("--orange"), w: 1.2, dash: "2 2"},
+    {x: idx, y: s.t_bottom, color: css("--red")},
+    {x: predX, y: P ? P.t_bottom.slice(0, horizon) : [], color: css("--purple"), dash: "5 4"},
+  ]});
+  legend($("#l-temp"), [[css("--red"), "bottom-hole T (measured, production)"], [css("--orange"), "steam / soak (twin state)", true], [css("--purple"), "forecast (trajectory model)", true]]);
+  chart($("#c-spm"), {...common, zero: true, right: true, rmin: 1, rmax: 3, series: [
+    {x: idx, y: s.spm, color: css("--blue"), step: true, w: 2},
+    {x: idx, y: s.rec_spm, color: css("--purple"), step: true, dash: "4 3"},
+    {x: idx, y: s.speed_ratio, color: css("--orange"), step: true, right: true, w: 1.2},
+  ]});
+  legend($("#l-spm"), [[css("--blue"), "SPM applied"], [css("--purple"), "SPM twin recommendation", true], [css("--orange"), "down/up duration ratio (right axis)"]]);
+  chart($("#c-load"), {...common, zeroLine: true, right: true, rmin: 0, rmax: Math.max(1.2, ...s.goodman.filter(v => v != null)), series: [
+    {x: idx, y: s.prl_max_kN, color: css("--blue")},
+    {x: idx, y: s.prl_min_kN, color: css("--red")},
+    {x: idx, y: s.goodman, color: css("--gray"), right: true, w: 1.1},
+  ]});
+  legend($("#l-load"), [[css("--blue"), "peak load kN"], [css("--red"), "minimum load kN (<0 floating)"], [css("--gray"), "Goodman loading (right axis, >1 overload)"]]);
+
+  const C = D.card;
+  if (C) {
+    chart($("#c-card"), {xmin: -0.05, xmax: 1.05, xlabel: v => "", zeroLine: true, series: [
+      {x: C.pos, y: C.load, color: css("--blue"), w: 1.8},
+      {x: C.downhole_pos, y: C.downhole_load, color: css("--orange"), w: 1.2},
+    ]});
+    legend($("#l-card"), [[css("--blue"), "surface card: load / rod weight vs position / stroke (CNN input)"], [css("--orange"), "downhole (pump) card"]]);
+    const probs = Object.entries(C.diagnosis).sort((a, b) => b[1] - a[1]);
+    $("#diag").innerHTML = probs.map(([k, p]) => `<div class="bar"><span class="n">${k}</span><span class="b"><span style="width:${(p * 100).toFixed(1)}%;background:${k === "normal" ? css("--green") : k === "rod_floating" || k === "pump_unseated" ? css("--red") : css("--blue")}"></span></span><span class="p">${fmt(p * 100, 1)}%</span></div>`).join("")
+      + `<div style="margin-top:6px">CNN: <b>${C.top}</b> · physics label: <b>${C.expected}</b> ${C.top === C.expected ? '<span class="badge ok">agree</span>' : '<span class="badge alarm">disagree</span>'}</div>`
+      + (S.card_tally.n ? `<div class="muted" style="margin-top:2px">this session: ${S.card_tally.agree}/${S.card_tally.n} exact, ${S.card_tally.agree_grouped}/${S.card_tally.n} with pound+gas grouped as incomplete fillage</div>` : "")
+      + `<div class="muted" style="margin-top:4px">fillage ${fmt(C.fill, 2)} · ${C.spm.toFixed(2)} SPM · down/up ${C.ratio.toFixed(2)} · µ pump ${fmt(C.mu_pump_cP, 1)} cP · µ top ${fmt(C.mu_top_cP, 0)} cP · min load ${fmt(C.min_load_kN, 1)} kN</div>`;
+  } else {
+    $("#c-card").innerHTML = ""; $("#l-card").innerHTML = ""; $("#diag").innerHTML = `<div class="muted">No card: well is ${phaseTxt} (pump not running).</div>`;
+  }
+  const f = $("#fault");
+  if (f.options.length !== S.fault_presets.length) f.innerHTML = S.fault_presets.map(x => `<option>${x}</option>`).join("");
+  f.value = D.fault;
+
+  const last = n ? {spm: s.spm[n - 1], ratio: s.speed_ratio[n - 1], rs: s.rec_spm[n - 1], rr: s.rec_ratio[n - 1], fill: s.fillage[n - 1], g: s.goodman[n - 1], mn: s.prl_min_kN[n - 1]} : {};
+  $("#srp").innerHTML = phaseTxt !== "production" ? `<span>status</span><span>pump off (${phaseTxt})</span>` : `
+    <span>applied</span><span>${fmt(last.spm, 2)} SPM, down/up ${fmt(last.ratio, 2)}</span>
+    <span>twin recommends</span><span><b>${fmt(last.rs, 2)} SPM, down/up ${fmt(last.rr, 2)}</b></span>
+    <span>fillage</span><span>${fmt(last.fill, 2)}</span>
+    <span>min rod load</span><span>${fmt(last.mn, 1)} kN ${last.mn < 0 ? '<span class="badge alarm">floating</span>' : ""}</span>
+    <span>Goodman</span><span>${fmt(last.g * 100, 0)}%</span>
+    <span class="muted" style="grid-column:1/3">Twin rule: no floating (15% load margin), Goodman ≤ 100%, capacity ≈ inflow / 0.9 fillage, least power.</span>`;
+  const c = D.controls, pl = D.css_plan;
+  let h = c ? `<span>this cycle</span><span>${fmt(c.steam_t, 0)} t steam @ ${fmt(c.inj_pressure_MPa, 1)} MPa, x ${fmt(c.quality_surface, 2)}, soak ${c.soak_days} d, cut-off ${fmt(c.cutoff_m3d, 2)} m³/d, min ${c.min_prod_days} d</span>` : "";
+  if (pl) h += `<span>chosen by</span><span>surrogate search (${pl.pred_oil_m3 ? fmt(pl.pred_oil_m3, 0) + " m³ oil predicted" : ""}) → verified in physics twin: ${fmt(pl.verified.oil_m3, 0)} m³, SOR ${fmt(pl.verified.sor, 1)}, ${fmt(pl.verified.value_per_day, 0)} USD/day</span>`;
+  else if (D.fleet === "practice") h += `<span>chosen by</span><span>historical-practice envelope (operator)</span>`;
+  $("#css").innerHTML = h;
+}
+
+function render() {
+  if (!S) return;
+  $("#date").textContent = S.date;
+  $("#feed").textContent = S.feed.split(" - ")[0];
+  $("#feed").title = S.feed;
+  $("#tick").textContent = `tick ${S.tick_ms} ms`;
+  $("#elapsed").textContent = `Cumulative figures cover ${S.days_elapsed} simulated days since the live run started from the end of the history; both fleets start from the identical state. Early days are dominated by cycle-timing transients.`;
+  $("#play").textContent = S.running ? "Pause" : "Play";
+  $("#f-practice").classList.toggle("on", viewFleet === "practice");
+  $("#f-twin").classList.toggle("on", viewFleet === "twin");
+  kpis($("#k-practice"), S.kpis.practice, null, false);
+  kpis($("#k-twin"), S.kpis.twin, S.kpis.practice, true);
+  renderTable();
+  renderDetail();
+  $("#alerts").innerHTML = S.alerts.map(a => `<div><span class="badge ${a.level}">${a.level}</span> ${a.date} · <b>${a.well}</b> <span class="muted">[${a.fleet}]</span> ${a.msg}</div>`).join("");
+}
+
+$("#play").onclick = () => post("/api/control", {running: !S.running});
+$("#speed").onchange = e => post("/api/control", {seconds_per_day: +e.target.value});
+$("#fault").onchange = e => post("/api/fault", {well: S.selected.well, fault: e.target.value});
+for (const f of ["practice", "twin"]) $("#f-" + f).onclick = () => {
+  viewFleet = f; $("#f-practice").classList.toggle("on", f === "practice"); $("#f-twin").classList.toggle("on", f === "twin");
+  post("/api/select", {well: S.selected.well, fleet: f});
+};
+window.addEventListener("resize", render);
+if (new URLSearchParams(location.search).has("once")) {
+  // one-shot render of the latest snapshot (for screenshots / printing), no live stream
+  fetch("/api/snapshot").then(r => r.json()).then(d => { S = d; viewFleet = S.selected.fleet; render(); });
+} else {
+  const es = new EventSource("/api/stream");
+  es.onmessage = e => { S = JSON.parse(e.data); viewFleet = S.selected.fleet; render(); };
+  es.onerror = () => { $("#tick").textContent = "disconnected — retrying…"; };
+}
+</script>
+</body>
+</html>
